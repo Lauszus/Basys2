@@ -1,0 +1,155 @@
+--------------------------------------------------------------------------------
+Release 14.3 Trace  (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 4
+-n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o
+adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf
+
+Design file:              adder3bit_segment.ncd
+Physical constraint file: adder3bit_segment.pcf
+Device,package,speed:     xc3s100e,cp132,-4 (PRODUCTION 1.27 2012-10-12)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+anodes<2>   |    8.263(R)|clk_BUFGP         |   0.000|
+anodes<3>   |    8.134(R)|clk_BUFGP         |   0.000|
+segments<0> |   11.172(R)|clk_BUFGP         |   0.000|
+segments<1> |   11.183(R)|clk_BUFGP         |   0.000|
+segments<2> |   10.811(R)|clk_BUFGP         |   0.000|
+segments<3> |   10.863(R)|clk_BUFGP         |   0.000|
+segments<4> |   11.666(R)|clk_BUFGP         |   0.000|
+segments<5> |   11.141(R)|clk_BUFGP         |   0.000|
+segments<6> |   11.480(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    5.175|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+A<0>           |CO             |   10.337|
+A<0>           |S<0>           |    7.767|
+A<0>           |S<1>           |    8.912|
+A<0>           |S<2>           |   10.126|
+A<0>           |segments<0>    |   12.612|
+A<0>           |segments<1>    |   11.321|
+A<0>           |segments<2>    |   11.243|
+A<0>           |segments<3>    |   12.233|
+A<0>           |segments<4>    |   12.525|
+A<0>           |segments<5>    |   12.581|
+A<0>           |segments<6>    |   12.206|
+A<1>           |CO             |    9.626|
+A<1>           |S<1>           |    8.318|
+A<1>           |S<2>           |    9.415|
+A<1>           |segments<0>    |   11.901|
+A<1>           |segments<1>    |   10.610|
+A<1>           |segments<2>    |   10.532|
+A<1>           |segments<3>    |   11.522|
+A<1>           |segments<4>    |   11.814|
+A<1>           |segments<5>    |   11.870|
+A<1>           |segments<6>    |   11.495|
+A<2>           |CO             |    8.738|
+A<2>           |S<2>           |    8.393|
+A<2>           |segments<0>    |   11.013|
+A<2>           |segments<1>    |    9.722|
+A<2>           |segments<2>    |    9.441|
+A<2>           |segments<3>    |   10.500|
+A<2>           |segments<4>    |   10.792|
+A<2>           |segments<5>    |   10.982|
+A<2>           |segments<6>    |   10.574|
+B<0>           |CO             |   10.062|
+B<0>           |S<0>           |    7.306|
+B<0>           |S<1>           |    8.637|
+B<0>           |S<2>           |    9.851|
+B<0>           |segments<0>    |   12.337|
+B<0>           |segments<1>    |   11.046|
+B<0>           |segments<2>    |   10.968|
+B<0>           |segments<3>    |   11.958|
+B<0>           |segments<4>    |   12.250|
+B<0>           |segments<5>    |   12.306|
+B<0>           |segments<6>    |   11.931|
+B<1>           |CO             |    8.970|
+B<1>           |S<1>           |    8.438|
+B<1>           |S<2>           |    8.759|
+B<1>           |segments<0>    |   11.245|
+B<1>           |segments<1>    |    9.954|
+B<1>           |segments<2>    |   10.413|
+B<1>           |segments<3>    |   10.866|
+B<1>           |segments<4>    |   11.158|
+B<1>           |segments<5>    |   11.214|
+B<1>           |segments<6>    |   10.839|
+B<2>           |CO             |    8.626|
+B<2>           |S<2>           |    8.161|
+B<2>           |segments<0>    |   10.901|
+B<2>           |segments<1>    |    9.610|
+B<2>           |segments<2>    |    9.398|
+B<2>           |segments<3>    |   10.268|
+B<2>           |segments<4>    |   10.560|
+B<2>           |segments<5>    |   10.870|
+B<2>           |segments<6>    |   10.462|
+CI             |CO             |   10.622|
+CI             |S<0>           |    7.968|
+CI             |S<1>           |    9.197|
+CI             |S<2>           |   10.411|
+CI             |segments<0>    |   12.897|
+CI             |segments<1>    |   11.606|
+CI             |segments<2>    |   11.528|
+CI             |segments<3>    |   12.518|
+CI             |segments<4>    |   12.810|
+CI             |segments<5>    |   12.866|
+CI             |segments<6>    |   12.491|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Oct 26 15:00:54 2012 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 148 MB
+
+
+

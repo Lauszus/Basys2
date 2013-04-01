@@ -1,0 +1,4 @@
+vhdl work "full_adder.vhd"
+vhdl work "segment.vhd"
+vhdl work "3_bit_adder.vhd"
+vhdl work "adder3bit_segment.vhd"

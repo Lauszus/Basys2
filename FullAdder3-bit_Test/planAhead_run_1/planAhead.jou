@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4 (64-bit)
+# Build 157570 by hdbuild on Fri Dec 16 13:06:31 MST 2011
+# Start of session at: Sun Oct 14 16:17:16 2012
+# Process ID: 10188
+# Log file: C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/planAhead_run_1/planAhead.log
+# Journal file: C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/pa.fromNetlist.tcl
+exit
+stop_gui

@@ -1,0 +1,30 @@
+NET "CI" LOC = "P11";
+
+NET "A<2>" LOC = "F3";
+NET "A<1>" LOC = "B4";
+NET "A<0>" LOC = "L3";
+
+NET "B<2>" LOC = "E2";
+NET "B<1>" LOC = "G3";
+NET "B<0>" LOC = "K3";
+
+NET "S<2>" LOC = "P7";
+NET "S<1>" LOC = "M11";
+NET "S<0>" LOC = "M5";
+
+NET "CO" LOC = "P6";
+
+NET "anodes<3>" LOC = "F12";
+NET "anodes<2>" LOC = "J12";
+NET "anodes<1>" LOC = "M13";
+NET "anodes<0>" LOC = "K14";
+
+NET "segments<6>" LOC = "M12";
+NET "segments<5>" LOC = "L13";
+NET "segments<4>" LOC = "P12";
+NET "segments<3>" LOC = "N11";
+NET "segments<2>" LOC = "N14";
+NET "segments<1>" LOC = "H12";
+NET "segments<0>" LOC = "L14";
+
+NET "clk" LOC = "B8";

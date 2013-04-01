@@ -1,0 +1,8 @@
+Release 14.3 Drc P.40xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Fri Oct 26 15:00:57 2012
+
+drc -z adder3bit_segment.ncd adder3bit_segment.pcf
+
+DRC detected 0 errors and 0 warnings.
