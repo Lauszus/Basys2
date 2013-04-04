@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.44 secs
  
 --> Reading design: vending_machine.prj
 
@@ -104,16 +104,15 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Lauszus/Dropbox/Til Kristian/src/clock_manager.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd" in Library work.
 Architecture structure of Entity clock_manager is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/input_sync.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/input_sync.vhd" in Library work.
 Architecture behavioral of Entity input_sync is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" in Library work.
 Architecture decoder of Entity display_10base is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/vending_machine_cpu.vhd" in Library work.
-Entity <vending_machine_cpu> compiled.
-Entity <vending_machine_cpu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Lauszus/Dropbox/Til Kristian/src/vending_machine.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/vending_machine_cpu.vhd" in Library work.
+Architecture behavioral of Entity vending_machine_cpu is up to date.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd" in Library work.
 Architecture struct of Entity vending_machine is up to date.
 
 =========================================================================
@@ -144,12 +143,12 @@ Analyzing Entity <input_sync> in library <work> (Architecture <behavioral>).
 Entity <input_sync> analyzed. Unit <input_sync> generated.
 
 Analyzing Entity <display_10base> in library <work> (Architecture <decoder>).
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 46: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 49: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 52: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 64: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 67: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" line 70: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 46: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 49: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 52: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 64: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 67: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 70: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
 Entity <display_10base> analyzed. Unit <display_10base> generated.
 
 Analyzing Entity <vending_machine_cpu> in library <work> (Architecture <behavioral>).
@@ -163,7 +162,7 @@ Entity <vending_machine_cpu> analyzed. Unit <vending_machine_cpu> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <clock_manager>.
-    Related source file is "C:/Users/Lauszus/Dropbox/Til Kristian/src/clock_manager.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd".
     Found 16-bit up counter for signal <count_present>.
     Summary:
 	inferred   1 Counter(s).
@@ -171,7 +170,7 @@ Unit <clock_manager> synthesized.
 
 
 Synthesizing Unit <input_sync>.
-    Related source file is "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/input_sync.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/input_sync.vhd".
     Found 1-bit register for signal <reset>.
     Found 1-bit register for signal <buy>.
     Found 5-bit register for signal <price>.
@@ -183,7 +182,7 @@ Unit <input_sync> synthesized.
 
 
 Synthesizing Unit <display_10base>.
-    Related source file is "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd".
     Found 16x8-bit ROM for signal <seven_segment>.
     Found 1-of-4 decoder for signal <digit_select>.
     Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0000> created at line 44.
@@ -208,7 +207,7 @@ Unit <display_10base> synthesized.
 
 
 Synthesizing Unit <vending_machine_cpu>.
-    Related source file is "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/vending_machine_cpu.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/vending_machine_cpu.vhd".
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 4                                              |
@@ -238,7 +237,7 @@ Unit <vending_machine_cpu> synthesized.
 
 
 Synthesizing Unit <vending_machine>.
-    Related source file is "C:/Users/Lauszus/Dropbox/Til Kristian/src/vending_machine.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd".
 Unit <vending_machine> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -567,12 +566,12 @@ Offset:              9.270ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 7.69 secs
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.83 secs
  
 --> 
 
-Total memory usage is 253900 kilobytes
+Total memory usage is 254604 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    6 (   0 filtered)

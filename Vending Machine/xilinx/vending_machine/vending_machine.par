@@ -1,7 +1,7 @@
 Release 14.3 par P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-LAUSZUS-PC::  Fri Mar 22 00:16:34 2013
+LAUSZUS-PC::  Thu Apr 04 15:07:39 2013
 
 par -w -intstyle ise -ol high -t 1 vending_machine_map.ncd vending_machine.ncd
 vending_machine.pcf 
@@ -89,12 +89,12 @@ Phase 8.5  Local Placement Optimization
 Phase 8.5  Local Placement Optimization (Checksum:1daefae7) REAL time: 3 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:1fb2c685) REAL time: 3 secs 
+Phase 9.18  Placement Optimization (Checksum:1fb2c685) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:1fb2c685) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:1fb2c685) REAL time: 4 secs 
 
-Total REAL time to Placer completion: 3 secs 
+Total REAL time to Placer completion: 4 secs 
 Total CPU  time to Placer completion: 3 secs 
 Writing design to file vending_machine.ncd
 
@@ -103,11 +103,11 @@ Writing design to file vending_machine.ncd
 Starting Router
 
 
-Phase  1  : 339 unrouted;      REAL time: 4 secs 
+Phase  1  : 339 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 314 unrouted;      REAL time: 4 secs 
+Phase  2  : 314 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 84 unrouted;      REAL time: 4 secs 
+Phase  3  : 84 unrouted;      REAL time: 5 secs 
 
 Phase  4  : 99 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
@@ -121,17 +121,17 @@ Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 5
 
 Updating file: vending_machine.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
 
-Total REAL time to Router completion: 5 secs 
+Total REAL time to Router completion: 6 secs 
 Total CPU time to Router completion: 5 secs 
 
 Partition Implementation Status
@@ -193,7 +193,7 @@ Generating Pad Report.
 All signals are completely routed.
 
 Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 5 secs 
+Total CPU time to PAR completion: 6 secs 
 
 Peak Memory Usage:  243 MB
 

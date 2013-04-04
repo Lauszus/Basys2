@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-03-22T00:01:47</DateModified>
+  <DateModified>2013-04-04T15:00:51</DateModified>
   <ModuleName>vending_machine</ModuleName>
   <SummaryTimeStamp>2013-03-21T15:52:38</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/iseconfig/vending_machine.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/iseconfig/vending_machine.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine\</ImplementationReportsDirectory>
   <DateInitialized>2013-02-28T15:01:30</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
