@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s100e-cp132-4 adder3.ngc adder3.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3_map.ncd adder3.ngd adder3.pcf 
+par -w -intstyle ise -ol high -t 1 adder3_map.ncd adder3.ncd adder3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3.twx adder3.ncd -o adder3.twr adder3.pcf 
+bitgen -intstyle ise -f adder3.ut adder3.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3.ngc adder3.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3_map.ncd adder3.ngd adder3.pcf 
+par -w -intstyle ise -ol high -t 1 adder3_map.ncd adder3.ncd adder3.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3.twx adder3.ncd -o adder3.twr adder3.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3.ut adder3.ncd 
+vhdtdtfi -prj FullAdder3-bit_Test -o C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3.vhi -module adder3 -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../full_adder.vhd -lib work ../3_bit_adder.vhd 

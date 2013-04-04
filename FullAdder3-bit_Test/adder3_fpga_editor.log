@@ -1,0 +1,33 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 O.87xd
+#Current Working Directory:
+#:D   C:\.Xilinx\Projects\Kristian\FullAdder3-bit_Test
+#Date/Time:
+#:T   Sun Oct 14 16:19:05 2012
+#------------------------------
+	#Reading adder3.ncd...
+	#Loading device for application Rf_Device from file '3s100e.nph' in environment C:\Xilinx\13.4\ISE_DS\ISE\.
+	#   "adder3" is an NCD, version 3.2, device xc3s100e, package cp132, speed -4
+	#Design creation date: 2012.10.14.14.13.03
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+select -k comp 'S<1>'
+	#3
+unselect -all
+	#4
+unselect -all
+	#5
+select site 'SLICE_X15Y22'
+	#site "SLICE_X15Y22",  type = SLICEL  (RPM grid X35Y24)
+	#6
+unselect -all
+	#7
+select site 'SLICE_X15Y22'
+	#site "SLICE_X15Y22",  type = SLICEL  (RPM grid X35Y24)
+	#8
+post block

@@ -1,0 +1,1 @@
+vhdtdtfi -prj FullAdder3-bit_Test -o C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/segment.vhi -module segment -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work segment.vhd 

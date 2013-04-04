@@ -1,0 +1,133 @@
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 adder3bit_segment.ngc adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 
+xst -intstyle ise -ifn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.xst" -ofn "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/adder3bit_segment.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc pins.ucf -p xc3s100e-cp132-4 "adder3bit_segment.ngc" adder3bit_segment.ngd  
+map -intstyle ise -p xc3s100e-cp132-4 -cm area -ir off -pr off -c 100 -o adder3bit_segment_map.ncd adder3bit_segment.ngd adder3bit_segment.pcf 
+par -w -intstyle ise -ol high -t 1 adder3bit_segment_map.ncd adder3bit_segment.ncd adder3bit_segment.pcf 
+trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml adder3bit_segment.twx adder3bit_segment.ncd -o adder3bit_segment.twr adder3bit_segment.pcf -ucf pins.ucf 
+bitgen -intstyle ise -f adder3bit_segment.ut adder3bit_segment.ncd 

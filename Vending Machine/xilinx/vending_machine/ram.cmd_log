@@ -1,0 +1,1 @@
+vhdtdtfi -prj vending_machine -o "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/ram.vhi" -module ram -template C:/Xilinx/14.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ram.vhd 

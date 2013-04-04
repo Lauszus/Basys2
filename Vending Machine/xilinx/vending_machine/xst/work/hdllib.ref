@@ -1,0 +1,18 @@
+EN display NULL C:/02139/lab/src/display7seg_decoder.vhd sub00/vhpl05 1363275014
+AR input_sync behavioral "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/input_sync.vhd" sub00/vhpl13 1363907775
+AR ram rtl "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/ram.vhd" sub00/vhpl17 1363900325
+AR vending_machine_cpu behavioral "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/vending_machine_cpu.vhd" sub00/vhpl15 1363907779
+AR display decoder C:/02139/lab/src/display7seg_decoder.vhd sub00/vhpl06 1363275015
+EN vending_machine NULL "C:/Users/Lauszus/Dropbox/Til Kristian/src/vending_machine.vhd" sub00/vhpl04 1363907780
+EN segment NULL C:/02139/lab/xilinx/vending_machine/segment.vhd sub00/vhpl08 1363275010
+AR segment behavioral C:/02139/lab/xilinx/vending_machine/segment.vhd sub00/vhpl09 1363275011
+AR clock_manager structure "C:/Users/Lauszus/Dropbox/Til Kristian/src/clock_manager.vhd" sub00/vhpl03 1363907773
+EN input_sync NULL "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/input_sync.vhd" sub00/vhpl12 1363907774
+EN display7seg_decoder NULL C:/02139/lab/src/display7seg_decoder.vhd sub00/vhpl00 1363267700
+EN vending_machine_cpu NULL "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/vending_machine_cpu.vhd" sub00/vhpl14 1363907778
+EN clock_manager NULL "C:/Users/Lauszus/Dropbox/Til Kristian/src/clock_manager.vhd" sub00/vhpl02 1363907772
+EN ram NULL "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/ram.vhd" sub00/vhpl16 1363900324
+AR vending_machine struct "C:/Users/Lauszus/Dropbox/Til Kristian/src/vending_machine.vhd" sub00/vhpl07 1363907781
+AR display7seg_decoder decoder C:/02139/lab/src/display7seg_decoder.vhd sub00/vhpl01 1363267701
+EN display_10base NULL "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" sub00/vhpl10 1363907776
+AR display_10base decoder "C:/Users/Lauszus/Dropbox/Til Kristian/xilinx/vending_machine/display_10base.vhd" sub00/vhpl11 1363907777

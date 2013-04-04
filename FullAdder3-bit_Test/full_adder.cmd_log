@@ -1,0 +1,2 @@
+vhdtdtfi -prj FullAdder3-bit_Test -o C:/.Xilinx/Projects/Kristian/FullAdder3-bit_Test/full_adder.vhi -module full_adder -template C:/Xilinx/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work ../full_adder.vhd 
+vhdtdtfi -prj FullAdder3-bit_Test -o "C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/full_adder.vhi" -module full_adder -template C:/Xilinx/14.3/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work full_adder.vhd 

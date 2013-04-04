@@ -1,0 +1,16 @@
+Release 14.3 - WebTalk (P.40xd)
+Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
+
+Project Information
+--------------------
+ProjectID=51354E233AAC4B1FA3A584565229ECB8
+ProjectIteration=24
+
+WebTalk Summary
+----------------
+INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
+
+INFO:WebTalk:8 - WebTalk Install setting is ON.
+INFO:WebTalk:6 - WebTalk User setting is ON.
+
+INFO:WebTalk:5 - C:/Users/Lauszus/Dropbox/Basys 2/Projekter/FullAdder3-bit_Test/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.3/ISE_DS/ISE/data/reports/webtalk_introduction.html
