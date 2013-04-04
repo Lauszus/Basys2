@@ -1,5 +1,0 @@
-vhdl work "vending_machine_cpu.vhd"
-vhdl work "input_sync.vhd"
-vhdl work "display_10base.vhd"
-vhdl work "../../src/clock_manager.vhd"
-vhdl work "../../src/vending_machine.vhd"

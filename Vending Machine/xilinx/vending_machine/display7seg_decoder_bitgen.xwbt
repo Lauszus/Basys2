@@ -1,8 +1,0 @@
-INTSTYLE=ise
-INFILE=C:\02139\lab\xilinx\vending_machine\display7seg_decoder.ncd
-OUTFILE=C:\02139\lab\xilinx\vending_machine\display7seg_decoder.bit
-FAMILY=Spartan3E
-PART=xc3s100e-5cp132
-WORKINGDIR=C:\02139\lab\xilinx\vending_machine
-LICENSE=WebPack
-USER_INFO=210667704_0_0_932

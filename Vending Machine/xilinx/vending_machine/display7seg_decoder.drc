@@ -1,8 +1,0 @@
-Release 14.2 Drc P.28xd (nt64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
-
-Thu Mar 14 14:28:55 2013
-
-drc -z display7seg_decoder.ncd display7seg_decoder.pcf
-
-DRC detected 0 errors and 0 warnings.

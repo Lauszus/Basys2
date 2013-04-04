@@ -1,5 +1,0 @@
-vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine\vending_machine_cpu.vhd"
-vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine\input_sync.vhd"
-vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine\display_10base.vhd"
-vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\clock_manager.vhd"
-vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\vending_machine.vhd"

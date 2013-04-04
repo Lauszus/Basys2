@@ -1,4 +1,0 @@
-vhdtdtfi -prj vending_machine -o C:/02139/lab/xilinx/vending_machine/input_sync.vhi -module input_sync -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work input_sync.vhd 
-vhdtdtfi -prj vending_machine -o C:/02139/lab/xilinx/vending_machine/input_sync.vhi -module input_sync -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work input_sync.vhd 
-vhdtdtfi -prj vending_machine -o C:/02139/lab/xilinx/vending_machine/input_sync.vhi -module input_sync -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work input_sync.vhd 
-vhdtdtfi -prj vending_machine -o C:/02139/lab/xilinx/vending_machine/input_sync.vhi -module input_sync -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work input_sync.vhd 

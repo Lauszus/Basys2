@@ -1,1 +1,0 @@
-vhdtdtfi -prj vending_machine -o C:/02139/lab/xilinx/vending_machine/vending_machine_cpu.vhi -module vending_machine_cpu -template C:/Xilinx/14.2/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work vending_machine_cpu.vhd 
