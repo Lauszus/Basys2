@@ -1,0 +1,5 @@
+[Inputs]
+=binary_number[4:0]=
+=seven_segment[7:0]=
+[Outputs]
+[BiDir]
