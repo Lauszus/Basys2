@@ -10,20 +10,21 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity vending_machine is
-  port (
-    clk_50        : in  std_logic;
-    clk_man       : in  std_logic;
-    sel_man       : in  std_logic;
-    reset         : in  std_logic;
-    coin2         : in  std_logic;
-    coin5         : in  std_logic;
-    buy           : in  std_logic;
-    price         : in  std_logic_vector(4 downto 0);
-	 clk_2			: out std_logic;
-    release_can   : out std_logic;
-    alarm         : out std_logic;
-    seven_segment : out std_logic_vector(7 downto 0);
-    digit_select  : out std_logic_vector(3 downto 0));
+	port (
+		clk_50        : in  std_logic;
+		clk_man       : in  std_logic;
+		sel_man       : in  std_logic;
+		reset         : in  std_logic;
+		coin2         : in  std_logic;
+		coin5         : in  std_logic;
+		buy           : in  std_logic;
+		price         : in  std_logic_vector(4 downto 0);
+		clk_display	: out std_logic;
+		release_can   : out std_logic;
+		alarm         : out std_logic;
+		seven_segment : out std_logic_vector(7 downto 0);
+		digit_select  : out std_logic_vector(3 downto 0)
+	);
 
 end vending_machine;
 
@@ -36,19 +37,20 @@ architecture struct of vending_machine is
 	signal sum            : std_logic_vector(4 downto 0);
 	signal internal_price : std_logic_vector(4 downto 0);
 	
-	signal release_can_var : std_logic;
-	signal alarm_var : std_logic;
+	signal release_can_var, alarm_var, clk_display_var : std_logic;
 
 ------------------------------------------------------------------------
 -- Clock divider component declaration
 ------------------------------------------------------------------------
   
 	component clock_manager
-    port(
-      clk_50   :  in  std_logic;
-      clk_man  :  in  std_logic;
-      sel_man  :  in  std_logic;
-      clk      :  out std_logic);
+	port(
+		clk_50   :  in  std_logic;
+		clk_man  :  in  std_logic;
+		sel_man  :  in  std_logic;
+		clk      :  out std_logic;
+		clk_display : OUT std_logic
+		);
 	end component;
 
 ------------------------------------------------------------------------
@@ -93,10 +95,10 @@ architecture struct of vending_machine is
 		release_can : IN std_logic;
 		alarm : IN std_logic;
 		clk : IN std_logic;
+		clk_display : IN std_logic;
 		reset : IN std_logic;          
 		seven_segment : OUT std_logic_vector(7 downto 0);
-		digit_select : OUT std_logic_vector(3 downto 0);
-		clk_2 : OUT std_logic
+		digit_select : OUT std_logic_vector(3 downto 0)
 		);
 	END COMPONENT;
 
@@ -108,7 +110,9 @@ begin  -- struct
       clk_50  => clk_50,
       clk_man => clk_man,
       sel_man => sel_man,
-      clk => clk);
+      clk => clk,
+		clk_display => clk_display_var
+	);
 
 ------------------------------------------------------------------------
 -- Complete the remaining three component instantiations
@@ -149,12 +153,12 @@ begin  -- struct
 		release_can => release_can_var,
 		alarm => alarm_var,
 		clk => clk,
-		clk_2 => clk_2,
+		clk_display => clk_display_var,
 		reset => sync_reset
 	);
 	
 	alarm <= alarm_var;
-	
+	clk_display <= clk_display_var;
 	release_can <= release_can_var;
 
 ------------------------------------------------------------------------

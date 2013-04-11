@@ -5,7 +5,7 @@ use ieee.std_logic_unsigned.all;
 entity display_text is
 	port(
 		clk : in std_logic;
-		clk_2 : out std_logic;
+		clk_display : in std_logic;
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
 		reset : in std_logic;
@@ -31,14 +31,9 @@ architecture Behavioral of display_text is
 	constant A : std_logic_vector(3 downto 0) := "0100";
 	constant E : std_logic_vector(3 downto 0) := "0101";
 	constant r : std_logic_vector(3 downto 0) := "0110";
-	
-	signal count_present, count_next: std_logic_vector(24 downto 0);
-	signal clk_2_signal : std_logic;
 
 begin
 	selector_next <= selector + 1;
-	count_next <= count_present + 1;
-	clk_2 <= clk_2_signal;
 	
 	process(clk)
 	begin		
@@ -51,19 +46,7 @@ begin
 		end if;		
 	end process;
 	
-	process(clk,count_present)
-	begin		
-		if rising_edge(clk) then
-			if count_present >= 100 then -- Generate 3.81 Hz signal				
-				clk_2_signal <= not clk_2_signal;				
-				count_present <= (others=>'0');
-			else
-				count_present <= count_next;
-			end if;		
-		end if;
-	end process;
-	
-	process(clk_2_signal,reset,release_can,alarm)
+	process(clk_display,reset,release_can,alarm)
 	begin
 		if reset = '1' then
 			current_state <= state0;
@@ -71,7 +54,7 @@ begin
 			current_state <= errorState;
 		elsif release_can = '0' then
 			current_state <= state0;
-		elsif rising_edge(clk_2_signal) then
+		elsif rising_edge(clk_display) then
 			current_state <= next_state;
 		end if;
 	end process;

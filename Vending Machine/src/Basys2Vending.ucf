@@ -30,7 +30,7 @@ NET "alarm" LOC = "G1" ; # Bank = 3, Signal name = LD7
 #NET "Led<4>" LOC = "N5" ;  # Bank = 2, Signal name = LD4
 #NET "Led<3>" LOC = "P6" ; # Bank = 2, Signal name = LD3
 #NET "z2" LOC = "P7" ; # Bank = 3, Signal name = LD2
-NET "clk_2" LOC = "M11" ; # Bank = 2, Signal name = LD1
+NET "clk_display" LOC = "M11" ; # Bank = 2, Signal name = LD1
 NET "release_can" LOC = "M5" ;  # Bank = 2, Signal name = LD0
 
 # Pin assignment for SWs

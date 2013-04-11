@@ -11,7 +11,7 @@ entity display_manager is
 		release_can : in std_logic;
 		alarm : in std_logic;
 		clk : in std_logic;
-		clk_2 : out std_logic;
+		clk_display : in std_logic;
 		reset : in std_logic
 	);
 end display_manager;
@@ -30,7 +30,7 @@ architecture Behavioral of display_manager is
 	COMPONENT display_text
 	PORT(
 		clk : IN std_logic;
-		clk_2 : OUT std_logic;
+		clk_display : in std_logic;
 		seven_segment : OUT std_logic_vector(7 downto 0);
 		digit_select : OUT std_logic_vector(3 downto 0);
 		reset : IN std_logic;
@@ -60,7 +60,7 @@ begin
 
 	Inst_display_text: display_text PORT MAP(
 		clk => clk,
-		clk_2 => clk_2,
+		clk_display => clk_display,
 		seven_segment => seven_segment_text,
 		digit_select => digit_select_text,
 		reset => reset,
