@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.23 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: vending_machine.prj
 
@@ -104,14 +104,17 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" in Library work.
+Architecture decoder of Entity display_10base is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd" in Library work.
 Architecture structure of Entity clock_manager is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/input_sync.vhd" in Library work.
 Architecture behavioral of Entity input_sync is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" in Library work.
-Architecture decoder of Entity display_10base is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/vending_machine_cpu.vhd" in Library work.
 Architecture behavioral of Entity vending_machine_cpu is up to date.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_manager.vhd" in Library work.
+Entity <display_manager> compiled.
+Entity <display_manager> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd" in Library work.
 Architecture struct of Entity vending_machine is up to date.
 
@@ -124,9 +127,11 @@ Analyzing hierarchy for entity <clock_manager> in library <work> (architecture <
 
 Analyzing hierarchy for entity <input_sync> in library <work> (architecture <behavioral>).
 
-Analyzing hierarchy for entity <display_10base> in library <work> (architecture <decoder>).
-
 Analyzing hierarchy for entity <vending_machine_cpu> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <display_manager> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <display_10base> in library <work> (architecture <decoder>).
 
 
 =========================================================================
@@ -142,17 +147,20 @@ Entity <clock_manager> analyzed. Unit <clock_manager> generated.
 Analyzing Entity <input_sync> in library <work> (Architecture <behavioral>).
 Entity <input_sync> analyzed. Unit <input_sync> generated.
 
-Analyzing Entity <display_10base> in library <work> (Architecture <decoder>).
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 46: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 49: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 52: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 64: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 67: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 70: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-Entity <display_10base> analyzed. Unit <display_10base> generated.
-
 Analyzing Entity <vending_machine_cpu> in library <work> (Architecture <behavioral>).
 Entity <vending_machine_cpu> analyzed. Unit <vending_machine_cpu> generated.
+
+Analyzing Entity <display_manager> in library <work> (Architecture <behavioral>).
+Entity <display_manager> analyzed. Unit <display_manager> generated.
+
+Analyzing Entity <display_10base> in library <work> (Architecture <decoder>).
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 47: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 50: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 53: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 65: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 68: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd" line 71: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+Entity <display_10base> analyzed. Unit <display_10base> generated.
 
 
 =========================================================================
@@ -179,31 +187,6 @@ Synthesizing Unit <input_sync>.
     Summary:
 	inferred   9 D-type flip-flop(s).
 Unit <input_sync> synthesized.
-
-
-Synthesizing Unit <display_10base>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd".
-    Found 16x8-bit ROM for signal <seven_segment>.
-    Found 1-of-4 decoder for signal <digit_select>.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0000> created at line 44.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0001> created at line 46.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0002> created at line 49.
-    Found 4-bit subtractor for signal <coin_low$share0000> created at line 44.
-    Found 4-bit 4-to-1 multiplexer for signal <digit_temp>.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0000> created at line 62.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0001> created at line 64.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0002> created at line 67.
-    Found 4-bit subtractor for signal <price_low$share0000> created at line 62.
-    Found 2-bit up counter for signal <selector>.
-    Found 2-bit comparator less for signal <selector$cmp_lt0000> created at line 100.
-    Summary:
-	inferred   1 ROM(s).
-	inferred   1 Counter(s).
-	inferred   2 Adder/Subtractor(s).
-	inferred   7 Comparator(s).
-	inferred   4 Multiplexer(s).
-	inferred   1 Decoder(s).
-Unit <display_10base> synthesized.
 
 
 Synthesizing Unit <vending_machine_cpu>.
@@ -234,6 +217,40 @@ Synthesizing Unit <vending_machine_cpu>.
 	inferred   1 Adder/Subtractor(s).
 	inferred   2 Comparator(s).
 Unit <vending_machine_cpu> synthesized.
+
+
+Synthesizing Unit <display_10base>.
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_10base.vhd".
+    Found 16x8-bit ROM for signal <seven_segment>.
+    Found 1-of-4 decoder for signal <digit_select>.
+    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0000> created at line 45.
+    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0001> created at line 47.
+    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0002> created at line 50.
+    Found 4-bit subtractor for signal <coin_low$share0000> created at line 45.
+    Found 4-bit 4-to-1 multiplexer for signal <digit_temp>.
+    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0000> created at line 63.
+    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0001> created at line 65.
+    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0002> created at line 68.
+    Found 4-bit subtractor for signal <price_low$share0000> created at line 63.
+    Found 2-bit up counter for signal <selector>.
+    Found 2-bit comparator less for signal <selector$cmp_lt0000> created at line 101.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   1 Counter(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   7 Comparator(s).
+	inferred   4 Multiplexer(s).
+	inferred   1 Decoder(s).
+Unit <display_10base> synthesized.
+
+
+Synthesizing Unit <display_manager>.
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/xilinx/vending_machine/display_manager.vhd".
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:1305 - Output <clk_2> is never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <seven_segment_text> is used but never assigned. This sourceless signal will be automatically connected to value 00000000.
+WARNING:Xst:653 - Signal <digit_select_text> is used but never assigned. This sourceless signal will be automatically connected to value 0000.
+Unit <display_manager> synthesized.
 
 
 Synthesizing Unit <vending_machine>.
@@ -324,9 +341,9 @@ Optimizing unit <vending_machine> ...
 
 Optimizing unit <input_sync> ...
 
-Optimizing unit <display_10base> ...
-
 Optimizing unit <vending_machine_cpu> ...
+
+Optimizing unit <display_10base> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -365,7 +382,7 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 26
+# IOs                              : 27
 
 Cell Usage :
 # BELS                             : 137
@@ -393,9 +410,9 @@ Cell Usage :
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 25
+# IO Buffers                       : 26
 #      IBUF                        : 11
-#      OBUF                        : 14
+#      OBUF                        : 15
 =========================================================================
 
 Device utilization summary:
@@ -406,8 +423,8 @@ Selected Device : 3s100ecp132-5
  Number of Slices:                       44  out of    960     4%  
  Number of Slice Flip Flops:             38  out of   1920     1%  
  Number of 4 input LUTs:                 85  out of   1920     4%  
- Number of IOs:                          26
- Number of bonded IOBs:                  26  out of     83    31%  
+ Number of IOs:                          27
+ Number of bonded IOBs:                  27  out of     83    32%  
  Number of GCLKs:                         2  out of     24     8%  
 
 ---------------------------
@@ -553,11 +570,11 @@ Offset:              9.270ns (Levels of Logic = 6)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              10   0.514   0.902  Inst_input_sync/price_3 (Inst_input_sync/price_3)
-     LUT4:I0->O            1   0.612   0.387  Inst_display_10base/digit1<0>1 (Inst_display_10base/digit1<0>)
-     LUT3:I2->O            1   0.612   0.000  Inst_display_10base/Mmux_digit_temp_4 (Inst_display_10base/Mmux_digit_temp_4)
-     MUXF5:I0->O           9   0.278   0.766  Inst_display_10base/Mmux_digit_temp_2_f5 (Inst_display_10base/digit_temp<0>)
-     LUT4:I1->O            2   0.612   0.449  Inst_display_10base/seven_segment<3>11 (Inst_display_10base/seven_segment<3>_bdd0)
-     LUT3:I1->O            1   0.612   0.357  Inst_display_10base/seven_segment<3>2 (seven_segment_3_OBUF)
+     LUT4:I0->O            1   0.612   0.387  Inst_display_manager/Inst_display_10base/digit1<0>1 (Inst_display_manager/Inst_display_10base/digit1<0>)
+     LUT3:I2->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Mmux_digit_temp_4 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp_4)
+     MUXF5:I0->O           9   0.278   0.766  Inst_display_manager/Inst_display_10base/Mmux_digit_temp_2_f5 (Inst_display_manager/Inst_display_10base/digit_temp<0>)
+     LUT4:I1->O            2   0.612   0.449  Inst_display_manager/Inst_display_10base/seven_segment<3>11 (Inst_display_manager/Inst_display_10base/seven_segment<3>_bdd0)
+     LUT3:I1->O            1   0.612   0.357  Inst_display_manager/Inst_display_10base/seven_segment<3>2 (seven_segment_3_OBUF)
      OBUF:I->O                 3.169          seven_segment_3_OBUF (seven_segment<3>)
     ----------------------------------------
     Total                      9.270ns (6.409ns logic, 2.861ns route)
@@ -566,14 +583,14 @@ Offset:              9.270ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.01 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 7.88 secs
  
 --> 
 
 Total memory usage is 254348 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    6 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

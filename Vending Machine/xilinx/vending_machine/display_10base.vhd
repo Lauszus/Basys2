@@ -3,12 +3,13 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
 entity display_10base is
-port (
-	price : in std_logic_vector(4 downto 0);
-	coin_sum: in std_logic_vector(4 downto 0);
-	seven_segment : out std_logic_vector (7 downto 0);
-	digit_select : out std_logic_vector(3 downto 0);
-	clk : in std_logic);
+	port (
+		price : in std_logic_vector(4 downto 0);
+		coin_sum: in std_logic_vector(4 downto 0);
+		seven_segment : out std_logic_vector (7 downto 0);
+		digit_select : out std_logic_vector(3 downto 0);
+		clk : in std_logic
+	);
 end display_10base;
 
 architecture decoder of display_10base is

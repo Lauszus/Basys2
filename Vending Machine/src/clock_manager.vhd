@@ -13,7 +13,8 @@ entity clock_manager is
 	port(clk_50    : in  std_logic;   -- 50Mhz clock signal from board
        clk_man   : in  std_logic;   -- Manual clock signal
        sel_man   : in  std_logic;   -- Select signal between 762 Hz clock and manual clock
-       clk       : out std_logic);  -- Output signal from clock
+       clk       : out std_logic  -- Output signal from clock, 762 Hz
+	);
 end clock_manager;
 
 architecture structure of clock_manager is
@@ -26,12 +27,11 @@ begin
   
   process(sel_man, clk_man, count_present)
   begin
-    if  sel_man = '1' then
-      clk <=  clk_man;
+    if sel_man = '1' then
+      clk <= clk_man;
     else
-      clk <=  count_present(15);
+      clk <= count_present(15);
     end if;
-         
   end process;
     
   process(clk_50, count_present)

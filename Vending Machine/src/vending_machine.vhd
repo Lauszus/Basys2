@@ -19,6 +19,7 @@ entity vending_machine is
     coin5         : in  std_logic;
     buy           : in  std_logic;
     price         : in  std_logic_vector(4 downto 0);
+	 clk_2			: out std_logic; -- 2 Hz signal
     release_can   : out std_logic;
     alarm         : out std_logic;
     seven_segment : out std_logic_vector(7 downto 0);
@@ -34,6 +35,8 @@ architecture struct of vending_machine is
 	signal sync_buy       : std_logic;
 	signal sum            : std_logic_vector(4 downto 0);
 	signal internal_price : std_logic_vector(4 downto 0);
+	
+	signal release_can_var : std_logic;
 
 ------------------------------------------------------------------------
 -- Clock divider component declaration
@@ -65,17 +68,7 @@ architecture struct of vending_machine is
 		buy : OUT std_logic;
 		price : OUT std_logic_vector(4 downto 0)
 		);
-	END COMPONENT;
-	
-	component display_10base
-	port(
-		price : in std_logic_vector(4 downto 0);
-		coin_sum : in std_logic_vector(4 downto 0);
-		clk : in std_logic;          
-		seven_segment : out std_logic_vector(7 downto 0);
-		digit_select : out std_logic_vector(3 downto 0)
-		);
-	end component;
+	END COMPONENT;	
 	
 	COMPONENT vending_machine_cpu
 	PORT(
@@ -84,10 +77,23 @@ architecture struct of vending_machine is
 		coin2 : IN std_logic;
 		coin5 : IN std_logic;
 		buy : IN std_logic;
-		price : IN std_logic_vector(4 downto 0);          
+		price : IN std_logic_vector(4 downto 0);
 		sum : OUT std_logic_vector(4 downto 0);
 		release_can : OUT std_logic;
 		alarm : OUT std_logic
+		);
+	END COMPONENT;
+	
+	COMPONENT display_manager
+	PORT(
+		price : IN std_logic_vector(4 downto 0);
+		coin_sum : IN std_logic_vector(4 downto 0);
+		release_can : IN std_logic;
+		clk : IN std_logic;
+		reset : IN std_logic;          
+		seven_segment : OUT std_logic_vector(7 downto 0);
+		digit_select : OUT std_logic_vector(3 downto 0);
+		clk_2 : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -119,13 +125,6 @@ begin  -- struct
 		price => internal_price
 	);
 		
-	Inst_display_10base: display_10base port map (
-		price => internal_price,
-		coin_sum => sum,
-		seven_segment => seven_segment,
-		digit_select => digit_select,
-		clk => clk);
-		
 	Inst_vending_machine_cpu: vending_machine_cpu PORT MAP(
 		clk => clk,
 		reset => sync_reset,
@@ -134,9 +133,22 @@ begin  -- struct
 		buy => sync_buy,
 		price => internal_price,
 		sum => sum,
-		release_can => release_can,
+		release_can => release_can_var,
 		alarm => alarm
 	);
+	
+	Inst_display_manager: display_manager PORT MAP(
+		price => internal_price,
+		coin_sum => sum,
+		seven_segment => seven_segment,
+		digit_select => digit_select,
+		release_can => '0',
+		clk => clk,
+		clk_2 => clk_2,
+		reset => sync_reset
+	);
+	
+	release_can <= release_can_var;
 
 ------------------------------------------------------------------------
 end struct;

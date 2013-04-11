@@ -74,7 +74,7 @@ begin
 			elsif next_state = default_state then
 				release_can <= '0';
 				alarm <= '0';
-			end if;
+			end if;			
 			current_state <= next_state;
 		end if;		
 	end process;

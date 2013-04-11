@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.40xd on Thu Apr 04 15:12:57 2013
+// Written by: Map P.40xd on Thu Apr 04 17:39:35 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -28,6 +28,7 @@ COMP "sel_man" LOCATE = SITE "N3" LEVEL 1;
 COMP "digit_select<0>" LOCATE = SITE "F12" LEVEL 1;
 COMP "seven_segment<5>" LOCATE = SITE "L13" LEVEL 1;
 COMP "digit_select<1>" LOCATE = SITE "J12" LEVEL 1;
+COMP "clk_2" LOCATE = SITE "M11" LEVEL 1;
 COMP "seven_segment<6>" LOCATE = SITE "M12" LEVEL 1;
 COMP "digit_select<2>" LOCATE = SITE "M13" LEVEL 1;
 COMP "seven_segment<7>" LOCATE = SITE "N13" LEVEL 1;
