@@ -19,23 +19,23 @@ architecture Behavioral of display_manager is
 	port(
 		price : in std_logic_vector(4 downto 0);
 		coin_sum : in std_logic_vector(4 downto 0);
-		clk : in std_logic;          
+		clk : in std_logic;
 		seven_segment : out std_logic_vector(7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0)
 		);
 	end component;
 	
-	COMPONENT display_text
-	PORT(
-		clk : IN std_logic;
-		reset : IN std_logic;
-		release_can : IN std_logic;
-		flavor : IN std_logic;          
-		clk_2 : OUT std_logic;
-		seven_segment : OUT std_logic_vector(7 downto 0);
-		digit_select : OUT std_logic_vector(3 downto 0)
-		);
-	END COMPONENT;
+--	COMPONENT display_text
+--	PORT(
+--		clk : IN std_logic;
+--		reset : IN std_logic;
+--		release_can : IN std_logic;
+--		flavor : IN std_logic;
+--		clk_2 : OUT std_logic;
+--		seven_segment : OUT std_logic_vector(7 downto 0);
+--		digit_select : OUT std_logic_vector(3 downto 0)
+--		);
+--	END COMPONENT;
 	
 	signal seven_segment_temp, seven_segment_text, seven_segment_10base : std_logic_vector (7 downto 0);
 	signal digit_select_temp, digit_select_text, digit_select_10base : std_logic_vector(3 downto 0);

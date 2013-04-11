@@ -59,7 +59,7 @@ begin
 		if reset = '1' then
 			current_state <= default_state;
 			sum_val <= (others=>'0');
-		elsif rising_edge(clk) then
+		elsif rising_edge(clk) then			
 			if next_state = coin2_state and current_state /= coin2_state then
 				sum_val <= sum_val + 2;
 			elsif next_state = coin5_state and current_state /= coin5_state then
@@ -74,7 +74,8 @@ begin
 			elsif next_state = default_state then
 				release_can <= '0';
 				alarm <= '0';
-			end if;			
+			end if;
+			
 			current_state <= next_state;
 		end if;		
 	end process;

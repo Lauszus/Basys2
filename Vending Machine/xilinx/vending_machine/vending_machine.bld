@@ -28,7 +28,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 147972 kilobytes
+Total memory usage is 147140 kilobytes
 
 Writing NGD file "vending_machine.ngd" ...
 Total REAL time to NGDBUILD completion:  4 sec
