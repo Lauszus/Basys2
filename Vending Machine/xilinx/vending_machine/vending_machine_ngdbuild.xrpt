@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="NgdBuild" timeStamp="Thu Apr 11 18:20:53 2013">
+  <application stringID="NgdBuild" timeStamp="Thu Apr 11 18:36:57 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -54,7 +54,7 @@
         <item DEFAULT="None" label="-intstyle" stringID="NGDBUILD_intstyle" value="ise"/>
         <item DEFAULT="None" label="-dd" stringID="NGDBUILD_output_dir" value="_ngo"/>
         <item DEFAULT="None" label="-p" stringID="NGDBUILD_partname" value="xc3s100e-cp132-5"/>
-        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="Basys2Vending.ucf"/>
+        <item DEFAULT="None" label="-uc" stringID="NGDBUILD_ucf_file" value="C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/Basys2Vending.ucf"/>
       </section>
     </task>
     <task stringID="NGDBUILD_REPORT">

@@ -19,7 +19,7 @@ entity vending_machine is
     coin5         : in  std_logic;
     buy           : in  std_logic;
     price         : in  std_logic_vector(4 downto 0);
-	 clk_2			: out std_logic; -- 2 Hz signal
+	 clk_2			: out std_logic;
     release_can   : out std_logic;
     alarm         : out std_logic;
     seven_segment : out std_logic_vector(7 downto 0);

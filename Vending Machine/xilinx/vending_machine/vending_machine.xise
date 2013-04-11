@@ -27,9 +27,6 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="8"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
-    <file xil_pn:name="Basys2Vending.ucf" xil_pn:type="FILE_UCF">
-      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
-    </file>
     <file xil_pn:name="../../src/display_10base.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="175"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
@@ -53,6 +50,9 @@
     <file xil_pn:name="../../src/vending_machine_cpu.vhd" xil_pn:type="FILE_VHDL">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="180"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="3"/>
+    </file>
+    <file xil_pn:name="../../src/Basys2Vending.ucf" xil_pn:type="FILE_UCF">
+      <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
   </files>
 
@@ -354,7 +354,7 @@
   </properties>
 
   <bindings>
-    <binding xil_pn:location="/vending_machine" xil_pn:name="Basys2Vending.ucf"/>
+    <binding xil_pn:location="/vending_machine" xil_pn:name="../../src/Basys2Vending.ucf"/>
   </bindings>
 
   <libraries/>

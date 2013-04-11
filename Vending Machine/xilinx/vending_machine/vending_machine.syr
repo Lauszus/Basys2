@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: vending_machine.prj
 
@@ -105,8 +105,7 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_text.vhd" in Library work.
-Entity <display_text> compiled.
-Entity <display_text> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity display_text is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" in Library work.
 Architecture decoder of Entity display_10base is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd" in Library work.
@@ -118,7 +117,8 @@ Architecture behavioral of Entity vending_machine_cpu is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_manager.vhd" in Library work.
 Architecture behavioral of Entity display_manager is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd" in Library work.
-Architecture struct of Entity vending_machine is up to date.
+Entity <vending_machine> compiled.
+Entity <vending_machine> (Architecture <struct>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -691,11 +691,11 @@ Offset:              9.061ns (Levels of Logic = 6)
 
 
 Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.55 secs
+Total CPU time to Xst completion: 8.84 secs
  
 --> 
 
-Total memory usage is 258316 kilobytes
+Total memory usage is 258124 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    7 (   0 filtered)
