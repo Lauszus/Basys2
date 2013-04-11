@@ -1,3 +1,4 @@
+vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\display_text.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\display_10base.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\vending_machine_cpu.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\src\input_sync.vhd"

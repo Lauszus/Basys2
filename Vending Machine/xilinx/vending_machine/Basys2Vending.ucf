@@ -24,8 +24,8 @@ NET "digit_select<1>" LOC = "J12"; # Bank = 1, Signal name = AN1
 NET "digit_select<0>" LOC = "F12"; # Bank = 1, Signal name = AN0
 
 # Pin assignment for LEDs
-NET "alarm" LOC = "G1" ; # Bank = 3, Signal name = LD7
-#NET "Led<6>" LOC = "P4" ; # Bank = 2, Signal name = LD6
+#NET "alarm" LOC = "G1" ; # Bank = 3, Signal name = LD7
+NET "alarm" LOC = "P4" ; # Bank = 2, Signal name = LD6
 #NET "Led<5>" LOC = "N4" ;  # Bank = 2, Signal name = LD5
 #NET "Led<4>" LOC = "N5" ;  # Bank = 2, Signal name = LD4
 #NET "Led<3>" LOC = "P6" ; # Bank = 2, Signal name = LD3

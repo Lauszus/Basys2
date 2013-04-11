@@ -7,7 +7,9 @@ entity display_manager is
 		coin_sum: in std_logic_vector(4 downto 0);
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
+		buy : in std_logic;
 		release_can : in std_logic;
+		alarm : in std_logic;
 		clk : in std_logic;
 		clk_2 : out std_logic;
 		reset : in std_logic
@@ -25,48 +27,47 @@ architecture Behavioral of display_manager is
 		);
 	end component;
 	
---	COMPONENT display_text
---	PORT(
---		clk : IN std_logic;
---		reset : IN std_logic;
---		release_can : IN std_logic;
---		flavor : IN std_logic;
---		clk_2 : OUT std_logic;
---		seven_segment : OUT std_logic_vector(7 downto 0);
---		digit_select : OUT std_logic_vector(3 downto 0)
---		);
---	END COMPONENT;
+	COMPONENT display_text
+	PORT(
+		clk : IN std_logic;
+		clk_2 : OUT std_logic;
+		seven_segment : OUT std_logic_vector(7 downto 0);
+		digit_select : OUT std_logic_vector(3 downto 0);
+		reset : IN std_logic;
+		release_can : IN std_logic;
+		alarm : IN std_logic;
+		flavor : IN std_logic
+		);
+	END COMPONENT;
 	
 	signal seven_segment_temp, seven_segment_text, seven_segment_10base : std_logic_vector (7 downto 0);
-	signal digit_select_temp, digit_select_text, digit_select_10base : std_logic_vector(3 downto 0);
-	
+	signal digit_select_temp, digit_select_text, digit_select_10base : std_logic_vector(3 downto 0);	
 
 begin
 	seven_segment <= seven_segment_temp;
 	digit_select <= digit_select_temp;
 
-	process(release_can,seven_segment_text,digit_select_text,seven_segment_10base,digit_select_10base)
+	process(buy,seven_segment_text,digit_select_text,seven_segment_10base,digit_select_10base)
 	begin
-		--if rising_edge(clk) then
-			if release_can = '1' then
-				seven_segment_temp <= seven_segment_text;
-				digit_select_temp <= digit_select_text;
-			else
-				seven_segment_temp <= seven_segment_10base;
-				digit_select_temp <= digit_select_10base;
-			end if;
-		--end if;
+		if buy = '1' then
+			seven_segment_temp <= seven_segment_text;
+			digit_select_temp <= digit_select_text;
+		else
+			seven_segment_temp <= seven_segment_10base;
+			digit_select_temp <= digit_select_10base;
+		end if;
 	end process;
 
---	Inst_display_text: display_text PORT MAP(
---		clk => clk,
---		clk_2 => clk_2,
---		seven_segment => seven_segment_text,
---		digit_select => digit_select_text,
---		reset => reset,
---		release_can => release_can,
---		flavor => '0'
---	);
+	Inst_display_text: display_text PORT MAP(
+		clk => clk,
+		clk_2 => clk_2,
+		seven_segment => seven_segment_text,
+		digit_select => digit_select_text,
+		reset => reset,
+		release_can => release_can,
+		alarm => alarm,
+		flavor => price(0) -- Determine flavor based on if it's an equal or unequal number
+	);
 	
 	Inst_display_10base: display_10base port map (
 		price => price,
@@ -76,4 +77,3 @@ begin
 		clk => clk);
 
 end Behavioral;
-

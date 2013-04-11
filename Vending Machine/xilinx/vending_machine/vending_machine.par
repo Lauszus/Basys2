@@ -1,7 +1,7 @@
 Release 14.3 par P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-LAUSZUS-PC::  Thu Apr 11 16:38:54 2013
+LAUSZUS-PC::  Thu Apr 11 18:21:01 2013
 
 par -w -intstyle ise -ol high -t 1 vending_machine_map.ncd vending_machine.ncd
 vending_machine.pcf 
@@ -43,7 +43,7 @@ Design Summary Report:
 
 
    Number of BUFGMUXs                        2 out of 24      8%
-   Number of Slices                         52 out of 960     5%
+   Number of Slices                         92 out of 960     9%
       Number of SLICEMs                      0 out of 480     0%
 
 
@@ -62,37 +62,37 @@ Total REAL time at the beginning of Placer: 1 secs
 Total CPU  time at the beginning of Placer: 1 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d55e6490) REAL time: 1 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:91dcd944) REAL time: 1 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:d55e6490) REAL time: 1 secs 
+Phase 2.7  Design Feasibility Check (Checksum:91dcd944) REAL time: 1 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d55e6490) REAL time: 1 secs 
+Phase 3.31  Local Placement Optimization (Checksum:91dcd944) REAL time: 1 secs 
 
 Phase 4.2  Initial Clock and IO Placement
 
-Phase 4.2  Initial Clock and IO Placement (Checksum:dc2d1918) REAL time: 1 secs 
+Phase 4.2  Initial Clock and IO Placement (Checksum:96cd247c) REAL time: 1 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:dc2d1918) REAL time: 1 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:96cd247c) REAL time: 1 secs 
 
 Phase 6.36  Local Placement Optimization
-Phase 6.36  Local Placement Optimization (Checksum:dc2d1918) REAL time: 1 secs 
+Phase 6.36  Local Placement Optimization (Checksum:96cd247c) REAL time: 1 secs 
 
 Phase 7.8  Global Placement
+...
 ..
-..
-Phase 7.8  Global Placement (Checksum:30872f60) REAL time: 3 secs 
+Phase 7.8  Global Placement (Checksum:3085b51e) REAL time: 3 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:30872f60) REAL time: 3 secs 
+Phase 8.5  Local Placement Optimization (Checksum:3085b51e) REAL time: 3 secs 
 
 Phase 9.18  Placement Optimization
-Phase 9.18  Placement Optimization (Checksum:30cda1c1) REAL time: 3 secs 
+Phase 9.18  Placement Optimization (Checksum:309b49c1) REAL time: 3 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:30cda1c1) REAL time: 3 secs 
+Phase 10.5  Local Placement Optimization (Checksum:309b49c1) REAL time: 3 secs 
 
 Total REAL time to Placer completion: 3 secs 
 Total CPU  time to Placer completion: 3 secs 
@@ -103,13 +103,13 @@ Writing design to file vending_machine.ncd
 Starting Router
 
 
-Phase  1  : 340 unrouted;      REAL time: 5 secs 
+Phase  1  : 587 unrouted;      REAL time: 5 secs 
 
-Phase  2  : 315 unrouted;      REAL time: 5 secs 
+Phase  2  : 541 unrouted;      REAL time: 5 secs 
 
-Phase  3  : 81 unrouted;      REAL time: 5 secs 
+Phase  3  : 107 unrouted;      REAL time: 5 secs 
 
-Phase  4  : 97 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
+Phase  4  : 123 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
 Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
@@ -117,22 +117,24 @@ Updating file: vending_machine.ncd with current fully routed design.
 
 Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 5 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
 Updating file: vending_machine.ncd with current fully routed design.
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase 10  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase 11  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
 
-Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 6 secs 
+Phase 12  : 0 unrouted; (Par is working to improve performance)     REAL time: 7 secs 
+WARNING:Route:455 - CLK Net:Inst_display_manager/Inst_display_text/clk_2_signal may have excessive skew because 
+      0 CLK pins and 2 NON_CLK pins failed to route using a CLK template.
 
-Total REAL time to Router completion: 6 secs 
-Total CPU time to Router completion: 6 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -150,9 +152,13 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|                 clk | BUFGMUX_X1Y10| No   |   16 |  0.015     |  0.054      |
+|        clk_50_BUFGP | BUFGMUX_X2Y11| No   |    8 |  0.008     |  0.045      |
 +---------------------+--------------+------+------+------------+-------------+
-|        clk_50_BUFGP | BUFGMUX_X2Y11| No   |    8 |  0.008     |  0.064      |
+|                 clk | BUFGMUX_X1Y10| No   |   31 |  0.019     |  0.057      |
++---------------------+--------------+------+------+------------+-------------+
+|Inst_display_manager |              |      |      |            |             |
+|/Inst_display_text/c |              |      |      |            |             |
+|         lk_2_signal |         Local|      |    8 |  0.087     |  1.463      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -172,11 +178,15 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     6.075ns|     N/A|           0
-                                            | HOLD        |     1.204ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.374ns|     N/A|           0
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     3.345ns|     N/A|           0
   _50_BUFGP                                 | HOLD        |     1.360ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net clk | SETUP       |         N/A|     5.927ns|     N/A|           0
+                                            | HOLD        |     0.892ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  Autotimespec constraint for clock net Ins | SETUP       |         N/A|     2.718ns|     N/A|           0
+  t_display_manager/Inst_display_text/clk_2 | HOLD        |     1.206ns|            |       0|           0
+  _signal                                   |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -192,16 +202,16 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 6 secs 
-Total CPU time to PAR completion: 6 secs 
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
 
-Peak Memory Usage:  244 MB
+Peak Memory Usage:  246 MB
 
 Placement: Completed - No errors found.
 Routing: Completed - No errors found.
 
 Number of error messages: 0
-Number of warning messages: 0
+Number of warning messages: 1
 Number of info messages: 1
 
 Writing design to file vending_machine.ncd

@@ -1,11 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.40xd on Thu Apr 11 16:40:38 2013
+// Written by: Map P.40xd on Thu Apr 11 18:20:58 2013
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "price<0>" LOCATE = SITE "P11" LEVEL 1;
 COMP "price<1>" LOCATE = SITE "L3" LEVEL 1;
-COMP "alarm" LOCATE = SITE "G1" LEVEL 1;
+COMP "alarm" LOCATE = SITE "P4" LEVEL 1;
 COMP "price<2>" LOCATE = SITE "K3" LEVEL 1;
 COMP "price<3>" LOCATE = SITE "B4" LEVEL 1;
 COMP "price<4>" LOCATE = SITE "G3" LEVEL 1;

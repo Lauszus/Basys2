@@ -1,3 +1,4 @@
+vhdl work "../../src/display_text.vhd"
 vhdl work "../../src/display_10base.vhd"
 vhdl work "../../src/vending_machine_cpu.vhd"
 vhdl work "../../src/input_sync.vhd"

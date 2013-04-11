@@ -37,6 +37,7 @@ architecture struct of vending_machine is
 	signal internal_price : std_logic_vector(4 downto 0);
 	
 	signal release_can_var : std_logic;
+	signal alarm_var : std_logic;
 
 ------------------------------------------------------------------------
 -- Clock divider component declaration
@@ -88,7 +89,9 @@ architecture struct of vending_machine is
 	PORT(
 		price : IN std_logic_vector(4 downto 0);
 		coin_sum : IN std_logic_vector(4 downto 0);
+		buy : IN std_logic;
 		release_can : IN std_logic;
+		alarm : IN std_logic;
 		clk : IN std_logic;
 		reset : IN std_logic;          
 		seven_segment : OUT std_logic_vector(7 downto 0);
@@ -134,7 +137,7 @@ begin  -- struct
 		price => internal_price,
 		sum => sum,
 		release_can => release_can_var,
-		alarm => alarm
+		alarm => alarm_var
 	);
 	
 	Inst_display_manager: display_manager PORT MAP(
@@ -142,11 +145,15 @@ begin  -- struct
 		coin_sum => sum,
 		seven_segment => seven_segment,
 		digit_select => digit_select,
-		release_can => '0',
+		buy => sync_buy,
+		release_can => release_can_var,
+		alarm => alarm_var,
 		clk => clk,
 		clk_2 => clk_2,
 		reset => sync_reset
 	);
+	
+	alarm <= alarm_var;
 	
 	release_can <= release_can_var;
 
