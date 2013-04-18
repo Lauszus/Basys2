@@ -45,16 +45,16 @@ Setup/Hold to clock clk_man
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-buy         |   -1.218(R)|    2.817(R)|clk               |   0.000|
-coin2       |   -0.920(R)|    2.578(R)|clk               |   0.000|
-coin5       |   -1.169(R)|    2.777(R)|clk               |   0.000|
-price<0>    |    0.790(R)|    1.829(R)|clk               |   0.000|
-price<1>    |   -1.225(R)|    2.815(R)|clk               |   0.000|
-price<2>    |   -1.107(R)|    2.721(R)|clk               |   0.000|
-price<3>    |   -1.204(R)|    2.799(R)|clk               |   0.000|
-price<4>    |   -1.678(R)|    3.179(R)|clk               |   0.000|
-price<5>    |   -1.737(R)|    3.226(R)|clk               |   0.000|
-reset       |   -1.962(R)|    3.407(R)|clk               |   0.000|
+buy         |   -1.711(R)|    3.437(R)|clk               |   0.000|
+coin2       |   -1.662(R)|    3.397(R)|clk               |   0.000|
+coin5       |   -1.671(R)|    3.405(R)|clk               |   0.000|
+price<0>    |   -0.929(R)|    2.810(R)|clk               |   0.000|
+price<1>    |   -0.992(R)|    2.860(R)|clk               |   0.000|
+price<2>    |   -1.223(R)|    3.046(R)|clk               |   0.000|
+price<3>    |   -1.441(R)|    3.221(R)|clk               |   0.000|
+price<4>    |   -1.797(R)|    3.506(R)|clk               |   0.000|
+price<5>    |   -1.482(R)|    3.254(R)|clk               |   0.000|
+reset       |   -2.481(R)|    4.047(R)|clk               |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock sel_man
@@ -62,16 +62,16 @@ Setup/Hold to clock sel_man
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-buy         |   -1.682(R)|    3.397(R)|clk               |   0.000|
-coin2       |   -1.384(R)|    3.158(R)|clk               |   0.000|
-coin5       |   -1.633(R)|    3.357(R)|clk               |   0.000|
-price<0>    |    0.326(R)|    2.409(R)|clk               |   0.000|
-price<1>    |   -1.689(R)|    3.395(R)|clk               |   0.000|
-price<2>    |   -1.571(R)|    3.301(R)|clk               |   0.000|
-price<3>    |   -1.668(R)|    3.379(R)|clk               |   0.000|
-price<4>    |   -2.142(R)|    3.759(R)|clk               |   0.000|
-price<5>    |   -2.201(R)|    3.806(R)|clk               |   0.000|
-reset       |   -2.426(R)|    3.987(R)|clk               |   0.000|
+buy         |   -2.199(R)|    4.047(R)|clk               |   0.000|
+coin2       |   -2.150(R)|    4.007(R)|clk               |   0.000|
+coin5       |   -2.159(R)|    4.015(R)|clk               |   0.000|
+price<0>    |   -1.417(R)|    3.420(R)|clk               |   0.000|
+price<1>    |   -1.480(R)|    3.470(R)|clk               |   0.000|
+price<2>    |   -1.711(R)|    3.656(R)|clk               |   0.000|
+price<3>    |   -1.929(R)|    3.831(R)|clk               |   0.000|
+price<4>    |   -2.285(R)|    4.116(R)|clk               |   0.000|
+price<5>    |   -1.970(R)|    3.864(R)|clk               |   0.000|
+reset       |   -2.969(R)|    4.657(R)|clk               |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk_man to Pad
@@ -79,19 +79,19 @@ Clock clk_man to Pad
                 | clk (edge) |                  | Clock  |
 Destination     |   to PAD   |Internal Clock(s) | Phase  |
 ----------------+------------+------------------+--------+
-alarm           |   10.873(R)|clk               |   0.000|
-digit_select<0> |   11.908(R)|clk               |   0.000|
-digit_select<1> |   11.164(R)|clk               |   0.000|
-digit_select<2> |   11.868(R)|clk               |   0.000|
-digit_select<3> |   11.620(R)|clk               |   0.000|
-release_can     |   11.379(R)|clk               |   0.000|
-seven_segment<0>|   22.801(R)|clk               |   0.000|
-seven_segment<1>|   22.487(R)|clk               |   0.000|
-seven_segment<2>|   23.006(R)|clk               |   0.000|
-seven_segment<3>|   22.805(R)|clk               |   0.000|
-seven_segment<4>|   22.845(R)|clk               |   0.000|
-seven_segment<5>|   22.490(R)|clk               |   0.000|
-seven_segment<6>|   23.072(R)|clk               |   0.000|
+alarm           |   11.584(R)|clk               |   0.000|
+digit_select<0> |   13.969(R)|clk               |   0.000|
+digit_select<1> |   12.906(R)|clk               |   0.000|
+digit_select<2> |   13.335(R)|clk               |   0.000|
+digit_select<3> |   12.906(R)|clk               |   0.000|
+release_can     |   12.019(R)|clk               |   0.000|
+seven_segment<0>|   17.901(R)|clk               |   0.000|
+seven_segment<1>|   18.809(R)|clk               |   0.000|
+seven_segment<2>|   18.464(R)|clk               |   0.000|
+seven_segment<3>|   18.384(R)|clk               |   0.000|
+seven_segment<4>|   18.893(R)|clk               |   0.000|
+seven_segment<5>|   17.743(R)|clk               |   0.000|
+seven_segment<6>|   18.109(R)|clk               |   0.000|
 ----------------+------------+------------------+--------+
 
 Clock sel_man to Pad
@@ -99,19 +99,19 @@ Clock sel_man to Pad
                 | clk (edge) |                  | Clock  |
 Destination     |   to PAD   |Internal Clock(s) | Phase  |
 ----------------+------------+------------------+--------+
-alarm           |   11.453(R)|clk               |   0.000|
-digit_select<0> |   12.488(R)|clk               |   0.000|
-digit_select<1> |   11.744(R)|clk               |   0.000|
-digit_select<2> |   12.448(R)|clk               |   0.000|
-digit_select<3> |   12.200(R)|clk               |   0.000|
-release_can     |   11.959(R)|clk               |   0.000|
-seven_segment<0>|   23.381(R)|clk               |   0.000|
-seven_segment<1>|   23.067(R)|clk               |   0.000|
-seven_segment<2>|   23.586(R)|clk               |   0.000|
-seven_segment<3>|   23.385(R)|clk               |   0.000|
-seven_segment<4>|   23.425(R)|clk               |   0.000|
-seven_segment<5>|   23.070(R)|clk               |   0.000|
-seven_segment<6>|   23.652(R)|clk               |   0.000|
+alarm           |   12.194(R)|clk               |   0.000|
+digit_select<0> |   14.579(R)|clk               |   0.000|
+digit_select<1> |   13.516(R)|clk               |   0.000|
+digit_select<2> |   13.945(R)|clk               |   0.000|
+digit_select<3> |   13.516(R)|clk               |   0.000|
+release_can     |   12.629(R)|clk               |   0.000|
+seven_segment<0>|   18.511(R)|clk               |   0.000|
+seven_segment<1>|   19.419(R)|clk               |   0.000|
+seven_segment<2>|   19.074(R)|clk               |   0.000|
+seven_segment<3>|   18.994(R)|clk               |   0.000|
+seven_segment<4>|   19.503(R)|clk               |   0.000|
+seven_segment<5>|   18.353(R)|clk               |   0.000|
+seven_segment<6>|   18.719(R)|clk               |   0.000|
 ----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk_50
@@ -127,8 +127,8 @@ Clock to Setup on destination clock clk_man
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_man        |    9.261|         |         |         |
-sel_man        |    9.261|         |         |         |
+clk_man        |    9.266|         |         |         |
+sel_man        |    9.266|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sel_man
@@ -136,12 +136,12 @@ Clock to Setup on destination clock sel_man
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk_man        |    9.261|         |         |         |
-sel_man        |    9.261|         |         |         |
+clk_man        |    9.266|         |         |         |
+sel_man        |    9.266|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Thu Apr 18 19:21:18 2013 
+Analysis completed Thu Apr 18 20:16:07 2013 
 --------------------------------------------------------------------------------
 
 Trace Settings:

@@ -24,7 +24,7 @@ architecture Behavioral of display_text is
 	
 	signal segment_selector, segment_selector_next : std_logic_vector(1 downto 0);
 	signal digit0, digit1, digit2, digit3 : std_logic_vector(7 downto 0);
-
+	
 	constant OFF : std_logic_vector(7 downto 0) := "11111111";
 	constant C : std_logic_vector(7 downto 0) := "11000110";
 	constant O : std_logic_vector(7 downto 0) := "11000000";
