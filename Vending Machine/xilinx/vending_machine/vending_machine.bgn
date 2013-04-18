@@ -6,7 +6,7 @@ C:\Xilinx\14.3\ISE_DS\ISE\.
 speed -5
 Opened constraints file vending_machine.pcf.
 
-Thu Apr 18 17:15:47 2013
+Thu Apr 18 17:37:14 2013
 
 C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64\unwrapped\bitgen.exe -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:CClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:Yes -g DriveDone:No vending_machine.ncd 
 

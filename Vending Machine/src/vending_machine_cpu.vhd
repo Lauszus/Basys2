@@ -23,12 +23,10 @@ architecture Behavioral of vending_machine_cpu is
 	signal add_mux : std_logic_vector(1 downto 0);
 	signal add_val : signed(7 downto 0);
 	signal sum_val : signed(7 downto 0);
-	--signal sum_val_compare : unsigned(7 downto 0);
 	
 begin
 	sum <= std_logic_vector(sum_val(6 downto 0));
 	price_val <= unsigned(price);
-	--sum_val_compare <= unsigned(sum_val);
 	
 	process(current_state,coin2,coin5,buy,price_val,sum_val)
 	begin
@@ -41,7 +39,7 @@ begin
 				elsif coin5 = '1' then
 					next_state <= coin5_state;
 				elsif buy = '1' then
-					if unsigned(sum_val) >= price_val and price_val /= 0 then
+					if unsigned(sum_val(6 downto 0)) >= price_val and price_val /= 0 then
 						next_state <= buy_state;						
 					else
 						next_state <= alarm_state;											
@@ -93,23 +91,11 @@ begin
 		elsif add_mux = "10" then
 			add_val <= "00000101"; -- 5
 		elsif add_mux = "11" then
-			add_val <= signed("10" & price_val(5 downto 0));
+			add_val <= signed("10" & price_val(5 downto 0)); -- Return the negative number of the price
 		else
 			add_val <= "00000000";
 		end if;		
 	end process;
-	
---	process(add_val)
---	begin
---		if add_val < 0 then
---			sum_val <= sum_val - add_val;
---		else
---			sum_val <= sum_val + add_val;
---			if sum_val > 99 then
---				sum_val <= sum_val - 100;			
---			end if;
---		end if;	
---	end process;
 	
 	process(clk, reset)
 	begin
@@ -118,11 +104,18 @@ begin
 			sum_val <= (others=>'0');
 		elsif rising_edge(clk) then
 			current_state <= next_state;
-			--if add_val < 0 then
-				--sum_val <= sum_val - add_val;
-			--else
+			
+			-- Vi vil gerne undskylde på forhånd for nedenstående kode :(
+			if add_val < 0 then
+				sum_val <= sum_val - add_val;
+			else
 				sum_val <= sum_val + add_val;
-			--end if;
+				if sum_val > 99 then
+					sum_val <= sum_val - 100;
+				end if;
+			end if;
+			--------------------------------------------------------------
+			
 		end if;
 	end process;
 	

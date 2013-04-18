@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.15 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: vending_machine.prj
 
@@ -222,12 +222,16 @@ Synthesizing Unit <vending_machine_cpu>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Using one-hot encoding for signal <add_mux>.
-    Found 8-bit comparator greatequal for signal <current_state$cmp_ge0000> created at line 44.
-    Found 8-bit up accumulator for signal <sum_val>.
+    Found 7-bit comparator greatequal for signal <current_state$cmp_ge0000> created at line 42.
+    Found 8-bit register for signal <sum_val>.
+    Found 8-bit comparator greater for signal <sum_val$cmp_gt0000> created at line 113.
+    Found 8-bit comparator less for signal <sum_val$cmp_lt0000> created at line 109.
+    Found 8-bit addsub for signal <sum_val$mux0002>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred   1 Accumulator(s).
-	inferred   1 Comparator(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   3 Comparator(s).
 Unit <vending_machine_cpu> synthesized.
 
 
@@ -314,22 +318,23 @@ HDL Synthesis Report
 Macro Statistics
 # ROMs                                                 : 1
  16x8-bit ROM                                          : 1
-# Adders/Subtractors                                   : 3
+# Adders/Subtractors                                   : 4
  4-bit subtractor                                      : 2
  8-bit adder                                           : 1
+ 8-bit addsub                                          : 1
 # Counters                                             : 3
  16-bit up counter                                     : 1
  2-bit up counter                                      : 2
-# Accumulators                                         : 1
- 8-bit up accumulator                                  : 1
-# Registers                                            : 6
+# Registers                                            : 7
  1-bit register                                        : 4
  6-bit register                                        : 1
- 8-bit register                                        : 1
-# Comparators                                          : 17
+ 8-bit register                                        : 2
+# Comparators                                          : 19
  2-bit comparator less                                 : 1
- 7-bit comparator greatequal                           : 6
- 8-bit comparator greatequal                           : 10
+ 7-bit comparator greatequal                           : 7
+ 8-bit comparator greatequal                           : 9
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
 # Multiplexers                                         : 2
  4-bit 4-to-1 multiplexer                              : 1
  8-bit 4-to-1 multiplexer                              : 1
@@ -372,6 +377,10 @@ Optimizing FSM <Inst_vending_machine_cpu/current_state/FSM> on signal <current_s
  alarm_state     | 110
 -----------------------------
 
+Synthesizing (advanced) Unit <vending_machine_cpu>.
+The following registers are absorbed into accumulator <sum_val>: 1 register on signal <sum_val>.
+Unit <vending_machine_cpu> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
@@ -386,13 +395,15 @@ Macro Statistics
  16-bit up counter                                     : 1
  2-bit up counter                                      : 2
 # Accumulators                                         : 1
- 8-bit up accumulator                                  : 1
+ 8-bit updown accumulator                              : 1
 # Registers                                            : 18
  Flip-Flops                                            : 18
-# Comparators                                          : 17
+# Comparators                                          : 19
  2-bit comparator less                                 : 1
- 7-bit comparator greatequal                           : 6
- 8-bit comparator greatequal                           : 10
+ 7-bit comparator greatequal                           : 7
+ 8-bit comparator greatequal                           : 9
+ 8-bit comparator greater                              : 1
+ 8-bit comparator less                                 : 1
 # Multiplexers                                         : 2
  4-bit 4-to-1 multiplexer                              : 1
  8-bit 4-to-1 multiplexer                              : 1
@@ -420,10 +431,10 @@ Optimizing unit <display_manager> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block vending_machine, actual ratio is 16.
-FlipFlop Inst_input_sync/price_0 has been replicated 2 time(s)
+FlipFlop Inst_input_sync/price_0 has been replicated 1 time(s)
 INFO:Xst:1843 - HDL ADVISOR - FlipFlop Inst_input_sync/price_0 connected to a primary input has been replicated
-FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd1 has been replicated 1 time(s)
-FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd1 has been replicated 2 time(s)
+FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd2 has been replicated 2 time(s)
 FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd3 has been replicated 2 time(s)
 
 Final Macro Processing ...
@@ -432,8 +443,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 65
- Flip-Flops                                            : 65
+# Registers                                            : 66
+ Flip-Flops                                            : 66
 
 =========================================================================
 
@@ -462,25 +473,26 @@ Design Statistics
 # IOs                              : 27
 
 Cell Usage :
-# BELS                             : 345
+# BELS                             : 354
 #      GND                         : 1
-#      INV                         : 4
-#      LUT1                        : 16
-#      LUT2                        : 40
-#      LUT2_L                      : 1
-#      LUT3                        : 44
-#      LUT3_D                      : 1
+#      INV                         : 5
+#      LUT1                        : 15
+#      LUT2                        : 33
+#      LUT2_D                      : 2
+#      LUT2_L                      : 2
+#      LUT3                        : 49
+#      LUT3_D                      : 4
 #      LUT3_L                      : 2
-#      LUT4                        : 137
-#      LUT4_D                      : 2
-#      LUT4_L                      : 4
+#      LUT4                        : 146
+#      LUT4_D                      : 1
+#      LUT4_L                      : 2
 #      MUXCY                       : 29
-#      MUXF5                       : 39
+#      MUXF5                       : 38
 #      VCC                         : 1
 #      XORCY                       : 24
-# FlipFlops/Latches                : 65
-#      FD                          : 28
-#      FDC                         : 23
+# FlipFlops/Latches                : 66
+#      FD                          : 27
+#      FDC                         : 25
 #      FDCE                        : 9
 #      FDE                         : 2
 #      FDPE                        : 1
@@ -498,9 +510,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                      141  out of    960    14%  
- Number of Slice Flip Flops:             65  out of   1920     3%  
- Number of 4 input LUTs:                251  out of   1920    13%  
+ Number of Slices:                      145  out of    960    15%  
+ Number of Slice Flip Flops:             66  out of   1920     3%  
+ Number of 4 input LUTs:                261  out of   1920    13%  
  Number of IOs:                          27
  Number of bonded IOBs:                  27  out of     83    32%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -526,7 +538,7 @@ Clock Information:
 -----------------------------------+------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)        | Load  |
 -----------------------------------+------------------------------+-------+
-clk                                | NONE(Inst_input_sync/price_0)| 49    |
+clk                                | NONE(Inst_input_sync/price_0)| 50    |
 clk_50                             | BUFGP                        | 16    |
 -----------------------------------+------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -536,15 +548,15 @@ Asynchronous Control Signals Information:
 ----------------------------------------------+-------------------------------------------------------+-------+
 Control Signal                                | Buffer(FF name)                                       | Load  |
 ----------------------------------------------+-------------------------------------------------------+-------+
-Inst_input_sync/reset(Inst_input_sync/reset:Q)| NONE(Inst_display_manager/Inst_display_text/cnt_reg_0)| 33    |
+Inst_input_sync/reset(Inst_input_sync/reset:Q)| NONE(Inst_display_manager/Inst_display_text/cnt_reg_0)| 35    |
 ----------------------------------------------+-------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 4.612ns (Maximum Frequency: 216.809MHz)
-   Minimum input arrival time before clock: 1.825ns
+   Minimum period: 5.846ns (Maximum Frequency: 171.047MHz)
+   Minimum input arrival time before clock: 1.754ns
    Maximum output required time after clock: 14.914ns
    Maximum combinational path delay: No path found
 
@@ -591,23 +603,25 @@ Delay:               3.676ns (Levels of Logic = 16)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 4.612ns (frequency: 216.809MHz)
-  Total number of paths / destination ports: 556 / 51
+  Clock period: 5.846ns (frequency: 171.047MHz)
+  Total number of paths / destination ports: 1149 / 53
 -------------------------------------------------------------------------
-Delay:               4.612ns (Levels of Logic = 9)
-  Source:            Inst_input_sync/price_1 (FF)
+Delay:               5.846ns (Levels of Logic = 11)
+  Source:            Inst_vending_machine_cpu/sum_val_6 (FF)
   Destination:       Inst_vending_machine_cpu/sum_val_7 (FF)
   Source Clock:      clk rising
   Destination Clock: clk rising
 
-  Data Path: Inst_input_sync/price_1 to Inst_vending_machine_cpu/sum_val_7
+  Data Path: Inst_vending_machine_cpu/sum_val_6 to Inst_vending_machine_cpu/sum_val_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.514   0.820  Inst_input_sync/price_1 (Inst_input_sync/price_1)
-     LUT4:I3->O            1   0.612   0.426  Inst_vending_machine_cpu/add_val<1>21 (Inst_vending_machine_cpu/add_val<1>)
-     LUT2:I1->O            1   0.612   0.000  Inst_vending_machine_cpu/Maccum_sum_val_lut<1> (Inst_vending_machine_cpu/Maccum_sum_val_lut<1>)
-     MUXCY:S->O            1   0.404   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<1> (Inst_vending_machine_cpu/Maccum_sum_val_cy<1>)
+     FDC:C->Q             22   0.514   1.019  Inst_vending_machine_cpu/sum_val_6 (Inst_vending_machine_cpu/sum_val_6)
+     LUT3_D:I2->O          2   0.612   0.410  Inst_vending_machine_cpu/sum_val_cmp_gt00001_SW0 (N58)
+     LUT4:I2->O            1   0.612   0.387  Inst_vending_machine_cpu/sum_val_mux0003<0>1 (Inst_vending_machine_cpu/sum_val_mux0003<0>)
+     LUT3:I2->O            1   0.612   0.000  Inst_vending_machine_cpu/Maccum_sum_val_lut<0> (Inst_vending_machine_cpu/Maccum_sum_val_lut<0>)
+     MUXCY:S->O            1   0.404   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<0> (Inst_vending_machine_cpu/Maccum_sum_val_cy<0>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<1> (Inst_vending_machine_cpu/Maccum_sum_val_cy<1>)
      MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<2> (Inst_vending_machine_cpu/Maccum_sum_val_cy<2>)
      MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<3> (Inst_vending_machine_cpu/Maccum_sum_val_cy<3>)
      MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<4> (Inst_vending_machine_cpu/Maccum_sum_val_cy<4>)
@@ -616,14 +630,14 @@ Delay:               4.612ns (Levels of Logic = 9)
      XORCY:CI->O           1   0.699   0.000  Inst_vending_machine_cpu/Maccum_sum_val_xor<7> (Inst_vending_machine_cpu/Result<7>)
      FDC:D                     0.268          Inst_vending_machine_cpu/sum_val_7
     ----------------------------------------
-    Total                      4.612ns (3.367ns logic, 1.246ns route)
-                                       (73.0% logic, 27.0% route)
+    Total                      5.846ns (4.030ns logic, 1.816ns route)
+                                       (68.9% logic, 31.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 12 / 12
+  Total number of paths / destination ports: 11 / 11
 -------------------------------------------------------------------------
-Offset:              1.825ns (Levels of Logic = 1)
+Offset:              1.754ns (Levels of Logic = 1)
   Source:            price<0> (PAD)
   Destination:       Inst_input_sync/price_0 (FF)
   Destination Clock: clk rising
@@ -632,11 +646,11 @@ Offset:              1.825ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             3   1.106   0.451  price_0_IBUF (price_0_IBUF)
+     IBUF:I->O             2   1.106   0.380  price_0_IBUF (price_0_IBUF)
      FD:D                      0.268          Inst_input_sync/price_0
     ----------------------------------------
-    Total                      1.825ns (1.374ns logic, 0.451ns route)
-                                       (75.3% logic, 24.7% route)
+    Total                      1.754ns (1.374ns logic, 0.380ns route)
+                                       (78.3% logic, 21.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -654,11 +668,11 @@ Offset:              14.914ns (Levels of Logic = 12)
      FD:C->Q              13   0.514   0.988  Inst_input_sync/price_4 (Inst_input_sync/price_4)
      LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/price_low_cmp_ge000311 (Inst_display_manager/Inst_display_10base/price_low_cmp_ge00031)
      MUXF5:I0->O           2   0.278   0.410  Inst_display_manager/Inst_display_10base/price_low_cmp_ge00031_f5 (Inst_display_manager/Inst_display_10base/price_low_cmp_ge0003)
-     LUT3:I2->O            2   0.612   0.449  Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_lut<1>_SW0 (N89)
+     LUT3:I2->O            2   0.612   0.449  Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_lut<1>_SW0 (N93)
      LUT4:I1->O            2   0.612   0.383  Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_cy<1>11 (Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_cy<1>)
-     LUT4:I3->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138_SW0 (N160)
+     LUT4:I3->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138_SW0 (N168)
      LUT4:I0->O            2   0.612   0.532  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138)
-     LUT4:I0->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188_SW0 (N132)
+     LUT4:I0->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188_SW0 (N140)
      LUT4:I3->O            1   0.612   0.426  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188)
      LUT4:I1->O            7   0.612   0.754  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2230 (Inst_display_manager/Inst_display_10base/digit_temp<3>)
      LUT4:I0->O            1   0.612   0.000  Inst_display_manager/seven_segment_temp<2>311 (Inst_display_manager/seven_segment_temp<2>31)
@@ -672,11 +686,11 @@ Offset:              14.914ns (Levels of Logic = 12)
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 9.93 secs
+Total CPU time to Xst completion: 9.78 secs
  
 --> 
 
-Total memory usage is 259532 kilobytes
+Total memory usage is 260492 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   15 (   0 filtered)
