@@ -18,8 +18,7 @@ entity vending_machine is
 		coin2         : in  std_logic;
 		coin5         : in  std_logic;
 		buy           : in  std_logic;
-		price         : in  std_logic_vector(4 downto 0);
-		clk_display	: out std_logic;
+		price         : in  std_logic_vector(5 downto 0);
 		release_can   : out std_logic;
 		alarm         : out std_logic;
 		seven_segment : out std_logic_vector(7 downto 0);
@@ -34,10 +33,10 @@ architecture struct of vending_machine is
 	signal sync_coin2     : std_logic;
 	signal sync_coin5     : std_logic;
 	signal sync_buy       : std_logic;
-	signal sum            : std_logic_vector(4 downto 0);
-	signal internal_price : std_logic_vector(4 downto 0);
+	signal sum            : std_logic_vector(6 downto 0);
+	signal internal_price : std_logic_vector(5 downto 0);
 	
-	signal release_can_var, alarm_var, clk_display_var : std_logic;
+	signal release_can_var, alarm_var : std_logic;
 
 ------------------------------------------------------------------------
 -- Clock divider component declaration
@@ -48,8 +47,7 @@ architecture struct of vending_machine is
 		clk_50   :  in  std_logic;
 		clk_man  :  in  std_logic;
 		sel_man  :  in  std_logic;
-		clk      :  out std_logic;
-		clk_display : OUT std_logic
+		clk      :  out std_logic
 		);
 	end component;
 
@@ -64,12 +62,12 @@ architecture struct of vending_machine is
 		coin2_in : IN std_logic;
 		coin5_in : IN std_logic;
 		buy_in : IN std_logic;
-		price_in : IN std_logic_vector(4 downto 0);          
+		price_in : IN std_logic_vector(5 downto 0);          
 		reset : OUT std_logic;
 		coin2 : OUT std_logic;
 		coin5 : OUT std_logic;
 		buy : OUT std_logic;
-		price : OUT std_logic_vector(4 downto 0)
+		price : OUT std_logic_vector(5 downto 0)
 		);
 	END COMPONENT;	
 	
@@ -80,8 +78,8 @@ architecture struct of vending_machine is
 		coin2 : IN std_logic;
 		coin5 : IN std_logic;
 		buy : IN std_logic;
-		price : IN std_logic_vector(4 downto 0);
-		sum : OUT std_logic_vector(4 downto 0);
+		price : IN std_logic_vector(5 downto 0);
+		sum : OUT std_logic_vector(6 downto 0);
 		release_can : OUT std_logic;
 		alarm : OUT std_logic
 		);
@@ -89,13 +87,12 @@ architecture struct of vending_machine is
 	
 	COMPONENT display_manager
 	PORT(
-		price : IN std_logic_vector(4 downto 0);
-		coin_sum : IN std_logic_vector(4 downto 0);
+		price : IN std_logic_vector(5 downto 0);
+		coin_sum : IN std_logic_vector(6 downto 0);
 		buy : IN std_logic;
 		release_can : IN std_logic;
 		alarm : IN std_logic;
 		clk : IN std_logic;
-		clk_display : IN std_logic;
 		reset : IN std_logic;          
 		seven_segment : OUT std_logic_vector(7 downto 0);
 		digit_select : OUT std_logic_vector(3 downto 0)
@@ -110,8 +107,7 @@ begin  -- struct
       clk_50  => clk_50,
       clk_man => clk_man,
       sel_man => sel_man,
-      clk => clk,
-		clk_display => clk_display_var
+      clk => clk
 	);
 
 ------------------------------------------------------------------------
@@ -153,12 +149,10 @@ begin  -- struct
 		release_can => release_can_var,
 		alarm => alarm_var,
 		clk => clk,
-		clk_display => clk_display_var,
 		reset => sync_reset
 	);
 	
 	alarm <= alarm_var;
-	clk_display <= clk_display_var;
 	release_can <= release_can_var;
 
 ------------------------------------------------------------------------

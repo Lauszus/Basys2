@@ -3,15 +3,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity display_manager is
 	port (
-		price : in std_logic_vector(4 downto 0);
-		coin_sum: in std_logic_vector(4 downto 0);
+		price : in std_logic_vector(5 downto 0);
+		coin_sum: in std_logic_vector(6 downto 0);
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
 		buy : in std_logic;
 		release_can : in std_logic;
 		alarm : in std_logic;
 		clk : in std_logic;
-		clk_display : in std_logic;
 		reset : in std_logic
 	);
 end display_manager;
@@ -19,8 +18,8 @@ end display_manager;
 architecture Behavioral of display_manager is
 	component display_10base
 	port(
-		price : in std_logic_vector(4 downto 0);
-		coin_sum : in std_logic_vector(4 downto 0);
+		price : in std_logic_vector(5 downto 0);
+		coin_sum : in std_logic_vector(6 downto 0);
 		clk : in std_logic;
 		seven_segment : out std_logic_vector(7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0)
@@ -30,7 +29,6 @@ architecture Behavioral of display_manager is
 	COMPONENT display_text
 	PORT(
 		clk : IN std_logic;
-		clk_display : in std_logic;
 		seven_segment : OUT std_logic_vector(7 downto 0);
 		digit_select : OUT std_logic_vector(3 downto 0);
 		reset : IN std_logic;
@@ -60,7 +58,6 @@ begin
 
 	Inst_display_text: display_text PORT MAP(
 		clk => clk,
-		clk_display => clk_display,
 		seven_segment => seven_segment_text,
 		digit_select => digit_select_text,
 		reset => reset,

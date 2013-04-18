@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.40xd on Thu Apr 11 20:46:48 2013
+// Written by: Map P.40xd on Thu Apr 18 17:15:23 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -9,6 +9,7 @@ COMP "alarm" LOCATE = SITE "G1" LEVEL 1;
 COMP "price<2>" LOCATE = SITE "K3" LEVEL 1;
 COMP "price<3>" LOCATE = SITE "B4" LEVEL 1;
 COMP "price<4>" LOCATE = SITE "G3" LEVEL 1;
+COMP "price<5>" LOCATE = SITE "F3" LEVEL 1;
 COMP "clk_50" LOCATE = SITE "B8" LEVEL 1;
 PIN clk_50_pin<0> = BEL "clk_50" PINNAME PAD;
 PIN "clk_50_pin<0>" CLOCK_DEDICATED_ROUTE = FALSE;
@@ -33,7 +34,6 @@ COMP "digit_select<2>" LOCATE = SITE "M13" LEVEL 1;
 COMP "seven_segment<7>" LOCATE = SITE "N13" LEVEL 1;
 COMP "digit_select<3>" LOCATE = SITE "K14" LEVEL 1;
 COMP "release_can" LOCATE = SITE "M5" LEVEL 1;
-COMP "clk_display" LOCATE = SITE "M11" LEVEL 1;
 NET "clk_50_BUFGP/IBUFG" BEL "clk_50_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 

@@ -12,13 +12,13 @@ entity input_sync is
 	coin2_in : in std_logic;
 	coin5_in : in std_logic;
 	buy_in : in std_logic;
-	price_in : in std_logic_vector(4 downto 0);
+	price_in : in std_logic_vector(5 downto 0);
 	
 	reset : out std_logic;
 	coin2 : out std_logic;
 	coin5 : out std_logic;
 	buy : out std_logic;
-	price : out std_logic_vector(4 downto 0));
+	price : out std_logic_vector(5 downto 0));
 end input_sync;
 
 architecture Behavioral of input_sync is

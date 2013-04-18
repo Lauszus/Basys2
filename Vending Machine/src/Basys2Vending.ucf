@@ -30,13 +30,13 @@ NET "alarm" LOC = "G1" ; # Bank = 3, Signal name = LD7
 #NET "Led<4>" LOC = "N5" ;  # Bank = 2, Signal name = LD4
 #NET "Led<3>" LOC = "P6" ; # Bank = 2, Signal name = LD3
 #NET "z2" LOC = "P7" ; # Bank = 3, Signal name = LD2
-NET "clk_display" LOC = "M11" ; # Bank = 2, Signal name = LD1
+#NET "clk_display" LOC = "M11" ; # Bank = 2, Signal name = LD1
 NET "release_can" LOC = "M5" ;  # Bank = 2, Signal name = LD0
 
 # Pin assignment for SWs
 NET "sel_man" LOC = "N3";  # Bank = 2, Signal name = SW7
 NET "reset" LOC = "E2";  # Bank = 3, Signal name = SW6
-#NET "sw<5>" LOC = "F3";  # Bank = 3, Signal name = SW5
+NET "price<5>" LOC = "F3";  # Bank = 3, Signal name = SW5
 NET "price<4>" LOC = "G3";  # Bank = 3, Signal name = SW4
 NET "price<3>" LOC = "B4";  # Bank = 3, Signal name = SW3
 NET "price<2>" LOC = "K3";  # Bank = 3, Signal name = SW2

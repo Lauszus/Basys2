@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.15 secs
  
 --> Reading design: vending_machine.prj
 
@@ -109,12 +109,12 @@ Architecture behavioral of Entity display_text is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" in Library work.
 Architecture decoder of Entity display_10base is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd" in Library work.
-Entity <clock_manager> compiled.
-Entity <clock_manager> (Architecture <structure>) compiled.
+Architecture structure of Entity clock_manager is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/input_sync.vhd" in Library work.
 Architecture behavioral of Entity input_sync is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine_cpu.vhd" in Library work.
-Architecture behavioral of Entity vending_machine_cpu is up to date.
+Entity <vending_machine_cpu> compiled.
+Entity <vending_machine_cpu> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_manager.vhd" in Library work.
 Architecture behavioral of Entity display_manager is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd" in Library work.
@@ -161,12 +161,21 @@ Analyzing Entity <display_text> in library <work> (Architecture <behavioral>).
 Entity <display_text> analyzed. Unit <display_text> generated.
 
 Analyzing Entity <display_10base> in library <work> (Architecture <decoder>).
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 47: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 50: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 53: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 65: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 68: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
-WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 71: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 5-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 47: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 50: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 53: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 56: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 59: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 62: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 65: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 68: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 71: Width mismatch. <coin_low> has a width of 4 bits but assigned expression is 7-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 83: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 86: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 89: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 92: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 95: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
+WARNING:Xst:1610 - "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" line 98: Width mismatch. <price_low> has a width of 4 bits but assigned expression is 6-bit wide.
 Entity <display_10base> analyzed. Unit <display_10base> generated.
 
 
@@ -178,14 +187,9 @@ Performing bidirectional port resolution...
 
 Synthesizing Unit <clock_manager>.
     Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd".
-    Found 1-bit register for signal <clk_display_signal>.
     Found 16-bit up counter for signal <count_present>.
-    Found 7-bit up counter for signal <count_present_display>.
-    Found 7-bit comparator greatequal for signal <count_present_display$cmp_ge0000> created at line 49.
     Summary:
-	inferred   2 Counter(s).
-	inferred   1 D-type flip-flop(s).
-	inferred   1 Comparator(s).
+	inferred   1 Counter(s).
 Unit <clock_manager> synthesized.
 
 
@@ -193,11 +197,11 @@ Synthesizing Unit <input_sync>.
     Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/input_sync.vhd".
     Found 1-bit register for signal <reset>.
     Found 1-bit register for signal <buy>.
-    Found 5-bit register for signal <price>.
+    Found 6-bit register for signal <price>.
     Found 1-bit register for signal <coin2>.
     Found 1-bit register for signal <coin5>.
     Summary:
-	inferred   9 D-type flip-flop(s).
+	inferred  10 D-type flip-flop(s).
 Unit <input_sync> synthesized.
 
 
@@ -205,10 +209,10 @@ Synthesizing Unit <vending_machine_cpu>.
     Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine_cpu.vhd".
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
-    | States             | 4                                              |
-    | Transitions        | 10                                             |
-    | Inputs             | 3                                              |
-    | Outputs            | 11                                             |
+    | States             | 7                                              |
+    | Transitions        | 16                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 6                                              |
     | Clock              | clk                       (rising_edge)        |
     | Reset              | reset                     (positive)           |
     | Reset type         | asynchronous                                   |
@@ -217,50 +221,44 @@ Synthesizing Unit <vending_machine_cpu>.
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 1-bit register for signal <release_can>.
-    Found 1-bit register for signal <alarm>.
-    Found 5-bit comparator greatequal for signal <alarm$cmp_ge0000> created at line 68.
-    Found 5-bit comparator less for signal <release_can$cmp_lt0000> created at line 68.
-    Found 5-bit register for signal <sum_val>.
-    Found 5-bit addsub for signal <sum_val$mux0000>.
+    Using one-hot encoding for signal <add_mux>.
+    Found 8-bit comparator greatequal for signal <current_state$cmp_ge0000> created at line 44.
+    Found 8-bit up accumulator for signal <sum_val>.
     Summary:
 	inferred   1 Finite State Machine(s).
-	inferred   7 D-type flip-flop(s).
-	inferred   1 Adder/Subtractor(s).
-	inferred   2 Comparator(s).
+	inferred   1 Accumulator(s).
+	inferred   1 Comparator(s).
 Unit <vending_machine_cpu> synthesized.
 
 
 Synthesizing Unit <display_text>.
     Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_text.vhd".
-WARNING:Xst:647 - Input <flavor> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-    Using one-hot encoding for signal <digit_temp>.
-    Using one-hot encoding for signal <current_state>.
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
-INFO:Xst:2117 - HDL ADVISOR - Mux Selector <current_state> of Case statement line 0 was re-encoded using one-hot encoding. The case statement will be optimized (default statement optimization), but this optimization may lead to design initialization problems. To ensure the design works safely, you can:
-   	- add an 'INIT' attribute on signal <current_state> (optimization is then done without any risk)
-   	- use the attribute 'signal_encoding user' to avoid onehot optimization
-   	- use the attribute 'safe_implementation yes' to force XST to perform a safe (but less efficient) optimization
+    Found finite state machine <FSM_1> for signal <current_state>.
+    -----------------------------------------------------------------------
+    | States             | 10                                             |
+    | Transitions        | 29                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk                       (rising_edge)        |
+    | Clock enable       | display_enable            (positive)           |
+    | Reset              | reset                     (positive)           |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | state0                                         |
+    | Power Up State     | state0                                         |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
     Found 1-of-4 decoder for signal <digit_select>.
-    Found 9-bit register for signal <current_state>.
-    Found 7-bit 4-to-1 multiplexer for signal <digit_temp>.
-    Found 2-bit up counter for signal <selector>.
-    Found 2-bit comparator less for signal <selector$cmp_lt0000> created at line 41.
+    Found 8-bit 4-to-1 multiplexer for signal <seven_segment>.
+    Found 8-bit adder for signal <cnt$addsub0000> created at line 63.
+    Found 8-bit register for signal <cnt_reg>.
+    Found 2-bit up counter for signal <segment_selector>.
     Summary:
+	inferred   1 Finite State Machine(s).
 	inferred   1 Counter(s).
-	inferred   1 Comparator(s).
-	inferred   7 Multiplexer(s).
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   8 Multiplexer(s).
 	inferred   1 Decoder(s).
 Unit <display_text> synthesized.
 
@@ -269,22 +267,31 @@ Synthesizing Unit <display_10base>.
     Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd".
     Found 16x8-bit ROM for signal <seven_segment>.
     Found 1-of-4 decoder for signal <digit_select>.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0000> created at line 45.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0001> created at line 47.
-    Found 6-bit comparator greatequal for signal <coin_low$cmp_ge0002> created at line 50.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0000> created at line 45.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0001> created at line 47.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0002> created at line 50.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0003> created at line 53.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0004> created at line 56.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0005> created at line 59.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0006> created at line 62.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0007> created at line 65.
+    Found 8-bit comparator greatequal for signal <coin_low$cmp_ge0008> created at line 68.
     Found 4-bit subtractor for signal <coin_low$share0000> created at line 45.
     Found 4-bit 4-to-1 multiplexer for signal <digit_temp>.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0000> created at line 63.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0001> created at line 65.
-    Found 6-bit comparator greatequal for signal <price_low$cmp_ge0002> created at line 68.
-    Found 4-bit subtractor for signal <price_low$share0000> created at line 63.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0000> created at line 81.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0001> created at line 83.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0002> created at line 86.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0003> created at line 89.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0004> created at line 92.
+    Found 7-bit comparator greatequal for signal <price_low$cmp_ge0005> created at line 95.
+    Found 4-bit subtractor for signal <price_low$share0000> created at line 81.
     Found 2-bit up counter for signal <selector>.
-    Found 2-bit comparator less for signal <selector$cmp_lt0000> created at line 101.
+    Found 2-bit comparator less for signal <selector$cmp_lt0000> created at line 128.
     Summary:
 	inferred   1 ROM(s).
 	inferred   1 Counter(s).
 	inferred   2 Adder/Subtractor(s).
-	inferred   7 Comparator(s).
+	inferred  16 Comparator(s).
 	inferred   4 Multiplexer(s).
 	inferred   1 Decoder(s).
 Unit <display_10base> synthesized.
@@ -309,24 +316,23 @@ Macro Statistics
  16x8-bit ROM                                          : 1
 # Adders/Subtractors                                   : 3
  4-bit subtractor                                      : 2
- 5-bit addsub                                          : 1
-# Counters                                             : 4
+ 8-bit adder                                           : 1
+# Counters                                             : 3
  16-bit up counter                                     : 1
  2-bit up counter                                      : 2
- 7-bit up counter                                      : 1
-# Registers                                            : 10
- 1-bit register                                        : 7
- 5-bit register                                        : 2
- 9-bit register                                        : 1
-# Comparators                                          : 11
- 2-bit comparator less                                 : 2
- 5-bit comparator greatequal                           : 1
- 5-bit comparator less                                 : 1
- 6-bit comparator greatequal                           : 6
- 7-bit comparator greatequal                           : 1
+# Accumulators                                         : 1
+ 8-bit up accumulator                                  : 1
+# Registers                                            : 6
+ 1-bit register                                        : 4
+ 6-bit register                                        : 1
+ 8-bit register                                        : 1
+# Comparators                                          : 17
+ 2-bit comparator less                                 : 1
+ 7-bit comparator greatequal                           : 6
+ 8-bit comparator greatequal                           : 10
 # Multiplexers                                         : 2
  4-bit 4-to-1 multiplexer                              : 1
- 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 # Decoders                                             : 2
  1-of-4 decoder                                        : 2
 
@@ -336,47 +342,60 @@ Macro Statistics
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <Inst_display_manager/Inst_display_text/current_state/FSM> on signal <current_state[1:10]> with one-hot encoding.
+---------------------------
+ State       | Encoding
+---------------------------
+ state0      | 0000000001
+ state1      | 0000000100
+ state2      | 0000001000
+ state3      | 0000010000
+ state4      | 0000100000
+ state5      | 0001000000
+ state6      | 0010000000
+ state7      | 0100000000
+ state8      | 1000000000
+ error_state | 0000000010
+---------------------------
 Analyzing FSM <FSM_0> for best encoding.
-Optimizing FSM <Inst_vending_machine_cpu/current_state/FSM> on signal <current_state[1:4]> with one-hot encoding.
----------------------------
- State         | Encoding
----------------------------
- default_state | 0001
- coin2_state   | 0010
- coin5_state   | 0100
- buy_state     | 1000
----------------------------
-
-Synthesizing (advanced) Unit <vending_machine_cpu>.
-The following registers are absorbed into accumulator <sum_val>: 1 register on signal <sum_val>.
-Unit <vending_machine_cpu> synthesized (advanced).
+Optimizing FSM <Inst_vending_machine_cpu/current_state/FSM> on signal <current_state[1:3]> with gray encoding.
+-----------------------------
+ State           | Encoding
+-----------------------------
+ default_state   | 000
+ coin2_state     | 001
+ coin5_state     | 011
+ wait_coin_state | 111
+ wait_buy_state  | 101
+ buy_state       | 010
+ alarm_state     | 110
+-----------------------------
 
 =========================================================================
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# FSMs                                                 : 1
+# FSMs                                                 : 2
 # ROMs                                                 : 1
  16x8-bit ROM                                          : 1
-# Adders/Subtractors                                   : 2
+# Adders/Subtractors                                   : 3
  4-bit subtractor                                      : 2
-# Counters                                             : 4
+ 8-bit adder                                           : 1
+# Counters                                             : 3
  16-bit up counter                                     : 1
  2-bit up counter                                      : 2
- 7-bit up counter                                      : 1
 # Accumulators                                         : 1
- 5-bit updown accumulator                              : 1
-# Registers                                            : 12
- Flip-Flops                                            : 12
-# Comparators                                          : 11
- 2-bit comparator less                                 : 2
- 5-bit comparator greatequal                           : 1
- 5-bit comparator less                                 : 1
- 6-bit comparator greatequal                           : 6
- 7-bit comparator greatequal                           : 1
+ 8-bit up accumulator                                  : 1
+# Registers                                            : 18
+ Flip-Flops                                            : 18
+# Comparators                                          : 17
+ 2-bit comparator less                                 : 1
+ 7-bit comparator greatequal                           : 6
+ 8-bit comparator greatequal                           : 10
 # Multiplexers                                         : 2
  4-bit 4-to-1 multiplexer                              : 1
- 7-bit 4-to-1 multiplexer                              : 1
+ 8-bit 4-to-1 multiplexer                              : 1
 # Decoders                                             : 2
  1-of-4 decoder                                        : 2
 
@@ -392,15 +411,20 @@ Optimizing unit <input_sync> ...
 
 Optimizing unit <vending_machine_cpu> ...
 
-Optimizing unit <display_10base> ...
-
 Optimizing unit <display_text> ...
+
+Optimizing unit <display_10base> ...
 
 Optimizing unit <display_manager> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block vending_machine, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block vending_machine, actual ratio is 16.
+FlipFlop Inst_input_sync/price_0 has been replicated 2 time(s)
+INFO:Xst:1843 - HDL ADVISOR - FlipFlop Inst_input_sync/price_0 connected to a primary input has been replicated
+FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop Inst_vending_machine_cpu/current_state_FSM_FFd3 has been replicated 2 time(s)
 
 Final Macro Processing ...
 
@@ -408,8 +432,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 57
- Flip-Flops                                            : 57
+# Registers                                            : 65
+ Flip-Flops                                            : 65
 
 =========================================================================
 
@@ -438,34 +462,35 @@ Design Statistics
 # IOs                              : 27
 
 Cell Usage :
-# BELS                             : 197
+# BELS                             : 345
 #      GND                         : 1
-#      INV                         : 5
-#      LUT1                        : 15
-#      LUT2                        : 15
-#      LUT2_L                      : 2
-#      LUT3                        : 36
-#      LUT4                        : 58
+#      INV                         : 4
+#      LUT1                        : 16
+#      LUT2                        : 40
+#      LUT2_L                      : 1
+#      LUT3                        : 44
+#      LUT3_D                      : 1
+#      LUT3_L                      : 2
+#      LUT4                        : 137
 #      LUT4_D                      : 2
-#      LUT4_L                      : 3
-#      MUXCY                       : 19
-#      MUXF5                       : 19
+#      LUT4_L                      : 4
+#      MUXCY                       : 29
+#      MUXF5                       : 39
 #      VCC                         : 1
-#      XORCY                       : 21
-# FlipFlops/Latches                : 57
-#      FD                          : 25
-#      FDC                         : 3
-#      FDCE                        : 5
-#      FDCP                        : 9
-#      FDE                         : 3
-#      FDP                         : 1
-#      FDR                         : 11
+#      XORCY                       : 24
+# FlipFlops/Latches                : 65
+#      FD                          : 28
+#      FDC                         : 23
+#      FDCE                        : 9
+#      FDE                         : 2
+#      FDPE                        : 1
+#      FDR                         : 2
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
 # IO Buffers                       : 26
-#      IBUF                        : 11
-#      OBUF                        : 15
+#      IBUF                        : 12
+#      OBUF                        : 14
 =========================================================================
 
 Device utilization summary:
@@ -473,9 +498,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                       71  out of    960     7%  
- Number of Slice Flip Flops:             57  out of   1920     2%  
- Number of 4 input LUTs:                136  out of   1920     7%  
+ Number of Slices:                      141  out of    960    14%  
+ Number of Slice Flip Flops:             65  out of   1920     3%  
+ Number of 4 input LUTs:                251  out of   1920    13%  
  Number of IOs:                          27
  Number of bonded IOBs:                  27  out of     83    32%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -498,66 +523,34 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
--------------------------------------+-------------------------------------------------------------+-------+
-Clock Signal                         | Clock buffer(FF name)                                       | Load  |
--------------------------------------+-------------------------------------------------------------+-------+
-clk                                  | NONE(Inst_clock_manager/clk_display_signal)                 | 32    |
-clk_50                               | BUFGP                                                       | 16    |
-Inst_clock_manager/clk_display_signal| NONE(Inst_display_manager/Inst_display_text/current_state_0)| 9     |
--------------------------------------+-------------------------------------------------------------+-------+
+-----------------------------------+------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)        | Load  |
+-----------------------------------+------------------------------+-------+
+clk                                | NONE(Inst_input_sync/price_0)| 49    |
+clk_50                             | BUFGP                        | 16    |
+-----------------------------------+------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
-Control Signal                                                                                                                      | Buffer(FF name)                                             | Load  |
-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
-Inst_input_sync/reset(Inst_input_sync/reset:Q)                                                                                      | NONE(Inst_vending_machine_cpu/current_state_FSM_FFd1)       | 9     |
-Inst_display_manager/Inst_display_text/current_state_7__or0000(Inst_display_manager/Inst_display_text/current_state_7__or00001:O)   | NONE(Inst_display_manager/Inst_display_text/current_state_1)| 7     |
-N0(XST_GND:G)                                                                                                                       | NONE(Inst_display_manager/Inst_display_text/current_state_1)| 7     |
-Inst_display_manager/Inst_display_text/current_state_0__or0000(Inst_display_manager/Inst_display_text/current_state_8__or00001:O)   | NONE(Inst_display_manager/Inst_display_text/current_state_0)| 2     |
-Inst_display_manager/Inst_display_text/current_state_0__and0000(Inst_display_manager/Inst_display_text/current_state_0__and000011:O)| NONE(Inst_display_manager/Inst_display_text/current_state_0)| 1     |
-Inst_vending_machine_cpu/alarm(Inst_vending_machine_cpu/alarm:Q)                                                                    | NONE(Inst_display_manager/Inst_display_text/current_state_8)| 1     |
-------------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------------------+-------+
+----------------------------------------------+-------------------------------------------------------+-------+
+Control Signal                                | Buffer(FF name)                                       | Load  |
+----------------------------------------------+-------------------------------------------------------+-------+
+Inst_input_sync/reset(Inst_input_sync/reset:Q)| NONE(Inst_display_manager/Inst_display_text/cnt_reg_0)| 33    |
+----------------------------------------------+-------------------------------------------------------+-------+
 
 Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 7.082ns (Maximum Frequency: 141.195MHz)
-   Minimum input arrival time before clock: 1.731ns
-   Maximum output required time after clock: 10.212ns
+   Minimum period: 4.612ns (Maximum Frequency: 216.809MHz)
+   Minimum input arrival time before clock: 1.825ns
+   Maximum output required time after clock: 14.914ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
 --------------
 All values displayed in nanoseconds (ns)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 7.082ns (frequency: 141.195MHz)
-  Total number of paths / destination ports: 795 / 42
--------------------------------------------------------------------------
-Delay:               7.082ns (Levels of Logic = 5)
-  Source:            Inst_vending_machine_cpu/current_state_FSM_FFd4 (FF)
-  Destination:       Inst_vending_machine_cpu/release_can (FF)
-  Source Clock:      clk rising
-  Destination Clock: clk rising
-
-  Data Path: Inst_vending_machine_cpu/current_state_FSM_FFd4 to Inst_vending_machine_cpu/release_can
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDP:C->Q             10   0.514   0.753  Inst_vending_machine_cpu/current_state_FSM_FFd4 (Inst_vending_machine_cpu/current_state_FSM_FFd4)
-     LUT4:I3->O            4   0.612   0.502  Inst_vending_machine_cpu/current_state_FSM_FFd2-In1 (Inst_vending_machine_cpu/current_state_cmp_eq0005)
-     LUT4:I3->O            7   0.612   0.671  Inst_vending_machine_cpu/release_can_and00021 (Inst_vending_machine_cpu/release_can_and0002)
-     LUT2:I1->O            2   0.612   0.383  Inst_vending_machine_cpu/alarm_and0000214 (Inst_vending_machine_cpu/sum_val_mux0002_inv1_inv)
-     LUT4_D:I3->O          1   0.612   0.360  Inst_vending_machine_cpu/alarm_and0000232 (Inst_vending_machine_cpu/N15)
-     LUT4:I3->O            1   0.612   0.357  Inst_vending_machine_cpu/release_can_and0000 (Inst_vending_machine_cpu/release_can_and0000)
-     FDE:CE                    0.483          Inst_vending_machine_cpu/release_can
-    ----------------------------------------
-    Total                      7.082ns (4.057ns logic, 3.025ns route)
-                                       (57.3% logic, 42.7% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_50'
@@ -597,107 +590,95 @@ Delay:               3.676ns (Levels of Logic = 16)
                                        (86.2% logic, 13.8% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'Inst_clock_manager/clk_display_signal'
-  Clock period: 3.114ns (frequency: 321.166MHz)
-  Total number of paths / destination ports: 14 / 8
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 4.612ns (frequency: 216.809MHz)
+  Total number of paths / destination ports: 556 / 51
 -------------------------------------------------------------------------
-Delay:               3.114ns (Levels of Logic = 2)
-  Source:            Inst_display_manager/Inst_display_text/current_state_5 (FF)
-  Destination:       Inst_display_manager/Inst_display_text/current_state_0 (FF)
-  Source Clock:      Inst_clock_manager/clk_display_signal rising
-  Destination Clock: Inst_clock_manager/clk_display_signal rising
+Delay:               4.612ns (Levels of Logic = 9)
+  Source:            Inst_input_sync/price_1 (FF)
+  Destination:       Inst_vending_machine_cpu/sum_val_7 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
 
-  Data Path: Inst_display_manager/Inst_display_text/current_state_5 to Inst_display_manager/Inst_display_text/current_state_0
+  Data Path: Inst_input_sync/price_1 to Inst_vending_machine_cpu/sum_val_7
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCP:C->Q             6   0.514   0.721  Inst_display_manager/Inst_display_text/current_state_5 (Inst_display_manager/Inst_display_text/current_state_5)
-     LUT4:I0->O            1   0.612   0.387  Inst_display_manager/Inst_display_text/current_state_mux0000<8>112 (Inst_display_manager/Inst_display_text/current_state_mux0000<8>112)
-     LUT4:I2->O            1   0.612   0.000  Inst_display_manager/Inst_display_text/current_state_mux0000<8>150 (Inst_display_manager/Inst_display_text/current_state_mux0000<8>)
-     FDCP:D                    0.268          Inst_display_manager/Inst_display_text/current_state_0
+     FD:C->Q              12   0.514   0.820  Inst_input_sync/price_1 (Inst_input_sync/price_1)
+     LUT4:I3->O            1   0.612   0.426  Inst_vending_machine_cpu/add_val<1>21 (Inst_vending_machine_cpu/add_val<1>)
+     LUT2:I1->O            1   0.612   0.000  Inst_vending_machine_cpu/Maccum_sum_val_lut<1> (Inst_vending_machine_cpu/Maccum_sum_val_lut<1>)
+     MUXCY:S->O            1   0.404   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<1> (Inst_vending_machine_cpu/Maccum_sum_val_cy<1>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<2> (Inst_vending_machine_cpu/Maccum_sum_val_cy<2>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<3> (Inst_vending_machine_cpu/Maccum_sum_val_cy<3>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<4> (Inst_vending_machine_cpu/Maccum_sum_val_cy<4>)
+     MUXCY:CI->O           1   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<5> (Inst_vending_machine_cpu/Maccum_sum_val_cy<5>)
+     MUXCY:CI->O           0   0.051   0.000  Inst_vending_machine_cpu/Maccum_sum_val_cy<6> (Inst_vending_machine_cpu/Maccum_sum_val_cy<6>)
+     XORCY:CI->O           1   0.699   0.000  Inst_vending_machine_cpu/Maccum_sum_val_xor<7> (Inst_vending_machine_cpu/Result<7>)
+     FDC:D                     0.268          Inst_vending_machine_cpu/sum_val_7
     ----------------------------------------
-    Total                      3.114ns (2.006ns logic, 1.108ns route)
-                                       (64.4% logic, 35.6% route)
+    Total                      4.612ns (3.367ns logic, 1.246ns route)
+                                       (73.0% logic, 27.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 9 / 9
+  Total number of paths / destination ports: 12 / 12
 -------------------------------------------------------------------------
-Offset:              1.731ns (Levels of Logic = 1)
-  Source:            reset (PAD)
-  Destination:       Inst_input_sync/reset (FF)
+Offset:              1.825ns (Levels of Logic = 1)
+  Source:            price<0> (PAD)
+  Destination:       Inst_input_sync/price_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: reset to Inst_input_sync/reset
+  Data Path: price<0> to Inst_input_sync/price_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             1   1.106   0.357  reset_IBUF (reset_IBUF)
-     FD:D                      0.268          Inst_input_sync/reset
+     IBUF:I->O             3   1.106   0.451  price_0_IBUF (price_0_IBUF)
+     FD:D                      0.268          Inst_input_sync/price_0
     ----------------------------------------
-    Total                      1.731ns (1.374ns logic, 0.357ns route)
-                                       (79.4% logic, 20.6% route)
+    Total                      1.825ns (1.374ns logic, 0.451ns route)
+                                       (75.3% logic, 24.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 596 / 14
+  Total number of paths / destination ports: 3976 / 13
 -------------------------------------------------------------------------
-Offset:              10.212ns (Levels of Logic = 7)
-  Source:            Inst_input_sync/price_3 (FF)
-  Destination:       seven_segment<3> (PAD)
+Offset:              14.914ns (Levels of Logic = 12)
+  Source:            Inst_input_sync/price_4 (FF)
+  Destination:       seven_segment<2> (PAD)
   Source Clock:      clk rising
 
-  Data Path: Inst_input_sync/price_3 to seven_segment<3>
+  Data Path: Inst_input_sync/price_4 to seven_segment<2>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              10   0.514   0.902  Inst_input_sync/price_3 (Inst_input_sync/price_3)
-     LUT4:I0->O            1   0.612   0.387  Inst_display_manager/Inst_display_10base/digit1<0>1 (Inst_display_manager/Inst_display_10base/digit1<0>)
-     LUT3:I2->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Mmux_digit_temp_4 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp_4)
-     MUXF5:I0->O           7   0.278   0.671  Inst_display_manager/Inst_display_10base/Mmux_digit_temp_2_f5 (Inst_display_manager/Inst_display_10base/digit_temp<0>)
-     LUT4:I1->O            2   0.612   0.449  Inst_display_manager/Inst_display_10base/seven_segment<3>11 (Inst_display_manager/Inst_display_10base/seven_segment<3>_bdd0)
-     LUT3:I1->O            1   0.612   0.426  Inst_display_manager/seven_segment_temp<3>_SW0 (N38)
-     LUT4:I1->O            1   0.612   0.357  Inst_display_manager/seven_segment_temp<3> (seven_segment_3_OBUF)
-     OBUF:I->O                 3.169          seven_segment_3_OBUF (seven_segment<3>)
+     FD:C->Q              13   0.514   0.988  Inst_input_sync/price_4 (Inst_input_sync/price_4)
+     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/price_low_cmp_ge000311 (Inst_display_manager/Inst_display_10base/price_low_cmp_ge00031)
+     MUXF5:I0->O           2   0.278   0.410  Inst_display_manager/Inst_display_10base/price_low_cmp_ge00031_f5 (Inst_display_manager/Inst_display_10base/price_low_cmp_ge0003)
+     LUT3:I2->O            2   0.612   0.449  Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_lut<1>_SW0 (N89)
+     LUT4:I1->O            2   0.612   0.383  Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_cy<1>11 (Inst_display_manager/Inst_display_10base/Msub_price_low_share0000_cy<1>)
+     LUT4:I3->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138_SW0 (N160)
+     LUT4:I0->O            2   0.612   0.532  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp2138)
+     LUT4:I0->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188_SW0 (N132)
+     LUT4:I3->O            1   0.612   0.426  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188 (Inst_display_manager/Inst_display_10base/Mmux_digit_temp2188)
+     LUT4:I1->O            7   0.612   0.754  Inst_display_manager/Inst_display_10base/Mmux_digit_temp2230 (Inst_display_manager/Inst_display_10base/digit_temp<3>)
+     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/seven_segment_temp<2>311 (Inst_display_manager/seven_segment_temp<2>31)
+     MUXF5:I0->O           1   0.278   0.357  Inst_display_manager/seven_segment_temp<2>31_f5 (seven_segment_2_OBUF)
+     OBUF:I->O                 3.169          seven_segment_2_OBUF (seven_segment<2>)
     ----------------------------------------
-    Total                     10.212ns (7.021ns logic, 3.191ns route)
-                                       (68.7% logic, 31.3% route)
-
-=========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'Inst_clock_manager/clk_display_signal'
-  Total number of paths / destination ports: 155 / 7
--------------------------------------------------------------------------
-Offset:              9.061ns (Levels of Logic = 6)
-  Source:            Inst_display_manager/Inst_display_text/current_state_3 (FF)
-  Destination:       seven_segment<5> (PAD)
-  Source Clock:      Inst_clock_manager/clk_display_signal rising
-
-  Data Path: Inst_display_manager/Inst_display_text/current_state_3 to seven_segment<5>
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDCP:C->Q             6   0.514   0.638  Inst_display_manager/Inst_display_text/current_state_3 (Inst_display_manager/Inst_display_text/current_state_3)
-     LUT3:I1->O            1   0.612   0.000  Inst_display_manager/Inst_display_text/Mmux_digit_temp6_F (N61)
-     MUXF5:I0->O           5   0.278   0.607  Inst_display_manager/Inst_display_text/Mmux_digit_temp6 (Inst_display_manager/Inst_display_text/digit_temp<3>)
-     LUT4:I1->O            5   0.612   0.690  Inst_display_manager/Inst_display_text/seven_segment_or000014 (Inst_display_manager/Inst_display_text/seven_segment_or0000)
-     LUT4:I0->O            1   0.612   0.360  Inst_display_manager/seven_segment_temp<5>8 (Inst_display_manager/seven_segment_temp<5>8)
-     LUT4:I3->O            1   0.612   0.357  Inst_display_manager/seven_segment_temp<5>68 (seven_segment_5_OBUF)
-     OBUF:I->O                 3.169          seven_segment_5_OBUF (seven_segment<5>)
-    ----------------------------------------
-    Total                      9.061ns (6.409ns logic, 2.652ns route)
-                                       (70.7% logic, 29.3% route)
+    Total                     14.914ns (9.747ns logic, 5.167ns route)
+                                       (65.4% logic, 34.6% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.83 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 9.93 secs
  
 --> 
 
-Total memory usage is 257484 kilobytes
+Total memory usage is 259532 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :    7 (   0 filtered)
-Number of infos    :    6 (   0 filtered)
+Number of warnings :   15 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
 

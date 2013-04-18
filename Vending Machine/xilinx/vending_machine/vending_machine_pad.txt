@@ -1,7 +1,7 @@
 Release 14.3 - par P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Thu Apr 11 20:46:59 2013
+Thu Apr 18 17:15:36 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -76,7 +76,7 @@ Pinout by Pin Number:
 |E14       |                |         |GND                      |         |           |              |          |         |           |         |       |          |           |                |
 |F1        |                |DIFFM    |IO_L05P_3/LHCLK2         |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |F2        |                |DIFFS    |IO_L04N_3/LHCLK1         |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
-|F3        |                |DIFFM    |IO_L04P_3/LHCLK0         |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
+|F3        |price<5>        |IBUF     |IO_L04P_3/LHCLK0         |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |       |LOCATED   |NO         |NONE            |
 |F12       |digit_select<0> |IOB      |IO/A0                    |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |F13       |                |DIFFS    |IO_L08N_1/A1             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |F14       |                |DIFFM    |IO_L08P_1/A2             |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
@@ -120,7 +120,7 @@ Pinout by Pin Number:
 |M8        |                |         |VCCO_2                   |         |           |2             |          |         |           |         |2.50   |          |           |                |
 |M9        |                |         |NC                       |         |           |              |          |         |           |         |       |          |           |                |
 |M10       |                |         |NC                       |         |           |              |          |         |           |         |       |          |           |                |
-|M11       |clk_display     |IOB      |IO_L10N_2/VS1/A18        |OUTPUT   |LVCMOS25*  |2             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
+|M11       |                |DIFFS    |IO_L10N_2/VS1/A18        |UNUSED   |           |2             |          |         |           |         |       |          |           |                |
 |M12       |seven_segment<6>|IOB      |IO_L02P_1/A14            |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |M13       |digit_select<2> |IOB      |IO_L02N_1/A13            |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |M14       |                |         |VCCO_1                   |         |           |1             |          |         |           |         |2.50   |          |           |                |

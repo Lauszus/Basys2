@@ -5,7 +5,6 @@ use ieee.std_logic_unsigned.all;
 entity display_text is
 	port(
 		clk : in std_logic;
-		clk_display : in std_logic;
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
 		reset : in std_logic;
@@ -16,139 +15,198 @@ entity display_text is
 end display_text;
 
 architecture Behavioral of display_text is
-	type state_type is (state0, state1, state2, state3, state4, state5, state6, state7, errorState);
+	type state_type is (state0, state1, state2, state3, state4, state5, state6, state7, state8, error_state);
 	signal current_state : state_type;
 	signal next_state : state_type;
 	
-	signal selector, selector_next : std_logic_vector(1 downto 0);
-	signal digit_temp : std_logic_vector(3 downto 0);
-	signal digit0, digit1, digit2, digit3 : std_logic_vector(3 downto 0);
+	signal cnt, cnt_reg : std_logic_vector(7 downto 0);
+	signal display_enable : std_logic;
+	
+	signal segment_selector, segment_selector_next : std_logic_vector(1 downto 0);
+	signal digit0, digit1, digit2, digit3 : std_logic_vector(7 downto 0);
 
-	constant OFF : std_logic_vector(3 downto 0) := "0000";
-	constant C : std_logic_vector(3 downto 0) := "0001";
-	constant O : std_logic_vector(3 downto 0) := "0010";
-	constant L : std_logic_vector(3 downto 0) := "0011";
-	constant A : std_logic_vector(3 downto 0) := "0100";
-	constant E : std_logic_vector(3 downto 0) := "0101";
-	constant r : std_logic_vector(3 downto 0) := "0110";
+	constant OFF : std_logic_vector(7 downto 0) := "11111111";
+	constant C : std_logic_vector(7 downto 0) := "11000110";
+	constant O : std_logic_vector(7 downto 0) := "11000000";
+	constant L : std_logic_vector(7 downto 0) := "11000111";
+	constant A : std_logic_vector(7 downto 0) := "10001000";
+	constant E : std_logic_vector(7 downto 0) := "10000110";
+	constant r : std_logic_vector(7 downto 0) := "10101111";
+	constant P : std_logic_vector(7 downto 0) := "10001100";
+	constant S : std_logic_vector(7 downto 0) := "10010010";
+	constant I : std_logic_vector(7 downto 0) := "11001111";
 
 begin
-	selector_next <= selector + 1;
+	segment_selector_next <= segment_selector + 1;
 	
-	process(clk)
-	begin		
-		if rising_edge(clk) then		
-			if selector < "11" then
-				selector <= selector_next;
-			else
-				selector <= (others=>'0');
-			end if;
-		end if;		
-	end process;
-	
-	process(clk_display,reset,release_can,alarm)
+	process(clk,reset)
 	begin
 		if reset = '1' then
+			cnt_reg <= (others => '0');
 			current_state <= state0;
-		elsif alarm = '1' then
-			current_state <= errorState;
-		elsif release_can = '0' then
-			current_state <= state0;
-		elsif rising_edge(clk_display) then
-			current_state <= next_state;
+		elsif rising_edge(clk) then
+			cnt_reg <= cnt;
+			segment_selector <= segment_selector_next;
+			if display_enable = '1' then
+				current_state <= next_state;
+			end if;
 		end if;
 	end process;
-
-	process(digit_temp)
-	begin
-		case digit_temp is
-			when OFF => seven_segment <= "11111111";
-			when C => seven_segment <= "11000110";
-			when O => seven_segment <= "11000000";
-			when L => seven_segment <= "11000111";
-			when A => seven_segment <= "10001000";
-			when E => seven_segment <= "10000110";
-			when r => seven_segment <= "10101111";
-			when others => seven_segment <= (others=>'1');
-		end case;
-	end process;
 	
-	process(selector,digit0,digit1,digit2,digit3)
+	process(cnt_reg)
 	begin
-		if selector = "00" then
-			digit_select <= "1110";
-			digit_temp <= digit0;
-		elsif selector = "01" then
-			digit_select <= "1101";
-			digit_temp <= digit1;
-		elsif selector = "10" then
-			digit_select <= "1011";
-			digit_temp <= digit2;
+		display_enable <= '0';
+		if cnt_reg = 200 then -- Enable with a frequency of 3.81 Hz
+			cnt <= (others => '0');
+			display_enable <= '1';
 		else
-			digit_select <= "0111";
-			digit_temp <= digit3;
-		end if;	
+			cnt <= cnt_reg + 1;
+		end if;
 	end process;
 	
-	process(current_state)
+	process(current_state,alarm,release_can,flavor)
+	begin
+		if alarm = '1' then
+			next_state <= error_state;
+		elsif release_can = '0' then
+			next_state <= state0;
+		else
+			case current_state is
+				when state0 => next_state <= state1;
+				when state1 => next_state <= state2;
+				when state2 => next_state <= state3;
+				when state3 => next_state <= state4;
+				when state4 => next_state <= state5;
+				when state5 => next_state <= state6;
+				when state6 => next_state <= state7;
+				when state7 =>
+					if flavor = '0' then
+						next_state <= state0;
+					else
+						next_state <= state8;
+					end if;
+				when state8 => next_state <= state0;
+				when error_state => next_state <= state0;
+				when others => next_state <= state0;
+			end case;
+		end if;
+	end process;
+	
+	process(current_state,flavor)
 	begin
 		if current_state = state0 then
-			next_state <= state1;
 			digit0 <= OFF;
 			digit1 <= OFF;
 			digit2 <= OFF;
 			digit3 <= OFF;
 		elsif current_state = state1 then
-			next_state <= state2;
-			digit0 <= C;
+			if flavor = '0' then
+				digit0 <= C;
+			else
+				digit0 <= P;
+			end if;
 			digit1 <= OFF;
 			digit2 <= OFF;
 			digit3 <= OFF;
 		elsif current_state = state2 then
-			next_state <= state3;
-			digit0 <= O;
-			digit1 <= C;
+			if flavor = '0' then
+				digit0 <= O;
+				digit1 <= C;
+			else
+				digit0 <= E;
+				digit1 <= P;
+			end if;
 			digit2 <= OFF;
 			digit3 <= OFF;
 		elsif current_state = state3 then
-			next_state <= state4;
-			digit0 <= L;
-			digit1 <= O;
-			digit2 <= C;
+			if flavor = '0' then
+				digit0 <= L;
+				digit1 <= O;
+				digit2 <= C;
+			else
+				digit0 <= P;
+				digit1 <= E;
+				digit2 <= P;
+			end if;
 			digit3 <= OFF;
 		elsif current_state = state4 then
-			next_state <= state5;
-			digit0 <= A;
-			digit1 <= L;
-			digit2 <= O;
-			digit3 <= C;
+			if flavor = '0' then
+				digit0 <= A;
+				digit1 <= L;
+				digit2 <= O;
+				digit3 <= C;
+			else
+				digit0 <= S;
+				digit1 <= P;
+				digit2 <= E;
+				digit3 <= P;
+			end if;
 		elsif current_state = state5 then
-			next_state <= state6;
-			digit0 <= OFF;
-			digit1 <= A;
-			digit2 <= L;
-			digit3 <= O;
+			if flavor = '0' then
+				digit0 <= OFF;
+				digit1 <= A;
+				digit2 <= L;
+				digit3 <= O;
+			else
+				digit0 <= I;
+				digit1 <= S;
+				digit2 <= P;
+				digit3 <= E;			
+			end if;
 		elsif current_state = state6 then
-			next_state <= state7;
+			digit0 <= OFF;
+			if flavor = '0' then
+				digit1 <= OFF;
+				digit2 <= A;
+				digit3 <= L;
+			else
+				digit1 <= I;
+				digit2 <= S;
+				digit3 <= P;			
+			end if;
+		elsif current_state = state7 then			
 			digit0 <= OFF;
 			digit1 <= OFF;
-			digit2 <= A;
-			digit3 <= L;
-		elsif current_state = state7 then
-			next_state <= state0;
+			if flavor = '0' then
+				digit2 <= OFF;
+				digit3 <= A;
+			else
+				digit2 <= I;
+				digit3 <= S;			
+			end if;
+		elsif current_state = state8 then			
 			digit0 <= OFF;
 			digit1 <= OFF;
 			digit2 <= OFF;
-			digit3 <= A;
-		elsif current_state = errorState then
-			next_state <= state0;
+			digit3 <= I;
+		elsif current_state = error_state then
 			digit0 <= OFF;
 			digit1 <= r;
 			digit2 <= r;
 			digit3 <= E;
-		else
-			next_state <= state0;
+		else			
+			digit0 <= OFF;
+			digit1 <= OFF;
+			digit2 <= OFF;
+			digit3 <= OFF;
 		end if;
+	end process;
+	
+	process(segment_selector,digit0,digit1,digit2,digit3)
+	begin
+		if segment_selector = "00" then
+			digit_select <= "1110";
+			seven_segment <= digit0;
+		elsif segment_selector = "01" then
+			digit_select <= "1101";
+			seven_segment <= digit1;
+		elsif segment_selector = "10" then
+			digit_select <= "1011";
+			seven_segment <= digit2;
+		else
+			digit_select <= "0111";
+			seven_segment <= digit3;
+		end if;	
 	end process;
 	
 end Behavioral;
