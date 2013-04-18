@@ -17,8 +17,8 @@ architecture decoder of display_10base is
 	signal digit_temp : std_logic_vector(3 downto 0);
 	signal digit0, digit2, digit3 : std_logic_vector(3 downto 0);
 	signal digit1 : std_logic_vector(2 downto 0);
-	signal price_low : std_logic_vector(3 downto 0);
-	signal coin_low : std_logic_vector(3 downto 0);
+	signal price_low : std_logic_vector(5 downto 0);
+	signal coin_low : std_logic_vector(6 downto 0);
 
 begin
 	selector_next <= selector + 1;
@@ -71,10 +71,10 @@ begin
 			coin_low <= coin_sum - 10;
 		else
 			digit3 <= "0000";
-			coin_low <= coin_sum(3 downto 0);
+			coin_low <= coin_sum;
 		end if;
 	end process;
-	digit2 <= coin_low;
+	digit2 <= coin_low(3 downto 0);
 	
 	process(price)
 	begin
@@ -98,12 +98,10 @@ begin
 			price_low <= price - 10;
 		else
 			digit1 <= "000";
-			price_low <= price(3 downto 0);
+			price_low <= price;
 		end if;
 	end process;
-	
-	digit0 <= price_low;
-	--decimal0 <= price mod 10;
+	digit0 <= price_low(3 downto 0);
 	
 	process(selector,digit0,digit1,digit2,digit3)
 	begin
@@ -125,11 +123,7 @@ begin
 	process(clk)
 	begin
 		if rising_edge(clk) then
-			if selector < "11" then
-				selector <= selector_next;
-			else
-				selector <= (others=>'0');
-			end if;
+			selector <= selector_next;
 		end if;
 	end process;
 end decoder;

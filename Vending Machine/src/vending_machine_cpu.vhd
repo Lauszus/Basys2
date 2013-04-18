@@ -21,11 +21,11 @@ architecture Behavioral of vending_machine_cpu is
 	signal current_state, next_state : state_type;
 	signal price_val : unsigned(5 downto 0);
 	signal add_mux : std_logic_vector(1 downto 0);
-	signal add_val : signed(7 downto 0);
-	signal sum_val : signed(7 downto 0);
+	signal sum_val : unsigned(6 downto 0);
+	signal add_val, sum_val_temp, sum_val_new : signed(7 downto 0);
 	
 begin
-	sum <= std_logic_vector(sum_val(6 downto 0));
+	sum <= std_logic_vector(sum_val);
 	price_val <= unsigned(price);
 	
 	process(current_state,coin2,coin5,buy,price_val,sum_val)
@@ -39,7 +39,7 @@ begin
 				elsif coin5 = '1' then
 					next_state <= coin5_state;
 				elsif buy = '1' then
-					if unsigned(sum_val(6 downto 0)) >= price_val and price_val /= 0 then
+					if unsigned(sum_val) >= price_val and price_val /= 0 then
 						next_state <= buy_state;						
 					else
 						next_state <= alarm_state;											
@@ -47,13 +47,13 @@ begin
 				end if;
 			when coin2_state => next_state <= wait_coin_state;
 			when coin5_state => next_state <= wait_coin_state;
-			when buy_state => next_state <= wait_buy_state;
-			when alarm_state => 
-				if buy = '0' then
-					next_state <= default_state;
-				end if;
+			when buy_state => next_state <= wait_buy_state;			
 			when wait_coin_state =>
 				if coin2 = '0' and coin5 = '0' then
+					next_state <= default_state;
+				end if;
+			when alarm_state => 
+				if buy = '0' then
 					next_state <= default_state;
 				end if;
 			when wait_buy_state =>
@@ -91,10 +91,25 @@ begin
 		elsif add_mux = "10" then
 			add_val <= "00000101"; -- 5
 		elsif add_mux = "11" then
-			add_val <= signed("10" & price_val(5 downto 0)); -- Return the negative number of the price
+			add_val <= signed("10" & price_val); -- Return the negative number of the price
 		else
 			add_val <= "00000000";
 		end if;		
+	end process;
+	
+	sum_val_temp <= signed('0' & sum_val);
+	
+	process(add_val,sum_val_temp)
+	begin
+		if add_val < 0 then
+			sum_val_new <= sum_val_temp - add_val;
+		else
+			if sum_val_temp + add_val > 99 then
+				sum_val_new <= sum_val_temp + add_val - 100;
+			else
+				sum_val_new <= sum_val_temp + add_val;
+			end if;
+		end if;
 	end process;
 	
 	process(clk, reset)
@@ -104,18 +119,7 @@ begin
 			sum_val <= (others=>'0');
 		elsif rising_edge(clk) then
 			current_state <= next_state;
-			
-			-- Vi vil gerne undskylde på forhånd for nedenstående kode :(
-			if add_val < 0 then
-				sum_val <= sum_val - add_val;
-			else
-				sum_val <= sum_val + add_val;
-				if sum_val > 99 then
-					sum_val <= sum_val - 100;
-				end if;
-			end if;
-			--------------------------------------------------------------
-			
+			sum_val <= unsigned(sum_val_new(6 downto 0));
 		end if;
 	end process;
 	

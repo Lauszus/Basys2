@@ -104,10 +104,10 @@ architecture struct of vending_machine is
 begin  -- struct
 
 	Inst_clock_manager : clock_manager port map (
-      clk_50  => clk_50,
-      clk_man => clk_man,
-      sel_man => sel_man,
-      clk => clk
+		clk_50  => clk_50,
+		clk_man => clk_man,
+		sel_man => sel_man,
+		clk => clk
 	);
 
 ------------------------------------------------------------------------
