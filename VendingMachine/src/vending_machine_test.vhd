@@ -57,7 +57,7 @@ ARCHITECTURE behavior OF vending_machine_test IS
    --Inputs
    signal clk_50 : std_logic := '0';
    signal clk_man : std_logic := '0';
-   signal sel_man : std_logic := '0';
+   signal sel_man : std_logic := '1';
    signal reset : std_logic := '0';
    signal coin2 : std_logic := '0';
    signal coin5 : std_logic := '0';
@@ -116,26 +116,27 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      wait for 100 ns;	
+      --wait for 100 ns;	
 
-      wait for clk_50_period*10;
+      --wait for clk_50_period*10;
 
       -- insert stimulus here
 		price <= "000111";
-		wait for clk_50_period;
+		wait for clk_50_period*5;
 		buy <= '1';
-		wait for clk_50_period;
+		wait for clk_50_period*5;
 		assert alarm = '0' report "error: alarm should be 1";
+		buy <= '0';
 		
 		coin2 <= '1';
-		wait for clk_50_period;
+		wait for clk_50_period*5;
 		coin2 <= '0';
-		wait for clk_50_period;
+		wait for clk_50_period*5;
 		coin5 <= '1';
-		wait for clk_50_period;		
+		wait for clk_50_period*5;
 		coin5 <= '0';
 		buy <= '1';
-		wait for clk_50_period;
+		wait for clk_50_period*5;
 		assert release_can = '0' report "error: release_can should be 1";
 		
       wait;
