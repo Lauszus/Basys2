@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine\vending_machine.ncd
-OUTFILE=C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine\vending_machine.bit
+INFILE=C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\xilinx\vending_machine\vending_machine.ncd
+OUTFILE=C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\xilinx\vending_machine\vending_machine.bit
 FAMILY=Spartan3E
 PART=xc3s100e-5cp132
-WORKINGDIR=C:\Users\Lauszus\Documents\GitHub\Basys2\Vending Machine\xilinx\vending_machine
+WORKINGDIR=C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\xilinx\vending_machine
 LICENSE=WebPack
 USER_INFO=210687262_0_0_470

@@ -20,11 +20,10 @@ architecture Behavioral of vending_machine_cpu is
 	type state_type is (default_state, coin2_state, coin5_state, wait_coin_state, release_can_state, calc_state, buy_state, alarm_state);
 	signal current_state, next_state : state_type;
 	signal add_mux : std_logic_vector(1 downto 0);
-	signal negative : std_logic;
+	signal sum_enable, output_enable, negative : std_logic;
 	signal price_val : unsigned(5 downto 0);
 	signal sum_val, add_val : unsigned(6 downto 0);
 	signal sum_val_temp, sum_val_new : signed(7 downto 0);
-	signal sum_enable, output_enable : std_logic;
 	
 begin
 	price_val <= unsigned(price);
@@ -75,7 +74,7 @@ begin
 		release_can <= '0';
 		output_enable <= '0';
 		sum_enable <= '0';
-		negative <= '0';		
+		negative <= '0';
 		
 		case current_state is
 			when default_state =>

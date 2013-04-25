@@ -4,13 +4,13 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.16 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: vending_machine.prj
 
@@ -104,20 +104,20 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_text.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd" in Library work.
 Architecture behavioral of Entity display_text is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd" in Library work.
 Architecture decoder of Entity display_10base is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd" in Library work.
 Architecture structure of Entity clock_manager is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/input_sync.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd" in Library work.
 Architecture behavioral of Entity input_sync is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine_cpu.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd" in Library work.
 Entity <vending_machine_cpu> compiled.
 Entity <vending_machine_cpu> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_manager.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd" in Library work.
 Architecture behavioral of Entity display_manager is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd" in Library work.
+Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd" in Library work.
 Architecture struct of Entity vending_machine is up to date.
 
 =========================================================================
@@ -171,7 +171,7 @@ Entity <display_10base> analyzed. Unit <display_10base> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <clock_manager>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/clock_manager.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd".
     Found 16-bit up counter for signal <count_present>.
     Summary:
 	inferred   1 Counter(s).
@@ -179,7 +179,7 @@ Unit <clock_manager> synthesized.
 
 
 Synthesizing Unit <input_sync>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/input_sync.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd".
     Found 1-bit register for signal <reset>.
     Found 1-bit register for signal <buy>.
     Found 6-bit register for signal <price>.
@@ -191,7 +191,7 @@ Unit <input_sync> synthesized.
 
 
 Synthesizing Unit <vending_machine_cpu>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine_cpu.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd".
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
@@ -207,12 +207,12 @@ Synthesizing Unit <vending_machine_cpu>.
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
     Using one-hot encoding for signal <add_mux>.
-    Found 8-bit comparator less for signal <current_state$cmp_lt0000> created at line 50.
+    Found 8-bit comparator less for signal <current_state$cmp_lt0000> created at line 49.
     Found 7-bit register for signal <sum_val>.
     Found 8-bit register for signal <sum_val_new>.
-    Found 7-bit adder for signal <sum_val_temp$addsub0000> created at line 124.
-    Found 7-bit comparator greater for signal <sum_val_temp$cmp_gt0000> created at line 124.
-    Found 8-bit addsub for signal <sum_val_temp$share0000> created at line 121.
+    Found 7-bit adder for signal <sum_val_temp$addsub0000> created at line 123.
+    Found 7-bit comparator greater for signal <sum_val_temp$cmp_gt0000> created at line 123.
+    Found 8-bit addsub for signal <sum_val_temp$share0000> created at line 120.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred  15 D-type flip-flop(s).
@@ -222,7 +222,7 @@ Unit <vending_machine_cpu> synthesized.
 
 
 Synthesizing Unit <display_text>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_text.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd".
     Found finite state machine <FSM_1> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 10                                             |
@@ -254,7 +254,7 @@ Unit <display_text> synthesized.
 
 
 Synthesizing Unit <display_10base>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_10base.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd".
 WARNING:Xst:646 - Signal <digit2<6:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
 WARNING:Xst:646 - Signal <digit0<5:4>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 16x8-bit ROM for signal <seven_segment>.
@@ -289,12 +289,12 @@ Unit <display_10base> synthesized.
 
 
 Synthesizing Unit <display_manager>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/display_manager.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd".
 Unit <display_manager> synthesized.
 
 
 Synthesizing Unit <vending_machine>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine.vhd".
+    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd".
 Unit <vending_machine> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -661,8 +661,8 @@ Offset:              10.607ns (Levels of Logic = 8)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 8.98 secs
+Total REAL time to Xst completion: 13.00 secs
+Total CPU time to Xst completion: 13.18 secs
  
 --> 
 
