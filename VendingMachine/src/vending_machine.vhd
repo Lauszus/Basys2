@@ -22,7 +22,9 @@ entity vending_machine is
 		release_can   : out std_logic;
 		alarm         : out std_logic;
 		seven_segment : out std_logic_vector(7 downto 0);
-		digit_select  : out std_logic_vector(3 downto 0)
+		digit_select  : out std_logic_vector(3 downto 0);
+		--rx				  : in std_logic;
+		tx				  : out std_logic		
 	);
 
 end vending_machine;
@@ -37,6 +39,8 @@ architecture struct of vending_machine is
 	signal internal_price : std_logic_vector(5 downto 0);
 	
 	signal release_can_var, alarm_var : std_logic;
+	--signal receiveBuffer : std_logic_vector(7 downto 0);
+	signal outputBufer : std_logic_vector(7 downto 0);
 
 ------------------------------------------------------------------------
 -- Clock divider component declaration
@@ -98,6 +102,18 @@ architecture struct of vending_machine is
 		digit_select : OUT std_logic_vector(3 downto 0)
 		);
 	END COMPONENT;
+	
+	COMPONENT serial_interface
+	PORT(
+		clk_50 : IN std_logic;
+		reset : IN std_logic;
+		--rx : IN std_logic;
+		outputBufer : IN std_logic_vector(7 downto 0);
+		tx : OUT std_logic;
+		--receiveBuffer : OUT std_logic_vector(7 downto 0)
+		write_enable : IN std_logic		
+		);
+	END COMPONENT;
 
 ------------------------------------------------------------------------
   
@@ -154,6 +170,18 @@ begin  -- struct
 	
 	alarm <= alarm_var;
 	release_can <= release_can_var;
+	
+	outputBufer <= '0' & sum(6 downto 0);
+	
+	Inst_serial_interface: serial_interface PORT MAP(
+		clk_50 => clk_50,
+		reset => sync_reset,
+		tx => tx,
+		--rx => rx,
+		outputBufer => outputBufer,
+		--receiveBuffer => receiveBuffer,
+		write_enable => '1'
+	);
 
 ------------------------------------------------------------------------
 end struct;

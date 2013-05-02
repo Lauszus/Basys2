@@ -16,8 +16,7 @@ end display_text;
 
 architecture Behavioral of display_text is
 	type state_type is (state0, state1, state2, state3, state4, state5, state6, state7, state8, error_state);
-	signal current_state : state_type;
-	signal next_state : state_type;
+	signal current_state, next_state : state_type;
 	
 	signal cnt, cnt_reg : std_logic_vector(7 downto 0);
 	signal display_enable : std_logic;
@@ -66,6 +65,8 @@ begin
 	
 	process(current_state,alarm,release_can,flavor)
 	begin
+		next_state <= current_state;
+		
 		if alarm = '1' then
 			next_state <= error_state;
 		elsif release_can = '0' then

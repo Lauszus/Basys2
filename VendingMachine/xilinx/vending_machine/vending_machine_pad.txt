@@ -1,7 +1,7 @@
 Release 14.3 - par P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Thu Apr 25 17:26:35 2013
+Thu May 02 16:57:19 2013
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -65,7 +65,7 @@ Pinout by Pin Number:
 |D1        |                |         |NC                       |         |           |              |          |         |           |         |       |          |           |                |
 |D2        |                |IOB      |IO                       |UNUSED   |           |3             |          |         |           |         |       |          |           |                |
 |D3        |                |         |VCCINT                   |         |           |              |          |         |           |         |1.2    |          |           |                |
-|D12       |                |DIFFS    |IO_L09N_1/LDC0           |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
+|D12       |tx              |IOB      |IO_L09N_1/LDC0           |OUTPUT   |LVCMOS25*  |1             |12        |SLOW     |NONE**     |         |       |LOCATED   |NO         |NONE            |
 |D13       |                |DIFFM    |IO_L09P_1/HDC            |UNUSED   |           |1             |          |         |           |         |       |          |           |                |
 |D14       |                |         |NC                       |         |           |              |          |         |           |         |       |          |           |                |
 |E1        |                |         |VCCO_3                   |         |           |3             |          |         |           |         |2.50   |          |           |                |

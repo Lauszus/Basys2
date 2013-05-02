@@ -1,7 +1,7 @@
 -----------------------------------------------------------------------
 -- This component divides the 50 MHz clock signal down to a 762 Hz signal
 -- In addition the user can select between a manual clock
--- and the 762 Hz clock.
+-- and the 763 Hz clock.
 --
 -----------------------------------------------------------------------
 
@@ -11,10 +11,10 @@ use ieee.numeric_std.all;
  
 entity clock_manager is
 	port(
-		clk_50    : in  std_logic;   -- 50Mhz clock signal from board
-		clk_man   : in  std_logic;   -- Manual clock signal
-		sel_man   : in  std_logic;   -- Select signal between 762 Hz clock and manual clock
-		clk       : out std_logic  -- Output signal from clock, 762 Hz
+		clk_50    : in  std_logic; -- 50Mhz clock signal from board
+		clk_man   : in  std_logic; -- Manual clock signal
+		sel_man   : in  std_logic; -- Select signal between 763 Hz clock and manual clock
+		clk       : out std_logic -- Output signal from clock, 763 Hz
 	);
 end clock_manager;
 

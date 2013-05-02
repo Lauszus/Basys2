@@ -116,10 +116,15 @@ BEGIN
    stim_proc: process
    begin		
       -- hold reset state for 100 ns.
-      --wait for 100 ns;	
+      --wait for 100 ns;
 
       --wait for clk_50_period*10;
-
+		
+		reset <= '1';
+		wait for clk_50_period*5;
+		reset <= '0';
+		wait for clk_50_period*5;
+		
       -- insert stimulus here
 		price <= "000111";
 		wait for clk_50_period*5;
