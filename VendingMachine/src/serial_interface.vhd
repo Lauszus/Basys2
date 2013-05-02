@@ -43,10 +43,10 @@ begin
 			cnt_reg <= cnt;
 			if serial_enable = '1' then
 				current_state <= next_state;
-			end if;
-			if digit_enable = '1' then
-				digit <= digit_next;
-			end if;
+				if digit_enable = '1' then
+					digit <= digit_next;
+				end if;
+			end if;			
 			if wait_enable = '1' then
 				wait_counter <= wait_counter_next;
 			else

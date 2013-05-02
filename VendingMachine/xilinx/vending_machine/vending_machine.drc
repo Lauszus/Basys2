@@ -1,7 +1,7 @@
 Release 14.3 Drc P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-Thu May 02 22:33:10 2013
+Thu May 02 22:55:45 2013
 
 drc -z vending_machine.ncd vending_machine.pcf
 

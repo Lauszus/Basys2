@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.16 secs
  
 --> Reading design: vending_machine.prj
 
@@ -519,20 +519,20 @@ Design Statistics
 # IOs                              : 28
 
 Cell Usage :
-# BELS                             : 444
+# BELS                             : 443
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 26
 #      LUT2                        : 58
 #      LUT2_D                      : 1
 #      LUT2_L                      : 2
-#      LUT3                        : 50
+#      LUT3                        : 49
 #      LUT3_L                      : 3
-#      LUT4                        : 136
+#      LUT4                        : 138
 #      LUT4_D                      : 2
 #      LUT4_L                      : 1
 #      MUXCY                       : 56
-#      MUXF5                       : 41
+#      MUXF5                       : 39
 #      MUXF6                       : 2
 #      VCC                         : 1
 #      XORCY                       : 59
@@ -556,9 +556,9 @@ Device utilization summary:
 
 Selected Device : 3s100ecp132-5 
 
- Number of Slices:                      155  out of    960    16%  
+ Number of Slices:                      156  out of    960    16%  
  Number of Slice Flip Flops:            114  out of   1920     5%  
- Number of 4 input LUTs:                284  out of   1920    14%  
+ Number of 4 input LUTs:                285  out of   1920    14%  
  Number of IOs:                          28
  Number of bonded IOBs:                  28  out of     83    33%  
  Number of GCLKs:                         2  out of     24     8%  
@@ -603,7 +603,7 @@ Speed Grade: -5
 
    Minimum period: 6.955ns (Maximum Frequency: 143.791MHz)
    Minimum input arrival time before clock: 1.754ns
-   Maximum output required time after clock: 11.052ns
+   Maximum output required time after clock: 10.607ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -612,27 +612,27 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_50'
-  Clock period: 4.799ns (frequency: 208.379MHz)
-  Total number of paths / destination ports: 915 / 80
+  Clock period: 5.394ns (frequency: 185.385MHz)
+  Total number of paths / destination ports: 935 / 80
 -------------------------------------------------------------------------
-Delay:               4.799ns (Levels of Logic = 3)
+Delay:               5.394ns (Levels of Logic = 3)
   Source:            Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1 (FF)
-  Destination:       Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_9 (FF)
+  Destination:       Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_1 (FF)
   Source Clock:      clk_50 rising
   Destination Clock: clk_50 rising
 
-  Data Path: Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1 to Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_9
+  Data Path: Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1 to Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDC:C->Q              2   0.514   0.532  Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1)
      LUT4:I0->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000022 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000022)
-     LUT4:I0->O           25   0.612   1.140  Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000032 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable)
-     LUT2:I1->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt<0>1 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt<0>)
-     FDC:D                     0.268          Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_0
+     LUT4:I0->O           26   0.612   1.140  Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000032 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable)
+     LUT4:I1->O            2   0.612   0.380  Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_and00001 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_and0000)
+     FDE:CE                    0.483          Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_0
     ----------------------------------------
-    Total                      4.799ns (2.618ns logic, 2.181ns route)
-                                       (54.6% logic, 45.4% route)
+    Total                      5.394ns (2.833ns logic, 2.561ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
@@ -687,62 +687,61 @@ Offset:              1.754ns (Levels of Logic = 1)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
   Total number of paths / destination ports: 2037 / 14
 -------------------------------------------------------------------------
-Offset:              11.052ns (Levels of Logic = 9)
-  Source:            Inst_vending_machine_cpu/sum_val_3 (FF)
-  Destination:       tx (PAD)
+Offset:              10.607ns (Levels of Logic = 8)
+  Source:            Inst_display_manager/Inst_display_text/current_state_FSM_FFd5 (FF)
+  Destination:       seven_segment<4> (PAD)
   Source Clock:      clk rising
 
-  Data Path: Inst_vending_machine_cpu/sum_val_3 to tx
+  Data Path: Inst_display_manager/Inst_display_text/current_state_FSM_FFd5 to seven_segment<4>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q            12   0.514   0.969  Inst_vending_machine_cpu/sum_val_3 (Inst_vending_machine_cpu/sum_val_3)
-     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/coin_subtract<1>1 (Inst_display_manager/Inst_display_10base/coin_subtract<1>1)
-     MUXF5:I0->O           1   0.278   0.000  Inst_display_manager/Inst_display_10base/coin_subtract<1>_f5 (Inst_display_manager/Inst_display_10base/coin_subtract<1>_f5)
-     MUXF6:I1->O           6   0.451   0.721  Inst_display_manager/Inst_display_10base/coin_subtract<1>_f6 (Inst_display_manager/Inst_display_10base/coin_subtract<1>)
-     LUT3:I0->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149_SW0 (N122)
-     LUT4:I3->O            1   0.612   0.387  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149)
-     LUT4:I2->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx158 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx158)
-     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx197_F (N156)
-     MUXF5:I0->O           1   0.278   0.357  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx197 (tx_OBUF)
-     OBUF:I->O                 3.169          tx_OBUF (tx)
+     FDCE:C->Q            17   0.514   1.045  Inst_display_manager/Inst_display_text/current_state_FSM_FFd5 (Inst_display_manager/Inst_display_text/current_state_FSM_FFd5)
+     LUT2:I0->O            4   0.612   0.502  Inst_display_manager/Inst_display_text/digit3<1>11 (Inst_display_manager/Inst_display_text/N13)
+     LUT4:I3->O            5   0.612   0.607  Inst_display_manager/Inst_display_text/digit2<4>11 (Inst_display_manager/Inst_display_text/N17)
+     LUT4:I1->O            2   0.612   0.410  Inst_display_manager/Inst_display_text/digit3<5> (Inst_display_manager/Inst_display_text/digit3<5>)
+     LUT3:I2->O            1   0.612   0.387  Inst_display_manager/Inst_display_text/digit3<4>1 (Inst_display_manager/Inst_display_text/digit3<4>)
+     LUT3:I2->O            1   0.612   0.000  Inst_display_manager/Inst_display_text/Mmux_seven_segment_34 (Inst_display_manager/Inst_display_text/Mmux_seven_segment_34)
+     MUXF5:I1->O           1   0.278   0.000  Inst_display_manager/Inst_display_text/Mmux_seven_segment_2_f5_3 (Inst_display_manager/seven_segment_text<4>)
+     MUXF5:I1->O           1   0.278   0.357  Inst_display_manager/seven_segment_temp<4>21_f5 (seven_segment_4_OBUF)
+     OBUF:I->O                 3.169          seven_segment_4_OBUF (seven_segment<4>)
     ----------------------------------------
-    Total                     11.052ns (7.750ns logic, 3.303ns route)
-                                       (70.1% logic, 29.9% route)
+    Total                     10.607ns (7.299ns logic, 3.308ns route)
+                                       (68.8% logic, 31.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_50'
-  Total number of paths / destination ports: 41 / 1
+  Total number of paths / destination ports: 28 / 1
 -------------------------------------------------------------------------
-Offset:              8.551ns (Levels of Logic = 6)
-  Source:            Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd11 (FF)
+Offset:              8.629ns (Levels of Logic = 6)
+  Source:            Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd10 (FF)
   Destination:       tx (PAD)
   Source Clock:      clk_50 rising
 
-  Data Path: Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd11 to tx
+  Data Path: Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd10 to tx
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDCE:C->Q             4   0.514   0.529  Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd11 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd11)
-     LUT3:I2->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149_SW0 (N122)
-     LUT4:I3->O            1   0.612   0.387  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx149)
-     LUT4:I2->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx158 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx158)
-     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx197_F (N156)
-     MUXF5:I0->O           1   0.278   0.357  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx197 (tx_OBUF)
+     FDCE:C->Q             5   0.514   0.690  Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd10 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/current_state_FSM_FFd10)
+     LUT4:I0->O            1   0.612   0.000  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx311 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx311)
+     MUXF5:I0->O           1   0.278   0.426  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx31_f5 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx31)
+     LUT4:I1->O            1   0.612   0.360  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx62 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx62)
+     LUT4:I3->O            1   0.612   0.387  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx134 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx134)
+     LUT4:I2->O            1   0.612   0.357  Inst_display_manager/Inst_display_10base/Inst_serial_interface/tx195 (tx_OBUF)
      OBUF:I->O                 3.169          tx_OBUF (tx)
     ----------------------------------------
-    Total                      8.551ns (6.409ns logic, 2.142ns route)
-                                       (75.0% logic, 25.0% route)
+    Total                      8.629ns (6.409ns logic, 2.220ns route)
+                                       (74.3% logic, 25.7% route)
 
 =========================================================================
 
 
 Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 10.25 secs
+Total CPU time to Xst completion: 10.35 secs
  
 --> 
 
-Total memory usage is 263116 kilobytes
+Total memory usage is 263180 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    2 (   0 filtered)

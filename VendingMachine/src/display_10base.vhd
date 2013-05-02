@@ -44,8 +44,8 @@ begin
 		clk_50 => clk_50,
 		reset => reset,
 		tx => tx,
-		digit0 => digit2(3 downto 0),
-		digit1 => digit3(3 downto 0),
+		digit0 => digit3(3 downto 0),
+		digit1 => digit2(3 downto 0),
 		new_value => new_value
 	);
 	
