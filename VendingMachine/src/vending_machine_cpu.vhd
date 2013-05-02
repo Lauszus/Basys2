@@ -12,7 +12,8 @@ entity vending_machine_cpu is
 		price : in std_logic_vector(5 downto 0);
 		sum : out std_logic_vector(6 downto 0);
 		release_can : out std_logic;
-		alarm : out std_logic
+		alarm : out std_logic;
+		new_value : out std_logic
 	);
 end vending_machine_cpu;
 
@@ -27,7 +28,8 @@ architecture Behavioral of vending_machine_cpu is
 	
 begin
 	price_val <= unsigned(price);
-	sum <= std_logic_vector(sum_val);	
+	sum <= std_logic_vector(sum_val);
+	new_value <= sum_enable;
 	
 	process(current_state,coin2,coin5,buy,sum_val_new)
 	begin

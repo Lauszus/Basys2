@@ -4,11 +4,17 @@ use ieee.std_logic_unsigned.all;
 
 entity display_10base is
 	port (
+		clk_50 : in std_logic; -- 50MHz clock
+		reset : in std_logic;
+		tx : out std_logic;
+		--rx : in std_logic;
+		--receiveBuffer : out std_logic_vector(7 downto 0);
 		price : in std_logic_vector(5 downto 0);
 		coin_sum: in std_logic_vector(6 downto 0);
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
-		clk : in std_logic
+		clk : in std_logic;
+		new_value : in std_logic
 	);
 end display_10base;
 
@@ -22,7 +28,27 @@ architecture decoder of display_10base is
 	signal price_subtract : std_logic_vector(5 downto 0);
 	signal coin_subtract : std_logic_vector(6 downto 0);
 	
-begin		
+	COMPONENT serial_interface
+	PORT(
+		clk_50 : IN std_logic;
+		reset : IN std_logic;
+		digit0 : IN std_logic_vector(3 downto 0);
+		digit1 : IN std_logic_vector(3 downto 0);
+		new_value : IN std_logic;          
+		tx : OUT std_logic
+		);
+	END COMPONENT;
+	
+begin
+	Inst_serial_interface: serial_interface PORT MAP(
+		clk_50 => clk_50,
+		reset => reset,
+		tx => tx,
+		digit0 => digit2(3 downto 0),
+		digit1 => digit3(3 downto 0),
+		new_value => new_value
+	);
+	
 	process(digit_temp)
 	begin
 		case digit_temp is
