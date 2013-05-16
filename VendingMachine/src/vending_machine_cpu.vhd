@@ -29,7 +29,6 @@ architecture Behavioral of vending_machine_cpu is
 begin
 	price_val <= unsigned(price);
 	sum <= std_logic_vector(sum_val);
-	new_value <= sum_enable;
 	
 	process(current_state,coin2,coin5,buy,sum_val_new)
 	begin
@@ -142,6 +141,9 @@ begin
 			end if;
 			if sum_enable = '1' then
 				sum_val <= unsigned(sum_val_new(6 downto 0));
+				new_value <= '1';
+			else
+				new_value <= '0';
 			end if;
 		end if;
 	end process;

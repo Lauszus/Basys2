@@ -1,4 +1,5 @@
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\src\serial_interface.vhd"
+vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\src\bcdtab.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\src\display_text.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\src\display_10base.vhd"
 vhdl work "C:\Users\Lauszus\Documents\GitHub\Basys2\VendingMachine\src\vending_machine_cpu.vhd"

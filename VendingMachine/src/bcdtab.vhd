@@ -12,8 +12,8 @@ use ieee.std_logic_1164.all;
 
 entity bcdtab is
 port (
-    address : in std_logic_vector(6 downto 0);
-    q : out std_logic_vector(7 downto 0)
+   address : in std_logic_vector(6 downto 0);
+   q : out std_logic_vector(7 downto 0)
 );
 end bcdtab;
 
@@ -123,10 +123,9 @@ case address is
     when "1100000" => q <= "10010110";
     when "1100001" => q <= "10010111";
     when "1100010" => q <= "10011000";
-    when "1100011" => q <= "10011001";
-    
-
+    when "1100011" => q <= "10011001"; -- 99
     when others => q <= "00000000";
+	 
 end case;
 end process;
 
