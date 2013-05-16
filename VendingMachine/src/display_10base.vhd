@@ -27,6 +27,11 @@ architecture decoder of display_10base is
 	signal q1, q2 : std_logic_vector(7 downto 0);
 	
 	signal new_enable : std_logic;
+
+-----------------------------------------------------------------------------
+-- Binary to decimal converter
+-- Used to convert price and coin sum into 10 base numbers
+-----------------------------------------------------------------------------
 	
 	COMPONENT bcdtab
 	PORT(
@@ -34,6 +39,12 @@ architecture decoder of display_10base is
 		q : OUT std_logic_vector(7 downto 0)
 		);
 	END COMPONENT;
+
+-----------------------------------------------------------------------------
+-- Serial interface (UART)
+-- Used to write the value of coin sum when a new value is updated
+-- Only transmit is implemented
+-----------------------------------------------------------------------------
 	
 	COMPONENT serial_interface
 	PORT(
@@ -45,17 +56,21 @@ architecture decoder of display_10base is
 		tx : OUT std_logic
 		);
 	END COMPONENT;
-	
+
+-----------------------------------------------------------------------------	
+
 begin
+	-- Serial interface interface
 	Inst_serial_interface: serial_interface PORT MAP(
 		clk_50 => clk_50,
-		reset => reset,
-		tx => tx,
+		reset => reset,		
 		digit0 => digit3,
 		digit1 => digit2,
-		new_value => new_enable
+		tx => tx,
+		new_value => new_enable -- When this goes high, the serial interface will send the coin sum
 	);
 	
+	-- BCD instances
 	Inst_bcdtab1: bcdtab PORT MAP(
 		address => price_temp,
 		q => q1
@@ -67,6 +82,7 @@ begin
 		q => q2
 	);	
 	
+	-- Set the segments to the desired value
 	process(digit_out)
 	begin
 		case digit_out is
@@ -84,6 +100,7 @@ begin
 		end case;
 	end process;
 	
+	-- Used for the display multiplexing
 	process(selector,digit0,digit1,digit2,digit3)
 	begin
 		if selector = "00" then
@@ -101,8 +118,8 @@ begin
 		end if;	
 	end process;
 	
-	selector_next <= selector + 1;
-	
+	-- This will update the segment selector and update the different 
+	-- digits based on price and coin sum
 	process(clk)
 	begin
 		if rising_edge(clk) then
@@ -112,6 +129,8 @@ begin
 			digit2 <= q2(3 downto 0);
 			digit3 <= q2(7 downto 4);
 			
+			-- Used to indicate when the computation is done and it is 
+			-- okay for the serial interface to send the current coin sum
 			if new_value = '1' then
 				new_enable <= '1';
 			else
@@ -119,4 +138,7 @@ begin
 			end if;
 		end if;
 	end process;
+	
+	selector_next <= selector + 1;
+	
 end decoder;

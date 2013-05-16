@@ -4,7 +4,7 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.13 secs
  
 --> Parameter xsthdpdir set to xst
 
@@ -105,11 +105,13 @@ Slice Utilization Ratio Delta      : 5
 *                          HDL Compilation                              *
 =========================================================================
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd" in Library work.
-Architecture behavioral of Entity serial_interface is up to date.
+Entity <serial_interface> compiled.
+Entity <serial_interface> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd" in Library work.
 Architecture rtl of Entity bcdtab is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd" in Library work.
-Architecture behavioral of Entity display_text is up to date.
+Entity <display_text> compiled.
+Entity <display_text> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd" in Library work.
 Architecture decoder of Entity display_10base is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd" in Library work.
@@ -221,12 +223,12 @@ Synthesizing Unit <vending_machine_cpu>.
     -----------------------------------------------------------------------
     Using one-hot encoding for signal <add_mux>.
     Found 1-bit register for signal <new_value>.
-    Found 8-bit comparator less for signal <current_state$cmp_lt0000> created at line 50.
+    Found 8-bit comparator less for signal <current_state$cmp_lt0000> created at line 52.
     Found 7-bit register for signal <sum_val>.
     Found 8-bit register for signal <sum_val_new>.
-    Found 7-bit adder for signal <sum_val_temp$addsub0000> created at line 124.
-    Found 7-bit comparator greater for signal <sum_val_temp$cmp_gt0000> created at line 124.
-    Found 8-bit addsub for signal <sum_val_temp$share0000> created at line 121.
+    Found 7-bit adder for signal <sum_val_temp$addsub0000> created at line 125.
+    Found 7-bit comparator greater for signal <sum_val_temp$cmp_gt0000> created at line 125.
+    Found 8-bit addsub for signal <sum_val_temp$share0000> created at line 122.
     Summary:
 	inferred   1 Finite State Machine(s).
 	inferred  16 D-type flip-flop(s).
@@ -254,7 +256,7 @@ Synthesizing Unit <display_text>.
     -----------------------------------------------------------------------
     Found 1-of-4 decoder for signal <digit_select>.
     Found 8-bit 4-to-1 multiplexer for signal <seven_segment>.
-    Found 8-bit adder for signal <cnt$addsub0000> created at line 62.
+    Found 8-bit adder for signal <cnt$addsub0000> created at line 85.
     Found 8-bit register for signal <cnt_reg>.
     Found 2-bit up counter for signal <segment_selector>.
     Summary:
@@ -284,7 +286,7 @@ Synthesizing Unit <serial_interface>.
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <cnt$addsub0000> created at line 56.
+    Found 10-bit adder for signal <cnt$addsub0000> created at line 57.
     Found 10-bit register for signal <cnt_reg>.
     Found 2-bit up counter for signal <digit>.
     Summary:
@@ -730,12 +732,12 @@ Offset:              8.590ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 9.00 secs
-Total CPU time to Xst completion: 9.61 secs
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 10.06 secs
  
 --> 
 
-Total memory usage is 262732 kilobytes
+Total memory usage is 262028 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

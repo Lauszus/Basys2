@@ -1,7 +1,7 @@
 Release 14.3 par P.40xd (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 
-LAUSZUS-PC::  Thu May 16 16:08:12 2013
+LAUSZUS-PC::  Thu May 16 17:15:25 2013
 
 par -w -intstyle ise -ol high -t 1 vending_machine_map.ncd vending_machine.ncd
 vending_machine.pcf 

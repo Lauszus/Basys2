@@ -2,7 +2,6 @@
 -- This component divides the 50 MHz clock signal down to a 762 Hz signal
 -- In addition the user can select between a manual clock
 -- and the 763 Hz clock.
---
 -----------------------------------------------------------------------
 
 library ieee;

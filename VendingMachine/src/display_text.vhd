@@ -5,9 +5,9 @@ use ieee.std_logic_unsigned.all;
 entity display_text is
 	port(
 		clk : in std_logic;
+		reset : in std_logic;
 		seven_segment : out std_logic_vector (7 downto 0);
 		digit_select : out std_logic_vector(3 downto 0);
-		reset : in std_logic;
 		release_can : in std_logic;
 		alarm : in std_logic;
 		flavor : in std_logic
@@ -15,15 +15,18 @@ entity display_text is
 end display_text;
 
 architecture Behavioral of display_text is
+	-- State signals
 	type state_type is (state0, state1, state2, state3, state4, state5, state6, state7, state8, error_state);
 	signal current_state, next_state : state_type;
 	
+	-- Used to scroll the text slowly across the segments
 	signal cnt, cnt_reg : std_logic_vector(7 downto 0);
 	signal display_enable : std_logic;
 	
 	signal segment_selector, segment_selector_next : std_logic_vector(1 downto 0);
 	signal digit0, digit1, digit2, digit3 : std_logic_vector(7 downto 0);
 	
+	-- These constants are used to write letters to the seven segment display
 	constant OFF : std_logic_vector(7 downto 0) := "11111111";
 	constant C : std_logic_vector(7 downto 0) := "11000110";
 	constant O : std_logic_vector(7 downto 0) := "11000000";
@@ -52,10 +55,30 @@ begin
 		end if;
 	end process;
 	
+	-- This will control the multiplexing of the display
+	process(segment_selector,digit0,digit1,digit2,digit3)
+	begin
+		if segment_selector = "00" then
+			digit_select <= "1110";
+			seven_segment <= digit0;
+		elsif segment_selector = "01" then
+			digit_select <= "1101";
+			seven_segment <= digit1;
+		elsif segment_selector = "10" then
+			digit_select <= "1011";
+			seven_segment <= digit2;
+		else
+			digit_select <= "0111";
+			seven_segment <= digit3;
+		end if;	
+	end process;
+	
+	-- This will generate an enable signal with a frequency of 3.81 Hz
+	-- This will ensure that the text is scrolled nice and slowly
 	process(cnt_reg)
 	begin
 		display_enable <= '0';
-		if cnt_reg = 200 then -- Enable with a frequency of 3.81 Hz
+		if cnt_reg = 200 then
 			cnt <= (others => '0');
 			display_enable <= '1';
 		else
@@ -63,14 +86,15 @@ begin
 		end if;
 	end process;
 	
+	-- Next state logic for the FSM
 	process(current_state,alarm,release_can,flavor)
 	begin
 		next_state <= current_state;
 		
 		if alarm = '1' then
-			next_state <= error_state;
+			next_state <= error_state; -- If alarm is high we will print Err on the display
 		elsif release_can = '0' then
-			next_state <= state0;
+			next_state <= state0; -- Start the scrolling sequence
 		else
 			case current_state is
 				when state0 => next_state <= state1;
@@ -84,7 +108,7 @@ begin
 					if flavor = '0' then
 						next_state <= state0;
 					else
-						next_state <= state8;
+						next_state <= state8; -- Since COLA and PEPSI are not equal length we need one more state to write PEPSI
 					end if;
 				when state8 => next_state <= state0;
 				when error_state => next_state <= state0;
@@ -93,6 +117,8 @@ begin
 		end if;
 	end process;
 	
+	-- State logic for the FSM
+	-- This will set the different digits depending on the state
 	process(current_state,flavor)
 	begin
 		if current_state = state0 then
@@ -191,23 +217,6 @@ begin
 			digit2 <= OFF;
 			digit3 <= OFF;
 		end if;
-	end process;
-	
-	process(segment_selector,digit0,digit1,digit2,digit3)
-	begin
-		if segment_selector = "00" then
-			digit_select <= "1110";
-			seven_segment <= digit0;
-		elsif segment_selector = "01" then
-			digit_select <= "1101";
-			seven_segment <= digit1;
-		elsif segment_selector = "10" then
-			digit_select <= "1011";
-			seven_segment <= digit2;
-		else
-			digit_select <= "0111";
-			seven_segment <= digit3;
-		end if;	
 	end process;
 	
 end Behavioral;

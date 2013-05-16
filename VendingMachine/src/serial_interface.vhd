@@ -5,12 +5,12 @@ use ieee.std_logic_unsigned.all;
 entity serial_interface is
 	port (
 		clk_50 : in std_logic; -- 50MHz clock
-		reset : in std_logic;
-		tx : out std_logic;
+		reset : in std_logic;		
 		digit0 : in std_logic_vector(3 downto 0);
 		digit1 : in std_logic_vector(3 downto 0);
 		--rx : in std_logic;
 		--receiveBuffer : out std_logic_vector(7 downto 0);
+		tx : out std_logic;
 		new_value : in std_logic
 	);
 end serial_interface;
@@ -46,6 +46,7 @@ begin
 		end if;
 	end process;
 	
+	-- Used to generate the serial baudrate of 115200
 	process(cnt_reg)
 	begin
 		serial_enable <= '0';
@@ -57,6 +58,7 @@ begin
 		end if;
 	end process;
 	
+	-- Next state logic for the FSM
 	process(current_state,new_value,digit)
 	begin
 		next_state <= current_state;
@@ -90,6 +92,7 @@ begin
 		end case;
 	end process;
 	
+	-- State logic for the FSM
 	process(current_state,digit,digit0,digit1) -- The output send the output as 8N1
 	begin
 		digit_enable <= '0';

@@ -1,7 +1,3 @@
--------------------------------------------------------------
--- Vi synkroniserer med klokken for at undgå metastabilitet
--------------------------------------------------------------
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
