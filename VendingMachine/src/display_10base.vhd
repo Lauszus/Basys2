@@ -7,8 +7,6 @@ entity display_10base is
 		clk_50 : in std_logic; -- 50MHz clock
 		reset : in std_logic;
 		tx : out std_logic;
-		--rx : in std_logic;
-		--receiveBuffer : out std_logic_vector(7 downto 0);
 		price : in std_logic_vector(5 downto 0);
 		coin_sum: in std_logic_vector(6 downto 0);
 		seven_segment : out std_logic_vector (7 downto 0);

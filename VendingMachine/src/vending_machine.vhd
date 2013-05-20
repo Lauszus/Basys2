@@ -24,7 +24,6 @@ entity vending_machine is
 		alarm         : out std_logic; -- Alarm used to indicate that there was not enough money in order to buy the can
 		seven_segment : out std_logic_vector(7 downto 0); -- Cathodes for the segments
 		digit_select  : out std_logic_vector(3 downto 0); -- Anodes for the segments
-		--rx            : in  std_logic;
 		tx            : out  std_logic -- TX for the UART
 	);
 end vending_machine;

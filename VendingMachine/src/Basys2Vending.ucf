@@ -39,5 +39,4 @@ NET "coin5" LOC = "M4";  # Bank = 0, Signal name = BTN2
 NET "coin2" LOC = "C11"; # Bank = 2, Signal name = BTN1
 NET "clk_man" LOC = "G12"; # Bank = 0, Signal name = BTN0
 
-#NET "rx" LOC = "C13";
 NET "tx" LOC = "D12";

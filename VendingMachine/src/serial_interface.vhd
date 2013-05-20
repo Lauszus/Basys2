@@ -8,8 +8,6 @@ entity serial_interface is
 		reset : in std_logic;		
 		digit0 : in std_logic_vector(3 downto 0);
 		digit1 : in std_logic_vector(3 downto 0);
-		--rx : in std_logic;
-		--receiveBuffer : out std_logic_vector(7 downto 0);
 		tx : out std_logic;
 		new_value : in std_logic
 	);
