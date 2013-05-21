@@ -92,7 +92,7 @@ begin
 	end process;
 	
 	-- State logic for the FSM
-	process(current_state,digit,digit0,digit1) -- The output send the output as 8N1
+	process(current_state,digit,digit0,digit1) -- Send the output as 8N1
 	begin
 		digit_enable <= '0';
 		tx <= '1'; -- The start bit sets TX low after that we simply write the byte and set TX high again
