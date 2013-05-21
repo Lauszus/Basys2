@@ -97,7 +97,6 @@ BEGIN
       digit0 <= "0111";
       digit1 <= "0101";
       new_value <= '1';
-      wait for clk_50_period*10;
 
       wait;
    end process;
