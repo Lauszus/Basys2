@@ -1,0 +1,15 @@
+vsim -gui work.serial_interface_test
+
+add wave  \
+sim:/serial_interface_test/uut/clk_50 \
+sim:/serial_interface_test/uut/reset \
+sim:/serial_interface_test/uut/digit0 \
+sim:/serial_interface_test/uut/digit1 \
+sim:/serial_interface_test/uut/tx \
+sim:/serial_interface_test/uut/new_value \
+sim:/serial_interface_test/uut/current_state \
+sim:/serial_interface_test/uut/serial_enable \
+sim:/serial_interface_test/uut/digit \
+sim:/serial_interface_test/uut/digit_enable
+
+run 220000

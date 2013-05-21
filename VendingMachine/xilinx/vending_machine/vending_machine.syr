@@ -3,14 +3,14 @@ Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.21 secs
  
 --> Reading design: vending_machine.prj
 
@@ -110,10 +110,10 @@ Entity <serial_interface> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd" in Library work.
 Architecture rtl of Entity bcdtab is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd" in Library work.
-Entity <display_text> compiled.
-Entity <display_text> (Architecture <behavioral>) compiled.
+Architecture behavioral of Entity display_text is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd" in Library work.
-Architecture decoder of Entity display_10base is up to date.
+Entity <display_10base> compiled.
+Entity <display_10base> (Architecture <decoder>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd" in Library work.
 Architecture structure of Entity clock_manager is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd" in Library work.
@@ -121,9 +121,11 @@ Architecture behavioral of Entity input_sync is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd" in Library work.
 Architecture behavioral of Entity vending_machine_cpu is up to date.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd" in Library work.
-Architecture behavioral of Entity display_manager is up to date.
+Entity <display_manager> compiled.
+Entity <display_manager> (Architecture <behavioral>) compiled.
 Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd" in Library work.
-Architecture struct of Entity vending_machine is up to date.
+Entity <vending_machine> compiled.
+Entity <vending_machine> (Architecture <struct>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
@@ -286,7 +288,7 @@ Synthesizing Unit <serial_interface>.
     | Encoding           | automatic                                      |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 10-bit adder for signal <cnt$addsub0000> created at line 57.
+    Found 10-bit adder for signal <cnt$addsub0000> created at line 56.
     Found 10-bit register for signal <cnt_reg>.
     Found 2-bit up counter for signal <digit>.
     Summary:
@@ -522,9 +524,9 @@ Cell Usage :
 #      LUT2                        : 38
 #      LUT2_D                      : 1
 #      LUT2_L                      : 1
-#      LUT3                        : 51
+#      LUT3                        : 52
 #      LUT3_L                      : 1
-#      LUT4                        : 143
+#      LUT4                        : 142
 #      LUT4_D                      : 2
 #      LUT4_L                      : 1
 #      MUXCY                       : 37
@@ -535,8 +537,8 @@ Cell Usage :
 # FlipFlops/Latches                : 110
 #      FD                          : 39
 #      FDC                         : 21
-#      FDCE                        : 29
-#      FDE                         : 13
+#      FDCE                        : 31
+#      FDE                         : 11
 #      FDPE                        : 2
 #      FDR                         : 6
 # Clock Buffers                    : 2
@@ -590,7 +592,7 @@ Asynchronous Control Signals Information:
 ----------------------------------------------+-------------------------------------------------------------------------------+-------+
 Control Signal                                | Buffer(FF name)                                                               | Load  |
 ----------------------------------------------+-------------------------------------------------------------------------------+-------+
-Inst_input_sync/reset(Inst_input_sync/reset:Q)| NONE(Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_0)| 52    |
+Inst_input_sync/reset(Inst_input_sync/reset:Q)| NONE(Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_0)| 54    |
 ----------------------------------------------+-------------------------------------------------------------------------------+-------+
 
 Timing Summary:
@@ -624,8 +626,8 @@ Delay:               5.477ns (Levels of Logic = 3)
      FDC:C->Q              2   0.514   0.532  Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/cnt_reg_1)
      LUT4:I0->O            1   0.612   0.509  Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000022 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000022)
      LUT4:I0->O           25   0.612   1.223  Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable_cmp_eq000032 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/serial_enable)
-     LUT4:I0->O            2   0.612   0.380  Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_and00001 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_and0000)
-     FDE:CE                    0.483          Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_0
+     LUT3:I0->O            2   0.612   0.380  Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_not00011 (Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_not0001)
+     FDCE:CE                   0.483          Inst_display_manager/Inst_display_10base/Inst_serial_interface/digit_0
     ----------------------------------------
     Total                      5.477ns (2.833ns logic, 2.644ns route)
                                        (51.7% logic, 48.3% route)
@@ -733,11 +735,11 @@ Offset:              8.590ns (Levels of Logic = 6)
 
 
 Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.06 secs
+Total CPU time to Xst completion: 10.16 secs
  
 --> 
 
-Total memory usage is 262028 kilobytes
+Total memory usage is 262732 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)

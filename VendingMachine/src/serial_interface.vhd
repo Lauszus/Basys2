@@ -32,6 +32,7 @@ begin
 	begin
 		if reset = '1' then
 			cnt_reg <= (others => '0');
+			digit <= (others => '0');
 			current_state <= state_idle;
 		elsif rising_edge(clk_50) then
 			cnt_reg <= cnt;

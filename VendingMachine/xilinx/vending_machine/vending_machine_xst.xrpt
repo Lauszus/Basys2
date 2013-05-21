@@ -5,14 +5,14 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu May 16 17:14:58 2013">
+  <application stringID="Xst" timeStamp="Tue May 21 01:00:11 2013">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
         <column stringID="value"/>
         <row stringID="row" value="0">
           <item stringID="variable" value="Path"/>
-          <item stringID="value" value="C:\Xilinx\14.3\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.3\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.3\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.3\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.3\ISE_DS\PlanAhead\bin;C:\Xilinx\14.3\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.3\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.3\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.3\ISE_DS\common\bin\nt64;C:\Xilinx\14.3\ISE_DS\common\lib\nt64;C:\Program Files (x86)\Arduino\Arduino ERW 1.0.3\hardware\tools\avr\bin;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Windows;C:\Windows\system32;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Modeltech_pe_edu_10.1c\win32pe_edu;C:\Modeltech_pe_edu_10.2\win32pe_edu;C:\Modeltech_pe_edu_10.2a\win32pe_edu"/>
+          <item stringID="value" value="C:\Xilinx\14.3\ISE_DS\ISE\\lib\nt64;C:\Xilinx\14.3\ISE_DS\ISE\\bin\nt64;C:\Xilinx\14.3\ISE_DS\ISE\bin\nt64;C:\Xilinx\14.3\ISE_DS\ISE\lib\nt64;C:\Xilinx\14.3\ISE_DS\ISE\..\..\..\DocNav;C:\Xilinx\14.3\ISE_DS\PlanAhead\bin;C:\Xilinx\14.3\ISE_DS\EDK\bin\nt64;C:\Xilinx\14.3\ISE_DS\EDK\lib\nt64;C:\Xilinx\14.3\ISE_DS\EDK\gnu\microblaze\nt64\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnu\powerpc-eabi\nt64\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnuwin\bin;C:\Xilinx\14.3\ISE_DS\EDK\gnu\arm\nt64\bin;C:\Xilinx\14.3\ISE_DS\common\bin\nt64;C:\Xilinx\14.3\ISE_DS\common\lib\nt64;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Windows;C:\Windows\system32;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Modeltech_pe_edu_10.1c\win32pe_edu;C:\Modeltech_pe_edu_10.2\win32pe_edu;C:\Modeltech_pe_edu_10.2a\win32pe_edu"/>
         </row>
         <row stringID="row" value="1">
           <item stringID="variable" value="PATHEXT"/>
@@ -182,9 +182,9 @@
           <item dataType="int" stringID="XST_LUT2" value="38"/>
           <item dataType="int" stringID="XST_LUT2D" value="1"/>
           <item dataType="int" stringID="XST_LUT2L" value="1"/>
-          <item dataType="int" stringID="XST_LUT3" value="51"/>
+          <item dataType="int" stringID="XST_LUT3" value="52"/>
           <item dataType="int" stringID="XST_LUT3L" value="1"/>
-          <item dataType="int" stringID="XST_LUT4" value="143"/>
+          <item dataType="int" stringID="XST_LUT4" value="142"/>
           <item dataType="int" stringID="XST_LUT4D" value="2"/>
           <item dataType="int" stringID="XST_LUT4L" value="1"/>
           <item dataType="int" stringID="XST_MUXCY" value="37"/>
@@ -196,8 +196,8 @@
         <item dataType="int" stringID="XST_FLIPFLOPSLATCHES" value="110">
           <item dataType="int" stringID="XST_FD" value="39"/>
           <item dataType="int" stringID="XST_FDC" value="21"/>
-          <item dataType="int" stringID="XST_FDCE" value="29"/>
-          <item dataType="int" stringID="XST_FDE" value="13"/>
+          <item dataType="int" stringID="XST_FDCE" value="31"/>
+          <item dataType="int" stringID="XST_FDE" value="11"/>
           <item dataType="int" stringID="XST_FDPE" value="2"/>
           <item dataType="int" stringID="XST_FDR" value="6"/>
         </item>

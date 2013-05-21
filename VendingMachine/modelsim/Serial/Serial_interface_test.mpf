@@ -1,4 +1,4 @@
-Copyright 1991-2013 Mentor Graphics Corporation
+; Copyright 1991-2013 Mentor Graphics Corporation
 ;
 ; All Rights Reserved.
 ;
@@ -49,7 +49,7 @@ modelsim_lib = $MODEL_TECH/../modelsim_lib
 sv_std = $MODEL_TECH/../sv_std
 mtiAvm = $MODEL_TECH/../avm
 mtiOvm = $MODEL_TECH/../ovm-2.1.2
-mtiUvm = $MODEL_TECH/../uvm-1.1c
+mtiUvm = $MODEL_TECH/../uvm-1.1d
 mtiUPF = $MODEL_TECH/../upf_lib
 mtiPA  = $MODEL_TECH/../pa_lib
 floatfixlib = $MODEL_TECH/../floatfixlib
@@ -515,12 +515,6 @@ Explicit = 1
 ; modelsim.ini variable "SVCovergroupStrobe" in the [vsim] section.
 ; SVCovergroupStrobeDefault = 0
 
-; Specify the override for the default value of "merge_instances" option for
-; the Covergroup Type. This is a compile time option which forces 
-; "merge_instances" to a user specified default value and supersedes 
-; SystemVerilog specified default value of '0'(zero).
-; SVCovergroupMergeInstancesDefault = 0
-
 ; Specify the override for the default value of "per_instance" option for the
 ; Covergroup variables. This is a compile time option which forces "per_instance"
 ; to a user specified default value and supersedes SystemVerilog specified
@@ -600,7 +594,7 @@ LibrarySearchPath = mtiAvm mtiOvm mtiUvm mtiUPF
 
 ; Controls SystemVerilog Language Extensions.  These options enable
 ; some non-LRM compliant behavior.  Valid extensions are "feci",
-; "pae", "uslt", "spsl" and "sccts".
+; "pae", "uslt", "spsl", "sccts", "iddp" and "atpi".
 ; SVExtensions = uslt,spsl,sccts
 
 ; Generate symbols debugging database in only some special cases to save on
@@ -1527,15 +1521,13 @@ OnFinish = ask
 ; drives compliance with the clarified behavior in the IEEE 1800-2009 standard.
 ; SVCovergroup63Compatibility = 0
 
-; Enforce the 6.5 default behavior of covergroup get_coverage() builtin 
-; functions, GUI, and report. This setting changes the default values of
-; type_option.merge_instances to ensure the 6.5 default behavior if explicit
-; assignments are not made on type_option.merge_instances by the user.
+; Enforce the default behavior of covergroup get_coverage() builtin function, GUI
+; and report. This variable sets the default value of type_option.merge_instances.
 ; There are two vsim command line options, -cvgmergeinstances and 
 ; -nocvgmergeinstances to override this setting from vsim command line.
-; The default value of this variable from release 6.6 onwards is 0. This default
+; The default value of this variable is 0. This default
 ; drives compliance with the clarified behavior in the IEEE 1800-2009 standard.
-; SvCovergroupMergeInstancesDefault = 1
+; SVCovergroupMergeInstancesDefault = 0
 
 ; Enable or disable generation of more detailed information about the sampling
 ; of covergroup, cross, and coverpoints. It provides the details of the number
@@ -1860,31 +1852,11 @@ suppress = 8780 ;an explanation can be had by running: verror 8780
 Project_Version = 6
 Project_DefaultLib = work
 Project_SortMethod = unused
-Project_Files_Count = 12
-Project_File_0 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display7seg_decoder.vhd
-Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1365070137 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 4 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_1 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd
-Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1367505587 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 3 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_2 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/segment.vhd
-Project_File_P_2 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1365070137 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 6 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_3 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd
-Project_File_P_3 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1366293113 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 5 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_4 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd
-Project_File_P_4 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1366900100 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 8 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_5 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd
-Project_File_P_5 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1367507590 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 1 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 7 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_6 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd
-Project_File_P_6 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1366309056 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 1 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_7 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/Basys2Vending.ucf
-Project_File_P_7 = folder {Top Level} last_compile 0 compile_order -1 file_type none group_id 0 dont_compile 1 ood 1
-Project_File_8 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_test.vhd
-Project_File_P_8 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1367507180 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 9 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_9 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd
-Project_File_P_9 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1367503366 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 0 cover_nosub 0 dont_compile 0 vhdl_use93 2002
-Project_File_10 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd
-Project_File_P_10 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1366295100 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 2 dont_compile 0 cover_nosub 0 vhdl_use93 2002
-Project_File_11 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd
-Project_File_P_11 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1367507815 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 10 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_Files_Count = 2
+Project_File_0 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface_test.vhd
+Project_File_P_0 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1369091763 vhdl_disableopt 0 cover_excludedefault 0 vhdl_vital 0 vhdl_warn1 1 vhdl_showsource 0 vhdl_explicit 1 vhdl_warn2 1 vhdl_0InOptions {} cover_covercells 0 vhdl_warn3 1 vhdl_options {} cover_optlevel 3 voptflow 1 vhdl_warn4 1 ood 0 toggle - vhdl_warn5 1 compile_to work cover_noshort 0 compile_order 0 dont_compile 0 cover_nosub 0 vhdl_use93 2002
+Project_File_1 = C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd
+Project_File_P_1 = vhdl_novitalcheck 0 file_type vhdl group_id 0 cover_nofec 0 vhdl_nodebug 0 vhdl_1164 1 vhdl_noload 0 vhdl_synth 0 vhdl_enable0In 0 folder {Top Level} last_compile 1369090700 vhdl_disableopt 0 vhdl_vital 0 cover_excludedefault 0 vhdl_warn1 1 vhdl_warn2 1 vhdl_explicit 1 vhdl_showsource 0 vhdl_warn3 1 cover_covercells 0 vhdl_0InOptions {} vhdl_warn4 1 voptflow 1 cover_optlevel 3 vhdl_options {} vhdl_warn5 1 toggle - ood 0 cover_noshort 0 compile_to work compile_order 1 cover_nosub 0 dont_compile 0 vhdl_use93 2002
 Project_Sim_Count = 0
 Project_Folder_Count = 0
 Echo_Compile_Output = 0

@@ -9,7 +9,7 @@ Target Device  : xc3s100e
 Target Package : cp132
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Thu May 16 17:15:19 2013
+Mapped Date    : Tue May 21 01:00:35 2013
 
 Design Summary
 --------------
@@ -33,10 +33,10 @@ Logic Distribution:
   Number of bonded IOBs:                 28 out of      83   33%
   Number of BUFGMUXs:                     2 out of      24    8%
 
-Average Fanout of Non-Clock Nets:                3.63
+Average Fanout of Non-Clock Nets:                3.64
 
 Peak Memory Usage:  236 MB
-Total REAL time to MAP completion:  2 secs 
+Total REAL time to MAP completion:  5 secs 
 Total CPU time to MAP completion:   2 secs 
 
 NOTES:

@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   13:14:08 04/25/2013
+-- Create Date:   23:34:15 05/20/2013
 -- Design Name:   
--- Module Name:   C:/Users/Lauszus/Documents/GitHub/Basys2/Vending Machine/src/vending_machine_test.vhd
+-- Module Name:   C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_test.vhd
 -- Project Name:  vending_machine
 -- Target Device:  
 -- Tool versions:  
@@ -27,11 +27,14 @@
 --------------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
-
+ 
+-- Uncomment the following library declaration if using
+-- arithmetic functions with Signed or Unsigned values
+--USE ieee.numeric_std.ALL;
+ 
 ENTITY vending_machine_test IS
 END vending_machine_test;
-
+ 
 ARCHITECTURE behavior OF vending_machine_test IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
@@ -49,7 +52,8 @@ ARCHITECTURE behavior OF vending_machine_test IS
          release_can : OUT  std_logic;
          alarm : OUT  std_logic;
          seven_segment : OUT  std_logic_vector(7 downto 0);
-         digit_select : OUT  std_logic_vector(3 downto 0)
+         digit_select : OUT  std_logic_vector(3 downto 0);
+         tx : OUT  std_logic
         );
     END COMPONENT;
     
@@ -69,12 +73,11 @@ ARCHITECTURE behavior OF vending_machine_test IS
    signal alarm : std_logic;
    signal seven_segment : std_logic_vector(7 downto 0);
    signal digit_select : std_logic_vector(3 downto 0);
+   signal tx : std_logic;
 
    -- Clock period definitions
    constant clk_50_period : time := 10 ns;
    constant clk_man_period : time := 10 ns;
-	--constant clk_period : time := 1312 us;
-	--constant display_enable_period : time := clk_period*200;
  
 BEGIN
  
@@ -91,7 +94,8 @@ BEGIN
           release_can => release_can,
           alarm => alarm,
           seven_segment => seven_segment,
-          digit_select => digit_select
+          digit_select => digit_select,
+          tx => tx
         );
 
    -- Clock process definitions
@@ -114,49 +118,34 @@ BEGIN
 
    -- Stimulus process
    stim_proc: process
-   begin		
-      -- hold reset state for 100 ns.
-      --wait for 100 ns;
-
-      --wait for clk_50_period*10;
-		
-		reset <= '1';
-		wait for clk_50_period*5;
-		reset <= '0';
-		wait for clk_50_period*5;
-		
+   begin
       -- insert stimulus here
-		price <= "000111";
-		wait for clk_50_period*5;
-		buy <= '1';
-		wait for clk_50_period*5;
-		assert alarm = '0' report "error: alarm should be 1";
-		buy <= '0';
-		
-		coin2 <= '1';
-		wait for clk_50_period*5;
-		coin2 <= '0';
-		wait for clk_50_period*5;
-		coin5 <= '1';
-		wait for clk_50_period*5;
-		coin5 <= '0';
-		buy <= '1';
-		wait for clk_50_period*5;
-		assert release_can = '0' report "error: release_can should be 1";
-		
+
+      reset <= '1';
+      wait for clk_50_period*5;
+      reset <= '0';
+      wait for clk_50_period*5;
+    
+      -- insert stimulus here
+      price <= "000111";
+      wait for clk_50_period*5;
+      buy <= '1';
+      wait for clk_50_period*5;
+      assert alarm = '0' report "error: alarm should be 1";
+      buy <= '0';
+    
+      coin2 <= '1';
+      wait for clk_50_period*5;
+      coin2 <= '0';
+      wait for clk_50_period*5;
+      coin5 <= '1';
+      wait for clk_50_period*5;
+      coin5 <= '0';
+      buy <= '1';
+      wait for clk_50_period*5;
+      assert release_can = '0' report "error: release_can should be 1";
+
       wait;
    end process;
-
---   signal reset : std_logic := '0';
---   signal coin2 : std_logic := '0';
---   signal coin5 : std_logic := '0';
---   signal buy : std_logic := '0';
---   signal price : std_logic_vector(5 downto 0) := (others => '0');
---
--- 	--Outputs
---   signal release_can : std_logic;
---   signal alarm : std_logic;
---   signal seven_segment : std_logic_vector(7 downto 0);
---   signal digit_select : std_logic_vector(3 downto 0);
 
 END;

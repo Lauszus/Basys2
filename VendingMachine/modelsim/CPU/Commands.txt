@@ -1,0 +1,5 @@
+vsim -gui work.vending_machine_test
+
+add wave sim:/vending_machine_test/uut/Inst_vending_machine_cpu/*
+
+run 500
