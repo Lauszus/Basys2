@@ -1,16 +1,16 @@
-Release 14.3 - xst P.40xd (nt64)
+Release 14.5 - xst P.58f (nt64)
 Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.21 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: vending_machine.prj
 
@@ -104,26 +104,26 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd" in Library work.
 Entity <serial_interface> compiled.
 Entity <serial_interface> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd" in Library work.
 Architecture rtl of Entity bcdtab is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd" in Library work.
 Architecture behavioral of Entity display_text is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd" in Library work.
 Entity <display_10base> compiled.
 Entity <display_10base> (Architecture <decoder>) compiled.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd" in Library work.
 Architecture structure of Entity clock_manager is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd" in Library work.
 Architecture behavioral of Entity input_sync is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd" in Library work.
 Architecture behavioral of Entity vending_machine_cpu is up to date.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd" in Library work.
 Entity <display_manager> compiled.
 Entity <display_manager> (Architecture <behavioral>) compiled.
-Compiling vhdl file "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd" in Library work.
+Compiling vhdl file "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd" in Library work.
 Entity <vending_machine> compiled.
 Entity <vending_machine> (Architecture <struct>) compiled.
 
@@ -188,7 +188,7 @@ Entity <bcdtab> analyzed. Unit <bcdtab> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <clock_manager>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/clock_manager.vhd".
     Found 16-bit up counter for signal <count_present>.
     Summary:
 	inferred   1 Counter(s).
@@ -196,7 +196,7 @@ Unit <clock_manager> synthesized.
 
 
 Synthesizing Unit <input_sync>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/input_sync.vhd".
     Found 1-bit register for signal <reset>.
     Found 1-bit register for signal <buy>.
     Found 6-bit register for signal <price>.
@@ -208,7 +208,7 @@ Unit <input_sync> synthesized.
 
 
 Synthesizing Unit <vending_machine_cpu>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/vending_machine_cpu.vhd".
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
@@ -240,7 +240,7 @@ Unit <vending_machine_cpu> synthesized.
 
 
 Synthesizing Unit <display_text>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_text.vhd".
     Found finite state machine <FSM_1> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 10                                             |
@@ -272,7 +272,7 @@ Unit <display_text> synthesized.
 
 
 Synthesizing Unit <serial_interface>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/serial_interface.vhd".
     Found finite state machine <FSM_2> for signal <current_state>.
     -----------------------------------------------------------------------
     | States             | 14                                             |
@@ -300,7 +300,7 @@ Unit <serial_interface> synthesized.
 
 
 Synthesizing Unit <bcdtab>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/bcdtab.vhd".
     Found 128x8-bit ROM for signal <q>.
     Summary:
 	inferred   1 ROM(s).
@@ -308,7 +308,7 @@ Unit <bcdtab> synthesized.
 
 
 Synthesizing Unit <display_10base>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_10base.vhd".
 WARNING:Xst:646 - Signal <q1<7>> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 16x8-bit ROM for signal <seven_segment>.
     Found 1-of-4 decoder for signal <digit_select>.
@@ -329,12 +329,12 @@ Unit <display_10base> synthesized.
 
 
 Synthesizing Unit <display_manager>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/display_manager.vhd".
 Unit <display_manager> synthesized.
 
 
 Synthesizing Unit <vending_machine>.
-    Related source file is "C:/Users/Lauszus/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd".
+    Related source file is "C:/Users/Mads Bornebusch/Documents/GitHub/Basys2/VendingMachine/src/vending_machine.vhd".
 Unit <vending_machine> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -734,12 +734,12 @@ Offset:              8.590ns (Levels of Logic = 6)
 =========================================================================
 
 
-Total REAL time to Xst completion: 10.00 secs
-Total CPU time to Xst completion: 10.16 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 7.01 secs
  
 --> 
 
-Total memory usage is 262732 kilobytes
+Total memory usage is 270504 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
